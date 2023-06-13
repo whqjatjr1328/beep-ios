@@ -17,6 +17,11 @@
 		45983F082A385B7C00203EBB /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F072A385B7C00203EBB /* UIColor+Extension.swift */; };
 		45983F0A2A38609B00203EBB /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F092A38609B00203EBB /* String+Extension.swift */; };
 		45983F0C2A3865BD00203EBB /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F0B2A3865BD00203EBB /* AppComponent.swift */; };
+		45983F122A386C0800203EBB /* LogOutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F0E2A386C0800203EBB /* LogOutRouter.swift */; };
+		45983F132A386C0800203EBB /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F0F2A386C0800203EBB /* LogOutViewController.swift */; };
+		45983F142A386C0900203EBB /* LogOutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F102A386C0800203EBB /* LogOutBuilder.swift */; };
+		45983F152A386C0900203EBB /* LogOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F112A386C0800203EBB /* LogOutInteractor.swift */; };
+		45983F172A3882E100203EBB /* RootComponent+Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F162A3882E100203EBB /* RootComponent+Logout.swift */; };
 		45D160872A2F1C3500D633E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D160862A2F1C3500D633E1 /* AppDelegate.swift */; };
 		45D1608B2A2F1C3500D633E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1608A2A2F1C3500D633E1 /* ViewController.swift */; };
 		45D160902A2F1C3800D633E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D1608F2A2F1C3800D633E1 /* Assets.xcassets */; };
@@ -35,6 +40,11 @@
 		45983F072A385B7C00203EBB /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		45983F092A38609B00203EBB /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		45983F0B2A3865BD00203EBB /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		45983F0E2A386C0800203EBB /* LogOutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutRouter.swift; sourceTree = "<group>"; };
+		45983F0F2A386C0800203EBB /* LogOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutViewController.swift; sourceTree = "<group>"; };
+		45983F102A386C0800203EBB /* LogOutBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutBuilder.swift; sourceTree = "<group>"; };
+		45983F112A386C0800203EBB /* LogOutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutInteractor.swift; sourceTree = "<group>"; };
+		45983F162A3882E100203EBB /* RootComponent+Logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+Logout.swift"; sourceTree = "<group>"; };
 		45D160832A2F1C3500D633E1 /* beep-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "beep-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D160862A2F1C3500D633E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45D1608A2A2F1C3500D633E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +83,7 @@
 				45983EDB2A3857CE00203EBB /* RootViewController.swift */,
 				45983EDC2A3857CE00203EBB /* RootBuilder.swift */,
 				45983EDD2A3857CE00203EBB /* RootInteractor.swift */,
+				45983F162A3882E100203EBB /* RootComponent+Logout.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -94,6 +105,17 @@
 				45983F092A38609B00203EBB /* String+Extension.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		45983F0D2A386BED00203EBB /* LogOut */ = {
+			isa = PBXGroup;
+			children = (
+				45983F0E2A386C0800203EBB /* LogOutRouter.swift */,
+				45983F0F2A386C0800203EBB /* LogOutViewController.swift */,
+				45983F102A386C0800203EBB /* LogOutBuilder.swift */,
+				45983F112A386C0800203EBB /* LogOutInteractor.swift */,
+			);
+			path = LogOut;
 			sourceTree = "<group>";
 		};
 		45D1607A2A2F1C3500D633E1 = {
@@ -120,6 +142,7 @@
 				45983F062A385B6F00203EBB /* Base */,
 				45983EE22A38587A00203EBB /* StaticConfig */,
 				45983ED92A3857C000203EBB /* Root */,
+				45983F0D2A386BED00203EBB /* LogOut */,
 				45983F0B2A3865BD00203EBB /* AppComponent.swift */,
 				45D160862A2F1C3500D633E1 /* AppDelegate.swift */,
 				45D1608A2A2F1C3500D633E1 /* ViewController.swift */,
@@ -257,7 +280,12 @@
 				45983EDE2A3857CE00203EBB /* RootRouter.swift in Sources */,
 				45983F052A385A9900203EBB /* Font.swift in Sources */,
 				45983F082A385B7C00203EBB /* UIColor+Extension.swift in Sources */,
+				45983F172A3882E100203EBB /* RootComponent+Logout.swift in Sources */,
+				45983F122A386C0800203EBB /* LogOutRouter.swift in Sources */,
 				45983F0A2A38609B00203EBB /* String+Extension.swift in Sources */,
+				45983F152A386C0900203EBB /* LogOutInteractor.swift in Sources */,
+				45983F142A386C0900203EBB /* LogOutBuilder.swift in Sources */,
+				45983F132A386C0800203EBB /* LogOutViewController.swift in Sources */,
 				45983EE12A3857CE00203EBB /* RootInteractor.swift in Sources */,
 				45983EE42A38588E00203EBB /* StaticConfig.swift in Sources */,
 				45D1608B2A2F1C3500D633E1 /* ViewController.swift in Sources */,

@@ -23,4 +23,10 @@ final class RootViewController: UIViewController, RootPresentable, RootViewContr
         super.viewDidLoad()
         view.backgroundColor = Static.color.main
     }
+    
+    // MARK: - RootViewControllable
+
+    func present(viewController: ViewControllable) {
+        present(viewController.uiviewController, animated: true, completion: nil)
+    }
 }
