@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45983EDE2A3857CE00203EBB /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983EDA2A3857CE00203EBB /* RootRouter.swift */; };
+		45983EDF2A3857CE00203EBB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983EDB2A3857CE00203EBB /* RootViewController.swift */; };
+		45983EE02A3857CE00203EBB /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983EDC2A3857CE00203EBB /* RootBuilder.swift */; };
+		45983EE12A3857CE00203EBB /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983EDD2A3857CE00203EBB /* RootInteractor.swift */; };
 		45D160872A2F1C3500D633E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D160862A2F1C3500D633E1 /* AppDelegate.swift */; };
 		45D160892A2F1C3500D633E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D160882A2F1C3500D633E1 /* SceneDelegate.swift */; };
 		45D1608B2A2F1C3500D633E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1608A2A2F1C3500D633E1 /* ViewController.swift */; };
 		45D1608E2A2F1C3500D633E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D1608C2A2F1C3500D633E1 /* Main.storyboard */; };
 		45D160902A2F1C3800D633E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D1608F2A2F1C3800D633E1 /* Assets.xcassets */; };
 		45D160932A2F1C3800D633E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D160912A2F1C3800D633E1 /* LaunchScreen.storyboard */; };
+		4C9B012C178C45DEF1859192 /* Pods_beep_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D659B1DF638A0581A94BBC /* Pods_beep_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45983EDA2A3857CE00203EBB /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		45983EDB2A3857CE00203EBB /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		45983EDC2A3857CE00203EBB /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
+		45983EDD2A3857CE00203EBB /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		45D160832A2F1C3500D633E1 /* beep-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "beep-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D160862A2F1C3500D633E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45D160882A2F1C3500D633E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +33,9 @@
 		45D1608F2A2F1C3800D633E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45D160922A2F1C3800D633E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45D160942A2F1C3800D633E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		860DB2D2AF67BA5A9C1930B9 /* Pods-beep-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beep-ios.release.xcconfig"; path = "Target Support Files/Pods-beep-ios/Pods-beep-ios.release.xcconfig"; sourceTree = "<group>"; };
+		98C591E3B0958C203A441A56 /* Pods-beep-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beep-ios.debug.xcconfig"; path = "Target Support Files/Pods-beep-ios/Pods-beep-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		E1D659B1DF638A0581A94BBC /* Pods_beep_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beep_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C9B012C178C45DEF1859192 /* Pods_beep_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		290286118159289B1C9ECFE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1D659B1DF638A0581A94BBC /* Pods_beep_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		45983ED92A3857C000203EBB /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				45983EDA2A3857CE00203EBB /* RootRouter.swift */,
+				45983EDB2A3857CE00203EBB /* RootViewController.swift */,
+				45983EDC2A3857CE00203EBB /* RootBuilder.swift */,
+				45983EDD2A3857CE00203EBB /* RootInteractor.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		45D1607A2A2F1C3500D633E1 = {
 			isa = PBXGroup;
 			children = (
 				45D160852A2F1C3500D633E1 /* beep-ios */,
 				45D160842A2F1C3500D633E1 /* Products */,
+				94CFFB437150511825CEFDAD /* Pods */,
+				290286118159289B1C9ECFE7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +90,7 @@
 		45D160852A2F1C3500D633E1 /* beep-ios */ = {
 			isa = PBXGroup;
 			children = (
+				45983ED92A3857C000203EBB /* Root */,
 				45D160862A2F1C3500D633E1 /* AppDelegate.swift */,
 				45D160882A2F1C3500D633E1 /* SceneDelegate.swift */,
 				45D1608A2A2F1C3500D633E1 /* ViewController.swift */,
@@ -67,6 +102,15 @@
 			path = "beep-ios";
 			sourceTree = "<group>";
 		};
+		94CFFB437150511825CEFDAD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98C591E3B0958C203A441A56 /* Pods-beep-ios.debug.xcconfig */,
+				860DB2D2AF67BA5A9C1930B9 /* Pods-beep-ios.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +118,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45D160972A2F1C3800D633E1 /* Build configuration list for PBXNativeTarget "beep-ios" */;
 			buildPhases = (
+				A89AE219EC9070615D7B1816 /* [CP] Check Pods Manifest.lock */,
 				45D1607F2A2F1C3500D633E1 /* Sources */,
 				45D160802A2F1C3500D633E1 /* Frameworks */,
 				45D160812A2F1C3500D633E1 /* Resources */,
+				B8DA3763A63F563E5DABAF04 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +179,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A89AE219EC9070615D7B1816 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-beep-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8DA3763A63F563E5DABAF04 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-beep-ios/Pods-beep-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-beep-ios/Pods-beep-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-beep-ios/Pods-beep-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		45D1607F2A2F1C3500D633E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45983EDF2A3857CE00203EBB /* RootViewController.swift in Sources */,
+				45983EDE2A3857CE00203EBB /* RootRouter.swift in Sources */,
+				45983EE12A3857CE00203EBB /* RootInteractor.swift in Sources */,
 				45D1608B2A2F1C3500D633E1 /* ViewController.swift in Sources */,
 				45D160872A2F1C3500D633E1 /* AppDelegate.swift in Sources */,
 				45D160892A2F1C3500D633E1 /* SceneDelegate.swift in Sources */,
+				45983EE02A3857CE00203EBB /* RootBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +362,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -282,6 +374,7 @@
 		};
 		45D160982A2F1C3800D633E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98C591E3B0958C203A441A56 /* Pods-beep-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -295,6 +388,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,6 +404,7 @@
 		};
 		45D160992A2F1C3800D633E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 860DB2D2AF67BA5A9C1930B9 /* Pods-beep-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -323,6 +418,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
