@@ -19,6 +19,7 @@ protocol LogOutPresentable: Presentable {
 
 protocol LogOutListener: AnyObject {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    func didTapLogin()
 }
 
 final class LogOutInteractor: PresentableInteractor<LogOutPresentable>, LogOutInteractable, LogOutPresentableListener {
@@ -41,5 +42,9 @@ final class LogOutInteractor: PresentableInteractor<LogOutPresentable>, LogOutIn
     override func willResignActive() {
         super.willResignActive()
         // TODO: Pause any business logic.
+    }
+    
+    func didTapLogin() {
+        listener?.didTapLogin()
     }
 }

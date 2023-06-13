@@ -34,6 +34,7 @@ final class RootBuilder: Builder<RootDependency>, RootBuildable {
         let viewController = RootViewController()
         let interactor = RootInteractor(presenter: viewController)
         let logoutBuilder = LogOutBuilder(dependency: component)
-        return RootRouter(interactor: interactor, viewController: viewController, logoutBuilder: logoutBuilder)
+        let mainBuilder = MainBuilder(dependency: component)
+        return RootRouter(interactor: interactor, viewController: viewController, logoutBuilder: logoutBuilder, mainBuilder: mainBuilder)
     }
 }

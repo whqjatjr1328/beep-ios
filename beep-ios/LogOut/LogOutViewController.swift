@@ -7,6 +7,7 @@
 
 import RIBs
 import RxSwift
+import RxCocoa
 import UIKit
 import SnapKit
 
@@ -14,6 +15,8 @@ protocol LogOutPresentableListener: AnyObject {
     // TODO: Declare properties and methods that the view controller can invoke to perform
     // business logic, such as signIn(). This protocol is implemented by the corresponding
     // interactor class.
+    
+    func didTapLogin()
 }
 
 final class LogOutViewController: UIViewController, LogOutPresentable, LogOutViewControllable {
@@ -24,6 +27,7 @@ final class LogOutViewController: UIViewController, LogOutPresentable, LogOutVie
     var googleLogin: UIButton?
     var appleLogin: UIButton?
     
+    var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,6 +85,13 @@ final class LogOutViewController: UIViewController, LogOutPresentable, LogOutVie
         button.setTitle(title, for: .normal)
         button.setTitleColor(Static.color.black, for: .normal)
         button.titleLabel?.font = Static.font.bodyMedium
+        
+        button.rx.tap
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.listener?.didTapLogin()
+            })
+            .disposed(by: disposeBag)
         
         return button
     }
