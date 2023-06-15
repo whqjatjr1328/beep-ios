@@ -1,5 +1,17 @@
 PODS:
   - Alamofire (5.7.1)
+  - KakaoSDKAuth (2.15.0):
+    - KakaoSDKCommon (= 2.15.0)
+  - KakaoSDKCommon (2.15.0):
+    - KakaoSDKCommon/Common (= 2.15.0)
+    - KakaoSDKCommon/Network (= 2.15.0)
+  - KakaoSDKCommon/Common (2.15.0)
+  - KakaoSDKCommon/Network (2.15.0):
+    - Alamofire (~> 5.1)
+    - KakaoSDKCommon/Common (= 2.15.0)
+  - KakaoSDKUser (2.15.0):
+    - KakaoSDKAuth (= 2.15.0)
+  - naveridlogin-sdk-ios (4.1.6)
   - RIBs (0.9.3):
     - RxRelay (~> 6.5.0)
     - RxSwift (~> 6.5.0)
@@ -10,21 +22,31 @@ PODS:
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
   - SnapKit (5.0.1)
+  - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
   - Alamofire
+  - KakaoSDKAuth
+  - KakaoSDKUser
+  - naveridlogin-sdk-ios
   - RIBs (from `https://github.com/uber/RIBs.git`, branch `main`)
   - RxCocoa (= 6.5.0)
   - RxSwift (= 6.5.0)
   - SnapKit (~> 5.0.0)
+  - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - KakaoSDKAuth
+    - KakaoSDKCommon
+    - KakaoSDKUser
+    - naveridlogin-sdk-ios
     - RxCocoa
     - RxRelay
     - RxSwift
     - SnapKit
+    - SwiftyJSON
 
 EXTERNAL SOURCES:
   RIBs:
@@ -33,17 +55,22 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   RIBs:
-    :commit: 27d8eba3fc93ec350b1736d620977e95752d44df
+    :commit: 10414608cd7980946615c30be2b8f25bbcb12da1
     :git: https://github.com/uber/RIBs.git
 
 SPEC CHECKSUMS:
   Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  KakaoSDKAuth: 0fe5cf1756e8a9f66f8fc77826061aafa93034f3
+  KakaoSDKCommon: 89d863b7f34398e6fb93a0acb28a204908551a39
+  KakaoSDKUser: a997ca5c4c18ece2ab30646ff74841bc29d4399d
+  naveridlogin-sdk-ios: cdd34e3585a3d5aaf37c1d84c1f41faba4a25d1a
   RIBs: 77685927ce19e6fbc4931c0a35c9ac2ac5271495
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 14be3b68df62227485f2a97a3ffbdcba1ad9e6ba
+PODFILE CHECKSUM: 413b0168f52733741b027d0c65ff7692611301d5
 
 COCOAPODS: 1.12.1

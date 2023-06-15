@@ -7,6 +7,7 @@
 
 import UIKit
 import RIBs
+import NaverThirdPartyLogin
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 //
+        setupNaverLogin()
+        
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
 
@@ -26,6 +29,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.launchRouter = launchRouter
         launchRouter.launch(from: window)
         return true
+    }
+    
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        NaverThirdPartyLoginConnection.getSharedInstance().application(app, open: url, options: options)
+        return true
+    }
+    
+    private func setupNaverLogin() {
+        let instance = NaverThirdPartyLoginConnection.getSharedInstance()
+        instance?.isNaverAppOauthEnable = true
+        instance?.isInAppOauthEnable = true
+        
+        instance?.serviceUrlScheme = kServiceAppUrlScheme
+        instance?.consumerKey = kConsumerKey
+        instance?.consumerSecret = kConsumerSecret
+        instance?.appName = kServiceAppName
+        
     }
 
 

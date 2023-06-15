@@ -26,6 +26,8 @@ final class LogOutInteractor: PresentableInteractor<LogOutPresentable>, LogOutIn
 
     weak var router: LogOutRouting?
     weak var listener: LogOutListener?
+    
+    let naverLogin = NaverLogin()
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
@@ -45,6 +47,7 @@ final class LogOutInteractor: PresentableInteractor<LogOutPresentable>, LogOutIn
     }
     
     func didTapLogin() {
-        listener?.didTapLogin()
+        naverLogin.login()
+//        listener?.didTapLogin()
     }
 }
