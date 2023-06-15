@@ -28,6 +28,7 @@ final class LogOutInteractor: PresentableInteractor<LogOutPresentable>, LogOutIn
     weak var listener: LogOutListener?
     
     let naverLogin = NaverLogin()
+    let kakaoLogin = KakaoLogin()
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
@@ -47,7 +48,8 @@ final class LogOutInteractor: PresentableInteractor<LogOutPresentable>, LogOutIn
     }
     
     func didTapLogin() {
-        naverLogin.login()
+        kakaoLogin.login()
+//        naverLogin.login()
 //        listener?.didTapLogin()
     }
 }

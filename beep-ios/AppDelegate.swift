@@ -8,6 +8,8 @@
 import UIKit
 import RIBs
 import NaverThirdPartyLogin
+import KakaoSDKCommon
+import KakaoSDKAuth
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 //
         setupNaverLogin()
+        setupKakaoLogin()
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
@@ -33,6 +36,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        if AuthApi.isKakaoTalkLoginUrl(url) {
+            return AuthController.handleOpenUrl(url: url)
+        }
+        
         NaverThirdPartyLoginConnection.getSharedInstance().application(app, open: url, options: options)
         return true
     }
@@ -47,6 +55,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         instance?.consumerSecret = kConsumerSecret
         instance?.appName = kServiceAppName
         
+    }
+    
+    private func setupKakaoLogin() {
+        KakaoSDK.initSDK(appKey: "e435d6425fa688d1fe7fc7a6263c63ac")
     }
 
 

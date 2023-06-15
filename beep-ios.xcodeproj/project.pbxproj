@@ -28,6 +28,7 @@
 		45983F202A3884E900203EBB /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F1C2A3884E900203EBB /* MainInteractor.swift */; };
 		45983F222A38888400203EBB /* RootComponet+Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F212A38888400203EBB /* RootComponet+Main.swift */; };
 		45983F332A3A1EC800203EBB /* NaverLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F322A3A1EC800203EBB /* NaverLogin.swift */; };
+		45983F442A3B6C6B00203EBB /* KakaoLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F432A3B6C6B00203EBB /* KakaoLogin.swift */; };
 		45D160872A2F1C3500D633E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D160862A2F1C3500D633E1 /* AppDelegate.swift */; };
 		45D1608B2A2F1C3500D633E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1608A2A2F1C3500D633E1 /* ViewController.swift */; };
 		45D160902A2F1C3800D633E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D1608F2A2F1C3800D633E1 /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		45983F1C2A3884E900203EBB /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		45983F212A38888400203EBB /* RootComponet+Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponet+Main.swift"; sourceTree = "<group>"; };
 		45983F322A3A1EC800203EBB /* NaverLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLogin.swift; sourceTree = "<group>"; };
+		45983F432A3B6C6B00203EBB /* KakaoLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLogin.swift; sourceTree = "<group>"; };
 		45D160832A2F1C3500D633E1 /* beep-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "beep-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D160862A2F1C3500D633E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45D1608A2A2F1C3500D633E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				45983F322A3A1EC800203EBB /* NaverLogin.swift */,
+				45983F432A3B6C6B00203EBB /* KakaoLogin.swift */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				45D1608B2A2F1C3500D633E1 /* ViewController.swift in Sources */,
 				45D160872A2F1C3500D633E1 /* AppDelegate.swift in Sources */,
 				45983EE02A3857CE00203EBB /* RootBuilder.swift in Sources */,
+				45983F442A3B6C6B00203EBB /* KakaoLogin.swift in Sources */,
 				45983F0C2A3865BD00203EBB /* AppComponent.swift in Sources */,
 				45983F032A385A9200203EBB /* Color.swift in Sources */,
 				45983F332A3A1EC800203EBB /* NaverLogin.swift in Sources */,
