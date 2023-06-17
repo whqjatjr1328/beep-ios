@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4532FBF32A3D3BA00048B9BA /* LoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4532FBF22A3D3BA00048B9BA /* LoginType.swift */; };
+		4532FBF62A3D3CB90048B9BA /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4532FBF52A3D3CB90048B9BA /* LoginButton.swift */; };
 		45983EDE2A3857CE00203EBB /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983EDA2A3857CE00203EBB /* RootRouter.swift */; };
 		45983EDF2A3857CE00203EBB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983EDB2A3857CE00203EBB /* RootViewController.swift */; };
 		45983EE02A3857CE00203EBB /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983EDC2A3857CE00203EBB /* RootBuilder.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4532FBF22A3D3BA00048B9BA /* LoginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginType.swift; sourceTree = "<group>"; };
+		4532FBF52A3D3CB90048B9BA /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		45983EDA2A3857CE00203EBB /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		45983EDB2A3857CE00203EBB /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		45983EDC2A3857CE00203EBB /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
@@ -96,6 +100,14 @@
 				E1D659B1DF638A0581A94BBC /* Pods_beep_ios.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4532FBF42A3D3CAA0048B9BA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4532FBF52A3D3CB90048B9BA /* LoginButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		45983ED92A3857C000203EBB /* Root */ = {
@@ -159,9 +171,11 @@
 		45983F312A3A1EBB00203EBB /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
+				4532FBF42A3D3CAA0048B9BA /* Views */,
 				45983F322A3A1EC800203EBB /* NaverLogin.swift */,
 				45983F432A3B6C6B00203EBB /* KakaoLogin.swift */,
 				45983F452A3B739C00203EBB /* GoogleLogin.swift */,
+				4532FBF22A3D3BA00048B9BA /* LoginType.swift */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
@@ -374,7 +388,9 @@
 				45983F442A3B6C6B00203EBB /* KakaoLogin.swift in Sources */,
 				45983F4F2A3D307600203EBB /* SettingsViewController.swift in Sources */,
 				45983F0C2A3865BD00203EBB /* AppComponent.swift in Sources */,
+				4532FBF62A3D3CB90048B9BA /* LoginButton.swift in Sources */,
 				45983F032A385A9200203EBB /* Color.swift in Sources */,
+				4532FBF32A3D3BA00048B9BA /* LoginType.swift in Sources */,
 				45983F332A3A1EC800203EBB /* NaverLogin.swift in Sources */,
 				45983F1D2A3884E900203EBB /* MainRouter.swift in Sources */,
 			);

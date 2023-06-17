@@ -22,6 +22,32 @@ protocol LogOutPresentableListener: AnyObject {
 final class LogOutViewController: UIViewController, LogOutPresentable, LogOutViewControllable {
 
     weak var listener: LogOutPresentableListener?
+    
+    var titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = Static.font.titleLarge
+        label.textColor = Static.color.black
+        label.textAlignment = .center
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.1
+        label.text = "Beep"
+        return label
+    }()
+    
+    var subTitle: UILabel = {
+        let label = UILabel()
+        label.font = Static.font.titleMedium
+        label.textColor = Static.color.black
+        label.textAlignment = .center
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.1
+        label.text = "기프티콘 관리를 한번에"
+        return label
+    }()
+    
+    var logoImage = UIImageView()
+    
+    
     var naverLogin: UIButton?
     var kakaoLogin: UIButton?
     var googleLogin: UIButton?
@@ -36,64 +62,49 @@ final class LogOutViewController: UIViewController, LogOutPresentable, LogOutVie
     }
     
     func setupUI() {
-        view.backgroundColor = Static.color.main
+        view.backgroundColor = Static.color.whilte
         
-        let naver = makeButton(title: "naver")
-        view.addSubview(naver)
-        naver.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(15)
-            make.right.equalToSuperview().offset(-15)
-            make.bottom.equalToSuperview().offset(-173)
+        view.addSubview(titleLabel)
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(176)
+            make.left.right.equalToSuperview()
             make.height.equalTo(50)
         }
-        self.naverLogin = naver
         
-        let kakao = makeButton(title: "kakao")
-        view.addSubview(kakao)
-        kakao.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(15)
-            make.right.equalToSuperview().offset(-15)
-            make.bottom.equalToSuperview().offset(-113)
-            make.height.equalTo(50)
+        view.addSubview(subTitle)
+        subTitle.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(2)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(24)
         }
-        self.kakaoLogin = kakao
         
-        let google = makeButton(title: "google")
-        view.addSubview(google)
-        google.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(15)
-            make.right.equalToSuperview().offset(-15)
-            make.bottom.equalToSuperview().offset(-53)
-            make.height.equalTo(50)
+        view.addSubview(logoImage)
+        logoImage.snp.makeConstraints { make in
+            make.top.equalTo(subTitle.snp.bottom).offset(34)
+            make.centerX.equalToSuperview()
+            make.width.height.equalTo(144)
         }
-        self.googleLogin = google
         
-//        let apple = makeButton(title: "apple")
-//        view.addSubview(apple)
-//        apple.snp.makeConstraints { make in
-//            make.left.equalToSuperview().offset(15)
-//            make.right.equalToSuperview().offset(-15)
-//            make.bottom.equalToSuperview().offset(-173)
-//            make.height.equalTo(50)
-//        }
-//        self.appleLogin = apple
-    }
-    
-    
-    func makeButton(title: String) -> UIButton {
-        let button = UIButton(type: .custom)
-        button.setTitle(title, for: .normal)
-        button.setTitleColor(Static.color.black, for: .normal)
-        button.titleLabel?.font = Static.font.bodyMedium
-        
-        button.rx.tap
-            .subscribe(onNext: { [weak self] _ in
-                guard let self = self else { return }
-                self.listener?.didTapLogin()
-            })
-            .disposed(by: disposeBag)
-        
-        return button
+        var bottomOffset: CGFloat = 224
+        let loginTypes: [LoginType] = [.naver, .kakao, .google, .apple]
+        for loginType in loginTypes {
+            let button = LoginButton(loginType: loginType)
+            view.addSubview(button)
+            button.snp.makeConstraints { make in
+                make.centerX.equalToSuperview()
+                make.size.equalTo(LoginButton.Dimension.size)
+                make.bottom.equalToSuperview().offset(-bottomOffset)
+            }
+            
+            button.rx.tapGesture()
+                .when(.recognized)
+                .subscribe(onNext: { [weak self] _ in
+                    self?.listener?.didTapLogin()
+                })
+                .disposed(by: self.disposeBag)
+            
+            bottomOffset -= (LoginButton.Dimension.size.height + 10)
+        }
     }
     
 }

@@ -48,8 +48,10 @@ final class LogOutInteractor: PresentableInteractor<LogOutPresentable>, LogOutIn
     }
     
     func didTapLogin() {
-        kakaoLogin.login()
+        
+        
+//        kakaoLogin.login()
 //        naverLogin.login()
-//        listener?.didTapLogin()
+        listener?.didTapLogin()
     }
 }
