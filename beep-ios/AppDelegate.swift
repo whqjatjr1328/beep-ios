@@ -10,6 +10,7 @@ import RIBs
 import NaverThirdPartyLogin
 import KakaoSDKCommon
 import KakaoSDKAuth
+import GoogleSignIn
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -39,6 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if AuthApi.isKakaoTalkLoginUrl(url) {
             return AuthController.handleOpenUrl(url: url)
+        } else if url.scheme?.contains("com.googleusercontent.apps") == true {
+            return GIDSignIn.sharedInstance.handle(url)
         }
         
         NaverThirdPartyLoginConnection.getSharedInstance().application(app, open: url, options: options)

@@ -29,6 +29,10 @@
 		45983F222A38888400203EBB /* RootComponet+Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F212A38888400203EBB /* RootComponet+Main.swift */; };
 		45983F332A3A1EC800203EBB /* NaverLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F322A3A1EC800203EBB /* NaverLogin.swift */; };
 		45983F442A3B6C6B00203EBB /* KakaoLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F432A3B6C6B00203EBB /* KakaoLogin.swift */; };
+		45983F462A3B739C00203EBB /* GoogleLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F452A3B739C00203EBB /* GoogleLogin.swift */; };
+		45983F4B2A3D304300203EBB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F4A2A3D304300203EBB /* HomeViewController.swift */; };
+		45983F4D2A3D305400203EBB /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F4C2A3D305400203EBB /* ListViewController.swift */; };
+		45983F4F2A3D307600203EBB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F4E2A3D307600203EBB /* SettingsViewController.swift */; };
 		45D160872A2F1C3500D633E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D160862A2F1C3500D633E1 /* AppDelegate.swift */; };
 		45D1608B2A2F1C3500D633E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1608A2A2F1C3500D633E1 /* ViewController.swift */; };
 		45D160902A2F1C3800D633E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D1608F2A2F1C3800D633E1 /* Assets.xcassets */; };
@@ -59,6 +63,10 @@
 		45983F212A38888400203EBB /* RootComponet+Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponet+Main.swift"; sourceTree = "<group>"; };
 		45983F322A3A1EC800203EBB /* NaverLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLogin.swift; sourceTree = "<group>"; };
 		45983F432A3B6C6B00203EBB /* KakaoLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLogin.swift; sourceTree = "<group>"; };
+		45983F452A3B739C00203EBB /* GoogleLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLogin.swift; sourceTree = "<group>"; };
+		45983F4A2A3D304300203EBB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		45983F4C2A3D305400203EBB /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		45983F4E2A3D307600203EBB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		45D160832A2F1C3500D633E1 /* beep-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "beep-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D160862A2F1C3500D633E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45D1608A2A2F1C3500D633E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +145,9 @@
 		45983F182A3884D500203EBB /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				45983F492A3D2E6000203EBB /* Home */,
+				45983F482A3D2E5400203EBB /* List */,
+				45983F472A3D2E4B00203EBB /* Setting */,
 				45983F192A3884E900203EBB /* MainRouter.swift */,
 				45983F1A2A3884E900203EBB /* MainViewController.swift */,
 				45983F1B2A3884E900203EBB /* MainBuilder.swift */,
@@ -150,8 +161,33 @@
 			children = (
 				45983F322A3A1EC800203EBB /* NaverLogin.swift */,
 				45983F432A3B6C6B00203EBB /* KakaoLogin.swift */,
+				45983F452A3B739C00203EBB /* GoogleLogin.swift */,
 			);
 			path = LogIn;
+			sourceTree = "<group>";
+		};
+		45983F472A3D2E4B00203EBB /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				45983F4E2A3D307600203EBB /* SettingsViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		45983F482A3D2E5400203EBB /* List */ = {
+			isa = PBXGroup;
+			children = (
+				45983F4C2A3D305400203EBB /* ListViewController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		45983F492A3D2E6000203EBB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				45983F4A2A3D304300203EBB /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		45D1607A2A2F1C3500D633E1 = {
@@ -314,15 +350,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				45983EDF2A3857CE00203EBB /* RootViewController.swift in Sources */,
+				45983F462A3B739C00203EBB /* GoogleLogin.swift in Sources */,
 				45983EDE2A3857CE00203EBB /* RootRouter.swift in Sources */,
 				45983F052A385A9900203EBB /* Font.swift in Sources */,
 				45983F082A385B7C00203EBB /* UIColor+Extension.swift in Sources */,
+				45983F4D2A3D305400203EBB /* ListViewController.swift in Sources */,
 				45983F1F2A3884E900203EBB /* MainBuilder.swift in Sources */,
 				45983F202A3884E900203EBB /* MainInteractor.swift in Sources */,
 				45983F172A3882E100203EBB /* RootComponent+Logout.swift in Sources */,
 				45983F1E2A3884E900203EBB /* MainViewController.swift in Sources */,
 				45983F122A386C0800203EBB /* LogOutRouter.swift in Sources */,
 				45983F0A2A38609B00203EBB /* String+Extension.swift in Sources */,
+				45983F4B2A3D304300203EBB /* HomeViewController.swift in Sources */,
 				45983F152A386C0900203EBB /* LogOutInteractor.swift in Sources */,
 				45983F222A38888400203EBB /* RootComponet+Main.swift in Sources */,
 				45983F142A386C0900203EBB /* LogOutBuilder.swift in Sources */,
@@ -333,6 +372,7 @@
 				45D160872A2F1C3500D633E1 /* AppDelegate.swift in Sources */,
 				45983EE02A3857CE00203EBB /* RootBuilder.swift in Sources */,
 				45983F442A3B6C6B00203EBB /* KakaoLogin.swift in Sources */,
+				45983F4F2A3D307600203EBB /* SettingsViewController.swift in Sources */,
 				45983F0C2A3865BD00203EBB /* AppComponent.swift in Sources */,
 				45983F032A385A9200203EBB /* Color.swift in Sources */,
 				45983F332A3A1EC800203EBB /* NaverLogin.swift in Sources */,

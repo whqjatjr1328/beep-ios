@@ -24,6 +24,16 @@
 				<string>kakaoe435d6425fa688d1fe7fc7a6263c63ac</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>google</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.1062118155089-mh1ef12l8qmanet2t29kkc72pq0a778v</string>
+			</array>
+		</dict>
 	</array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
