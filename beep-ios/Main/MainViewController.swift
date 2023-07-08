@@ -15,7 +15,35 @@ protocol MainPresentableListener: AnyObject {
     // interactor class.
 }
 
-final class MainViewController: UIViewController, MainPresentable, MainViewControllable {
+final class MainViewController: UITabBarController, MainPresentable, MainViewControllable {
 
     weak var listener: MainPresentableListener?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+    }
+    
+    func setupUI() {
+        view.backgroundColor = Static.color.whilte
+        let listViewController = ListViewController()
+        let homeViewController = HomeViewController()
+        let settingsViewController = SettingsViewController()
+        
+        listViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
+        homeViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 1)
+        settingsViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 2)
+        
+        setViewControllers([listViewController, homeViewController, settingsViewController], animated: false)
+        selectedIndex = 1
+        
+        
+        let tabbarAppearance = UITabBarAppearance()
+        tabbarAppearance.backgroundColor = Static.color.whilte
+        
+        tabBar.standardAppearance = tabbarAppearance
+        tabBar.isTranslucent = false 
+    }
+    
+    
 }
