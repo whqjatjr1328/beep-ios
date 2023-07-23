@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RIBs
 import NaverThirdPartyLogin
 import KakaoSDKCommon
 import KakaoSDKAuth
@@ -17,9 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     // MARK: - Private
-
-    private var launchRouter: LaunchRouting?
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 //
