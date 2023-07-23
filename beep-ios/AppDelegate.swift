@@ -27,11 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupKakaoLogin()
         
         let window = UIWindow(frame: UIScreen.main.bounds)
+        window.rootViewController = RootViewController()
+        window.makeKeyAndVisible()
         self.window = window
-
-        let launchRouter = RootBuilder(dependency: AppComponent()).build()
-        self.launchRouter = launchRouter
-        launchRouter.launch(from: window)
         return true
     }
     

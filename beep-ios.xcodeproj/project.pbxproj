@@ -7,39 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4532FBF32A3D3BA00048B9BA /* LoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4532FBF22A3D3BA00048B9BA /* LoginType.swift */; };
-		4532FBF62A3D3CB90048B9BA /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4532FBF52A3D3CB90048B9BA /* LoginButton.swift */; };
-		4532FBFA2A3EE90F0048B9BA /* ListTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4532FBF92A3EE90F0048B9BA /* ListTopView.swift */; };
-		4532FBFC2A3EEA330048B9BA /* GiftListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4532FBFB2A3EEA330048B9BA /* GiftListItemCell.swift */; };
-		4532FBFE2A3EF36E0048B9BA /* GiftListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4532FBFD2A3EF36E0048B9BA /* GiftListView.swift */; };
-		4532FC002A3EFC170048B9BA /* GiftCategoryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4532FBFF2A3EFC170048B9BA /* GiftCategoryItemCell.swift */; };
-		4532FC022A3EFDEF0048B9BA /* GiftCaategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4532FC012A3EFDEF0048B9BA /* GiftCaategoryListView.swift */; };
-		45983EDE2A3857CE00203EBB /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983EDA2A3857CE00203EBB /* RootRouter.swift */; };
 		45983EDF2A3857CE00203EBB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983EDB2A3857CE00203EBB /* RootViewController.swift */; };
-		45983EE02A3857CE00203EBB /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983EDC2A3857CE00203EBB /* RootBuilder.swift */; };
-		45983EE12A3857CE00203EBB /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983EDD2A3857CE00203EBB /* RootInteractor.swift */; };
 		45983EE42A38588E00203EBB /* StaticConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983EE32A38588E00203EBB /* StaticConfig.swift */; };
 		45983F032A385A9200203EBB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F022A385A9200203EBB /* Color.swift */; };
 		45983F052A385A9900203EBB /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F042A385A9900203EBB /* Font.swift */; };
 		45983F082A385B7C00203EBB /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F072A385B7C00203EBB /* UIColor+Extension.swift */; };
 		45983F0A2A38609B00203EBB /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F092A38609B00203EBB /* String+Extension.swift */; };
-		45983F0C2A3865BD00203EBB /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F0B2A3865BD00203EBB /* AppComponent.swift */; };
-		45983F122A386C0800203EBB /* LogOutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F0E2A386C0800203EBB /* LogOutRouter.swift */; };
-		45983F132A386C0800203EBB /* LogOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F0F2A386C0800203EBB /* LogOutViewController.swift */; };
-		45983F142A386C0900203EBB /* LogOutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F102A386C0800203EBB /* LogOutBuilder.swift */; };
-		45983F152A386C0900203EBB /* LogOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F112A386C0800203EBB /* LogOutInteractor.swift */; };
-		45983F172A3882E100203EBB /* RootComponent+Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F162A3882E100203EBB /* RootComponent+Logout.swift */; };
-		45983F1D2A3884E900203EBB /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F192A3884E900203EBB /* MainRouter.swift */; };
-		45983F1E2A3884E900203EBB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F1A2A3884E900203EBB /* MainViewController.swift */; };
-		45983F1F2A3884E900203EBB /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F1B2A3884E900203EBB /* MainBuilder.swift */; };
-		45983F202A3884E900203EBB /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F1C2A3884E900203EBB /* MainInteractor.swift */; };
-		45983F222A38888400203EBB /* RootComponet+Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F212A38888400203EBB /* RootComponet+Main.swift */; };
-		45983F332A3A1EC800203EBB /* NaverLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F322A3A1EC800203EBB /* NaverLogin.swift */; };
-		45983F442A3B6C6B00203EBB /* KakaoLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F432A3B6C6B00203EBB /* KakaoLogin.swift */; };
-		45983F462A3B739C00203EBB /* GoogleLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F452A3B739C00203EBB /* GoogleLogin.swift */; };
-		45983F4B2A3D304300203EBB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F4A2A3D304300203EBB /* HomeViewController.swift */; };
-		45983F4D2A3D305400203EBB /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F4C2A3D305400203EBB /* ListViewController.swift */; };
-		45983F4F2A3D307600203EBB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F4E2A3D307600203EBB /* SettingsViewController.swift */; };
 		45D160872A2F1C3500D633E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D160862A2F1C3500D633E1 /* AppDelegate.swift */; };
 		45D1608B2A2F1C3500D633E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1608A2A2F1C3500D633E1 /* ViewController.swift */; };
 		45D160902A2F1C3800D633E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D1608F2A2F1C3800D633E1 /* Assets.xcassets */; };
@@ -48,39 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4532FBF22A3D3BA00048B9BA /* LoginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginType.swift; sourceTree = "<group>"; };
-		4532FBF52A3D3CB90048B9BA /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
-		4532FBF92A3EE90F0048B9BA /* ListTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTopView.swift; sourceTree = "<group>"; };
-		4532FBFB2A3EEA330048B9BA /* GiftListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftListItemCell.swift; sourceTree = "<group>"; };
-		4532FBFD2A3EF36E0048B9BA /* GiftListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftListView.swift; sourceTree = "<group>"; };
-		4532FBFF2A3EFC170048B9BA /* GiftCategoryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftCategoryItemCell.swift; sourceTree = "<group>"; };
-		4532FC012A3EFDEF0048B9BA /* GiftCaategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftCaategoryListView.swift; sourceTree = "<group>"; };
-		45983EDA2A3857CE00203EBB /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		45983EDB2A3857CE00203EBB /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		45983EDC2A3857CE00203EBB /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
-		45983EDD2A3857CE00203EBB /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		45983EE32A38588E00203EBB /* StaticConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticConfig.swift; sourceTree = "<group>"; };
 		45983F022A385A9200203EBB /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		45983F042A385A9900203EBB /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		45983F072A385B7C00203EBB /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		45983F092A38609B00203EBB /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		45983F0B2A3865BD00203EBB /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
-		45983F0E2A386C0800203EBB /* LogOutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutRouter.swift; sourceTree = "<group>"; };
-		45983F0F2A386C0800203EBB /* LogOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutViewController.swift; sourceTree = "<group>"; };
-		45983F102A386C0800203EBB /* LogOutBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutBuilder.swift; sourceTree = "<group>"; };
-		45983F112A386C0800203EBB /* LogOutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutInteractor.swift; sourceTree = "<group>"; };
-		45983F162A3882E100203EBB /* RootComponent+Logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+Logout.swift"; sourceTree = "<group>"; };
-		45983F192A3884E900203EBB /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
-		45983F1A2A3884E900203EBB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		45983F1B2A3884E900203EBB /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
-		45983F1C2A3884E900203EBB /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
-		45983F212A38888400203EBB /* RootComponet+Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponet+Main.swift"; sourceTree = "<group>"; };
-		45983F322A3A1EC800203EBB /* NaverLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLogin.swift; sourceTree = "<group>"; };
-		45983F432A3B6C6B00203EBB /* KakaoLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLogin.swift; sourceTree = "<group>"; };
-		45983F452A3B739C00203EBB /* GoogleLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLogin.swift; sourceTree = "<group>"; };
-		45983F4A2A3D304300203EBB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		45983F4C2A3D305400203EBB /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		45983F4E2A3D307600203EBB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		45D160832A2F1C3500D633E1 /* beep-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "beep-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D160862A2F1C3500D633E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45D1608A2A2F1C3500D633E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,35 +58,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4532FBF42A3D3CAA0048B9BA /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				4532FBF52A3D3CB90048B9BA /* LoginButton.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		4532FBF82A3EE9010048B9BA /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				4532FBF92A3EE90F0048B9BA /* ListTopView.swift */,
-				4532FBFB2A3EEA330048B9BA /* GiftListItemCell.swift */,
-				4532FBFD2A3EF36E0048B9BA /* GiftListView.swift */,
-				4532FBFF2A3EFC170048B9BA /* GiftCategoryItemCell.swift */,
-				4532FC012A3EFDEF0048B9BA /* GiftCaategoryListView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		45983ED92A3857C000203EBB /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				45983EDA2A3857CE00203EBB /* RootRouter.swift */,
 				45983EDB2A3857CE00203EBB /* RootViewController.swift */,
-				45983EDC2A3857CE00203EBB /* RootBuilder.swift */,
-				45983EDD2A3857CE00203EBB /* RootInteractor.swift */,
-				45983F162A3882E100203EBB /* RootComponent+Logout.swift */,
-				45983F212A38888400203EBB /* RootComponet+Main.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -162,69 +83,6 @@
 				45983F092A38609B00203EBB /* String+Extension.swift */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		45983F0D2A386BED00203EBB /* LogOut */ = {
-			isa = PBXGroup;
-			children = (
-				45983F312A3A1EBB00203EBB /* LogIn */,
-				45983F0E2A386C0800203EBB /* LogOutRouter.swift */,
-				45983F0F2A386C0800203EBB /* LogOutViewController.swift */,
-				45983F102A386C0800203EBB /* LogOutBuilder.swift */,
-				45983F112A386C0800203EBB /* LogOutInteractor.swift */,
-			);
-			path = LogOut;
-			sourceTree = "<group>";
-		};
-		45983F182A3884D500203EBB /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				45983F492A3D2E6000203EBB /* Home */,
-				45983F482A3D2E5400203EBB /* List */,
-				45983F472A3D2E4B00203EBB /* Setting */,
-				45983F192A3884E900203EBB /* MainRouter.swift */,
-				45983F1A2A3884E900203EBB /* MainViewController.swift */,
-				45983F1B2A3884E900203EBB /* MainBuilder.swift */,
-				45983F1C2A3884E900203EBB /* MainInteractor.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		45983F312A3A1EBB00203EBB /* LogIn */ = {
-			isa = PBXGroup;
-			children = (
-				4532FBF42A3D3CAA0048B9BA /* Views */,
-				45983F322A3A1EC800203EBB /* NaverLogin.swift */,
-				45983F432A3B6C6B00203EBB /* KakaoLogin.swift */,
-				45983F452A3B739C00203EBB /* GoogleLogin.swift */,
-				4532FBF22A3D3BA00048B9BA /* LoginType.swift */,
-			);
-			path = LogIn;
-			sourceTree = "<group>";
-		};
-		45983F472A3D2E4B00203EBB /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				45983F4E2A3D307600203EBB /* SettingsViewController.swift */,
-			);
-			path = Setting;
-			sourceTree = "<group>";
-		};
-		45983F482A3D2E5400203EBB /* List */ = {
-			isa = PBXGroup;
-			children = (
-				4532FBF82A3EE9010048B9BA /* Views */,
-				45983F4C2A3D305400203EBB /* ListViewController.swift */,
-			);
-			path = List;
-			sourceTree = "<group>";
-		};
-		45983F492A3D2E6000203EBB /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				45983F4A2A3D304300203EBB /* HomeViewController.swift */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		45D1607A2A2F1C3500D633E1 = {
@@ -251,9 +109,6 @@
 				45983F062A385B6F00203EBB /* Base */,
 				45983EE22A38587A00203EBB /* StaticConfig */,
 				45983ED92A3857C000203EBB /* Root */,
-				45983F0D2A386BED00203EBB /* LogOut */,
-				45983F182A3884D500203EBB /* Main */,
-				45983F0B2A3865BD00203EBB /* AppComponent.swift */,
 				45D160862A2F1C3500D633E1 /* AppDelegate.swift */,
 				45D1608A2A2F1C3500D633E1 /* ViewController.swift */,
 				45D1608F2A2F1C3800D633E1 /* Assets.xcassets */,
@@ -387,40 +242,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				45983EDF2A3857CE00203EBB /* RootViewController.swift in Sources */,
-				45983F462A3B739C00203EBB /* GoogleLogin.swift in Sources */,
-				45983EDE2A3857CE00203EBB /* RootRouter.swift in Sources */,
 				45983F052A385A9900203EBB /* Font.swift in Sources */,
 				45983F082A385B7C00203EBB /* UIColor+Extension.swift in Sources */,
-				4532FC022A3EFDEF0048B9BA /* GiftCaategoryListView.swift in Sources */,
-				45983F4D2A3D305400203EBB /* ListViewController.swift in Sources */,
-				4532FBFC2A3EEA330048B9BA /* GiftListItemCell.swift in Sources */,
-				45983F1F2A3884E900203EBB /* MainBuilder.swift in Sources */,
-				45983F202A3884E900203EBB /* MainInteractor.swift in Sources */,
-				45983F172A3882E100203EBB /* RootComponent+Logout.swift in Sources */,
-				45983F1E2A3884E900203EBB /* MainViewController.swift in Sources */,
-				45983F122A386C0800203EBB /* LogOutRouter.swift in Sources */,
 				45983F0A2A38609B00203EBB /* String+Extension.swift in Sources */,
-				45983F4B2A3D304300203EBB /* HomeViewController.swift in Sources */,
-				45983F152A386C0900203EBB /* LogOutInteractor.swift in Sources */,
-				45983F222A38888400203EBB /* RootComponet+Main.swift in Sources */,
-				45983F142A386C0900203EBB /* LogOutBuilder.swift in Sources */,
-				45983F132A386C0800203EBB /* LogOutViewController.swift in Sources */,
-				45983EE12A3857CE00203EBB /* RootInteractor.swift in Sources */,
-				4532FBFE2A3EF36E0048B9BA /* GiftListView.swift in Sources */,
 				45983EE42A38588E00203EBB /* StaticConfig.swift in Sources */,
 				45D1608B2A2F1C3500D633E1 /* ViewController.swift in Sources */,
-				4532FBFA2A3EE90F0048B9BA /* ListTopView.swift in Sources */,
 				45D160872A2F1C3500D633E1 /* AppDelegate.swift in Sources */,
-				4532FC002A3EFC170048B9BA /* GiftCategoryItemCell.swift in Sources */,
-				45983EE02A3857CE00203EBB /* RootBuilder.swift in Sources */,
-				45983F442A3B6C6B00203EBB /* KakaoLogin.swift in Sources */,
-				45983F4F2A3D307600203EBB /* SettingsViewController.swift in Sources */,
-				45983F0C2A3865BD00203EBB /* AppComponent.swift in Sources */,
-				4532FBF62A3D3CB90048B9BA /* LoginButton.swift in Sources */,
 				45983F032A385A9200203EBB /* Color.swift in Sources */,
-				4532FBF32A3D3BA00048B9BA /* LoginType.swift in Sources */,
-				45983F332A3A1EC800203EBB /* NaverLogin.swift in Sources */,
-				45983F1D2A3884E900203EBB /* MainRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
