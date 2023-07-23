@@ -7,6 +7,8 @@ target 'beep-ios' do
   inhibit_all_warnings!
 
 pod 'RIBs', :git => 'https://github.com/uber/RIBs.git', :branch => 'main'
+pod 'lottie-ios'
+pod 'AdvancedPageControl'
 pod 'SnapKit', '~> 5.0.0'
 pod 'Alamofire'
 pod 'RxSwift', '6.5.0'
