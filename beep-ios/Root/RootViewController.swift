@@ -15,4 +15,16 @@ class RootViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = Static.color.main
     }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let loginVC = LoginViewController()
+        loginVC.modalPresentationStyle = .fullScreen
+        self.present(loginVC, animated: true)
+    }
+    
+    
+    
 }

@@ -7,32 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		459188A82A763D6200EFA2B6 /* LoginImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459188A72A763D6200EFA2B6 /* LoginImageCell.swift */; };
+		459188AB2A763F6800EFA2B6 /* LoginAnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459188AA2A763F6800EFA2B6 /* LoginAnimationType.swift */; };
+		459188AD2A76438200EFA2B6 /* LoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459188AC2A76438200EFA2B6 /* LoginType.swift */; };
+		459188AF2A76480600EFA2B6 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459188AE2A76480600EFA2B6 /* LoginButton.swift */; };
+		459188B22A764DF200EFA2B6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459188B12A764DF200EFA2B6 /* LoginViewModel.swift */; };
 		45983EDF2A3857CE00203EBB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983EDB2A3857CE00203EBB /* RootViewController.swift */; };
 		45983EE42A38588E00203EBB /* StaticConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983EE32A38588E00203EBB /* StaticConfig.swift */; };
 		45983F032A385A9200203EBB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F022A385A9200203EBB /* Color.swift */; };
 		45983F052A385A9900203EBB /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F042A385A9900203EBB /* Font.swift */; };
 		45983F082A385B7C00203EBB /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F072A385B7C00203EBB /* UIColor+Extension.swift */; };
 		45983F0A2A38609B00203EBB /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F092A38609B00203EBB /* String+Extension.swift */; };
+		45B9E5D82A76346B00915DD9 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B9E5D72A76346B00915DD9 /* Dimension.swift */; };
+		45B9E5E92A76386D00915DD9 /* Beep.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 45B9E5E82A76386D00915DD9 /* Beep.bundle */; };
 		45D160872A2F1C3500D633E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D160862A2F1C3500D633E1 /* AppDelegate.swift */; };
 		45D1608B2A2F1C3500D633E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1608A2A2F1C3500D633E1 /* ViewController.swift */; };
 		45D160902A2F1C3800D633E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D1608F2A2F1C3800D633E1 /* Assets.xcassets */; };
 		45D160932A2F1C3800D633E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D160912A2F1C3800D633E1 /* LaunchScreen.storyboard */; };
+		45E884662A6D2AE00094A155 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E884652A6D2AE00094A155 /* LoginViewController.swift */; };
 		4C9B012C178C45DEF1859192 /* Pods_beep_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D659B1DF638A0581A94BBC /* Pods_beep_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		459188A72A763D6200EFA2B6 /* LoginImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginImageCell.swift; sourceTree = "<group>"; };
+		459188AA2A763F6800EFA2B6 /* LoginAnimationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAnimationType.swift; sourceTree = "<group>"; };
+		459188AC2A76438200EFA2B6 /* LoginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginType.swift; sourceTree = "<group>"; };
+		459188AE2A76480600EFA2B6 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		459188B12A764DF200EFA2B6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		45983EDB2A3857CE00203EBB /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		45983EE32A38588E00203EBB /* StaticConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticConfig.swift; sourceTree = "<group>"; };
 		45983F022A385A9200203EBB /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		45983F042A385A9900203EBB /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		45983F072A385B7C00203EBB /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		45983F092A38609B00203EBB /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		45B9E5D72A76346B00915DD9 /* Dimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
+		45B9E5E82A76386D00915DD9 /* Beep.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Beep.bundle; sourceTree = "<group>"; };
 		45D160832A2F1C3500D633E1 /* beep-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "beep-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D160862A2F1C3500D633E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45D1608A2A2F1C3500D633E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		45D1608F2A2F1C3800D633E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45D160922A2F1C3800D633E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45D160942A2F1C3800D633E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45E884652A6D2AE00094A155 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		860DB2D2AF67BA5A9C1930B9 /* Pods-beep-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beep-ios.release.xcconfig"; path = "Target Support Files/Pods-beep-ios/Pods-beep-ios.release.xcconfig"; sourceTree = "<group>"; };
 		98C591E3B0958C203A441A56 /* Pods-beep-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beep-ios.debug.xcconfig"; path = "Target Support Files/Pods-beep-ios/Pods-beep-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		E1D659B1DF638A0581A94BBC /* Pods_beep_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beep_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +74,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		459188A62A763D4100EFA2B6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				459188A72A763D6200EFA2B6 /* LoginImageCell.swift */,
+				459188AE2A76480600EFA2B6 /* LoginButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		459188A92A763F5700EFA2B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				459188AA2A763F6800EFA2B6 /* LoginAnimationType.swift */,
+				459188AC2A76438200EFA2B6 /* LoginType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		459188B02A764DE500EFA2B6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				459188B12A764DF200EFA2B6 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		45983ED92A3857C000203EBB /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +114,7 @@
 				45983EE32A38588E00203EBB /* StaticConfig.swift */,
 				45983F022A385A9200203EBB /* Color.swift */,
 				45983F042A385A9900203EBB /* Font.swift */,
+				45B9E5D72A76346B00915DD9 /* Dimension.swift */,
 			);
 			path = StaticConfig;
 			sourceTree = "<group>";
@@ -83,6 +126,14 @@
 				45983F092A38609B00203EBB /* String+Extension.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		45B9E5E72A76385300915DD9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				45B9E5E82A76386D00915DD9 /* Beep.bundle */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		45D1607A2A2F1C3500D633E1 = {
@@ -106,8 +157,10 @@
 		45D160852A2F1C3500D633E1 /* beep-ios */ = {
 			isa = PBXGroup;
 			children = (
+				45B9E5E72A76385300915DD9 /* Resources */,
 				45983F062A385B6F00203EBB /* Base */,
 				45983EE22A38587A00203EBB /* StaticConfig */,
+				45E884642A6D2ACD0094A155 /* Login */,
 				45983ED92A3857C000203EBB /* Root */,
 				45D160862A2F1C3500D633E1 /* AppDelegate.swift */,
 				45D1608A2A2F1C3500D633E1 /* ViewController.swift */,
@@ -116,6 +169,17 @@
 				45D160942A2F1C3800D633E1 /* Info.plist */,
 			);
 			path = "beep-ios";
+			sourceTree = "<group>";
+		};
+		45E884642A6D2ACD0094A155 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				459188B02A764DE500EFA2B6 /* ViewModel */,
+				459188A92A763F5700EFA2B6 /* Models */,
+				459188A62A763D4100EFA2B6 /* Views */,
+				45E884652A6D2AE00094A155 /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		94CFFB437150511825CEFDAD /* Pods */ = {
@@ -187,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45B9E5E92A76386D00915DD9 /* Beep.bundle in Resources */,
 				45D160932A2F1C3800D633E1 /* LaunchScreen.storyboard in Resources */,
 				45D160902A2F1C3800D633E1 /* Assets.xcassets in Resources */,
 			);
@@ -241,13 +306,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45E884662A6D2AE00094A155 /* LoginViewController.swift in Sources */,
 				45983EDF2A3857CE00203EBB /* RootViewController.swift in Sources */,
 				45983F052A385A9900203EBB /* Font.swift in Sources */,
+				459188AD2A76438200EFA2B6 /* LoginType.swift in Sources */,
 				45983F082A385B7C00203EBB /* UIColor+Extension.swift in Sources */,
 				45983F0A2A38609B00203EBB /* String+Extension.swift in Sources */,
 				45983EE42A38588E00203EBB /* StaticConfig.swift in Sources */,
+				459188AB2A763F6800EFA2B6 /* LoginAnimationType.swift in Sources */,
+				459188B22A764DF200EFA2B6 /* LoginViewModel.swift in Sources */,
 				45D1608B2A2F1C3500D633E1 /* ViewController.swift in Sources */,
+				459188AF2A76480600EFA2B6 /* LoginButton.swift in Sources */,
 				45D160872A2F1C3500D633E1 /* AppDelegate.swift in Sources */,
+				459188A82A763D6200EFA2B6 /* LoginImageCell.swift in Sources */,
+				45B9E5D82A76346B00915DD9 /* Dimension.swift in Sources */,
 				45983F032A385A9200203EBB /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

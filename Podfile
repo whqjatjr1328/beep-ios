@@ -14,6 +14,7 @@ pod 'Alamofire'
 pod 'RxSwift', '6.5.0'
 pod 'RxCocoa', '6.5.0'
 pod 'RxGesture'
+pod 'RxDataSources', '~> 5.0'
 pod 'naveridlogin-sdk-ios'
 pod 'SwiftyJSON', '~> 4.0'
 pod 'KakaoSDKCommon', '2.15.0'  # 필수 요소를 담은 공통 모듈

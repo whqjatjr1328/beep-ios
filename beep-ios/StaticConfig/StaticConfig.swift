@@ -11,4 +11,5 @@ typealias Static = StaticConfig
 class StaticConfig {
     static let color = Color()
     static let font = Font()
+    static let dimension = Dimension()
 }

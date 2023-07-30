@@ -11,4 +11,8 @@ extension String {
     var hex: Int? {
         return Int(self, radix: 16)
     }
+    
+    func appendingPathComponent(_ string: String) -> String {
+        return (self as NSString).appendingPathComponent(string)
+    }
 }
