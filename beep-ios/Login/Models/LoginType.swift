@@ -32,10 +32,10 @@ enum LoginType: CaseIterable {
     
     var icon: UIImage? {
         switch self {
-        case .naver:    return UIImage()
-        case .kakao:    return UIImage()
-        case .google:   return UIImage()
-        case .apple:    return UIImage()
+        case .naver:    return UIImage(beepNamed: "naver")
+        case .kakao:    return UIImage(beepNamed: "kakao")
+        case .google:   return UIImage(beepNamed: "google")
+        case .apple:    return UIImage(beepNamed: "apple")
         case .custom:   return nil
         }
     }

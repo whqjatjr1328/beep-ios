@@ -7,11 +7,15 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+import RxGesture
 import AdvancedPageControl
 
 class LoginViewController: UIViewController {
     enum Dimension {
         static let animationViewWidth: CGFloat = 150
+        static let loginButtonWidth: CGFloat = 44
+        static let loginButtonSpacing: CGFloat = 16
     }
     
     let titleLable: UILabel = {
@@ -61,7 +65,24 @@ class LoginViewController: UIViewController {
         return label
     }()
     
+    let loginButtonList: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: Dimension.loginButtonWidth, height: Dimension.loginButtonWidth)
+        layout.minimumLineSpacing = Dimension.loginButtonSpacing
+        layout.minimumInteritemSpacing = Dimension.loginButtonSpacing
+        layout.scrollDirection = .horizontal
+        let listView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        listView.register(LoginButtonCell.self, forCellWithReuseIdentifier: String(describing: LoginButtonCell.self))
+        listView.isPagingEnabled = true
+        listView.isScrollEnabled = false
+        listView.showsHorizontalScrollIndicator = false
+        return listView
+    }()
+    
+    var customLoginButton: LoginButton?
+    
     let loginViewModel = LoginViewModel()
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,7 +125,28 @@ class LoginViewController: UIViewController {
             make.height.equalTo(20)
         }
         
+        view.addSubview(loginButtonList)
+        let loginButtonCount = CGFloat(loginViewModel.loginButtonTypes.value.count)
+        let loginButtonListWidth = loginButtonCount * (Dimension.loginButtonWidth + Dimension.loginButtonSpacing) - Dimension.loginButtonSpacing
+        loginButtonList.snp.makeConstraints { make in
+            make.top.equalTo(loginButtonTitle.snp.bottom).offset(12)
+            make.centerX.equalToSuperview()
+            make.width.equalTo(loginButtonListWidth)
+            make.height.equalTo(Dimension.loginButtonWidth)
+        }
+        
+        let customLoginButton = LoginButton(loginType: .custom)
+        view.addSubview(customLoginButton)
+        customLoginButton.snp.makeConstraints { make in
+            make.top.equalTo(loginButtonList.snp.bottom).offset(20)
+            make.centerX.equalToSuperview()
+            make.size.equalTo(LoginButton.Dimension.size)
+        }
+        self.customLoginButton = customLoginButton
+        
+        
         setupBinding()
+        setupObserver()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -116,10 +158,29 @@ class LoginViewController: UIViewController {
         animationListView.delegate = self
         loginViewModel.configureLoginAnimatinoList(listView: animationListView)
         animationListView.scrollToItem(at: IndexPath(item: 1, section: 0), at: .centeredHorizontally, animated: false)
+        
+        loginViewModel.configureLoginButtonList(listView: loginButtonList)
+        
+        self.customLoginButton?.rx.tapGesture()
+            .when(.recognized)
+            .bind(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.loginViewModel.selectedLoginButton.onNext(.custom)
+            })
+            .disposed(by: disposeBag)
+        
     }
     
-
-    
+    func setupObserver() {
+        loginViewModel.selectedLoginButton
+            .subscribe(onNext: { [weak self] loginType in
+                guard let self = self else { return }
+                switch loginType {
+                
+                }
+            })
+            .disposed(by: disposeBag)
+    }
     
 }
 
