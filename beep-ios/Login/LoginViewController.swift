@@ -177,6 +177,11 @@ class LoginViewController: UIViewController {
                 guard let self = self else { return }
                 switch loginType {
                 
+                case .naver: break
+                case .kakao: break
+                case .google: break
+                case .apple: break
+                case .custom: break
                 }
             })
             .disposed(by: disposeBag)
