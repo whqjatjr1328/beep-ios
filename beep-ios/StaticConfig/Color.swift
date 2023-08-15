@@ -63,4 +63,8 @@ class Color {
     var grey99: UIColor {
         return UIColor(hexString: "#FFFBFE")
     }
+    
+    var pink: UIColor {
+        return UIColor(hexString: "#FF2869")
+    }
 }

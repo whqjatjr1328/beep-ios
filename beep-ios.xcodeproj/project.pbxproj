@@ -22,6 +22,10 @@
 		45B9E5E92A76386D00915DD9 /* Beep.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 45B9E5E82A76386D00915DD9 /* Beep.bundle */; };
 		45D0365E2A8B45F900FE5042 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0365D2A8B45F900FE5042 /* UIImage+Extension.swift */; };
 		45D036602A8B4B1800FE5042 /* LoginButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0365F2A8B4B1800FE5042 /* LoginButtonCell.swift */; };
+		45D036632A8B602200FE5042 /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D036622A8B602200FE5042 /* PermissionViewController.swift */; };
+		45D036662A8B611400FE5042 /* PermissionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D036652A8B611400FE5042 /* PermissionType.swift */; };
+		45D036692A8B628800FE5042 /* PermissionTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D036682A8B628800FE5042 /* PermissionTypeView.swift */; };
+		45D0366B2A8B654700FE5042 /* PermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0366A2A8B654700FE5042 /* PermissionView.swift */; };
 		45D160872A2F1C3500D633E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D160862A2F1C3500D633E1 /* AppDelegate.swift */; };
 		45D1608B2A2F1C3500D633E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1608A2A2F1C3500D633E1 /* ViewController.swift */; };
 		45D160902A2F1C3800D633E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D1608F2A2F1C3800D633E1 /* Assets.xcassets */; };
@@ -46,6 +50,10 @@
 		45B9E5E82A76386D00915DD9 /* Beep.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Beep.bundle; sourceTree = "<group>"; };
 		45D0365D2A8B45F900FE5042 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		45D0365F2A8B4B1800FE5042 /* LoginButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonCell.swift; sourceTree = "<group>"; };
+		45D036622A8B602200FE5042 /* PermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
+		45D036652A8B611400FE5042 /* PermissionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionType.swift; sourceTree = "<group>"; };
+		45D036682A8B628800FE5042 /* PermissionTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionTypeView.swift; sourceTree = "<group>"; };
+		45D0366A2A8B654700FE5042 /* PermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionView.swift; sourceTree = "<group>"; };
 		45D160832A2F1C3500D633E1 /* beep-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "beep-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D160862A2F1C3500D633E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45D1608A2A2F1C3500D633E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +150,33 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		45D036612A8B601000FE5042 /* Permission */ = {
+			isa = PBXGroup;
+			children = (
+				45D036672A8B627C00FE5042 /* Views */,
+				45D036642A8B610600FE5042 /* Models */,
+				45D036622A8B602200FE5042 /* PermissionViewController.swift */,
+			);
+			path = Permission;
+			sourceTree = "<group>";
+		};
+		45D036642A8B610600FE5042 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				45D036652A8B611400FE5042 /* PermissionType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		45D036672A8B627C00FE5042 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				45D036682A8B628800FE5042 /* PermissionTypeView.swift */,
+				45D0366A2A8B654700FE5042 /* PermissionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		45D1607A2A2F1C3500D633E1 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +202,7 @@
 				45983F062A385B6F00203EBB /* Base */,
 				45983EE22A38587A00203EBB /* StaticConfig */,
 				45E884642A6D2ACD0094A155 /* Login */,
+				45D036612A8B601000FE5042 /* Permission */,
 				45983ED92A3857C000203EBB /* Root */,
 				45D160862A2F1C3500D633E1 /* AppDelegate.swift */,
 				45D1608A2A2F1C3500D633E1 /* ViewController.swift */,
@@ -313,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45E884662A6D2AE00094A155 /* LoginViewController.swift in Sources */,
+				45D036632A8B602200FE5042 /* PermissionViewController.swift in Sources */,
 				45983EDF2A3857CE00203EBB /* RootViewController.swift in Sources */,
 				45983F052A385A9900203EBB /* Font.swift in Sources */,
 				459188AD2A76438200EFA2B6 /* LoginType.swift in Sources */,
@@ -323,10 +360,13 @@
 				459188B22A764DF200EFA2B6 /* LoginViewModel.swift in Sources */,
 				45D1608B2A2F1C3500D633E1 /* ViewController.swift in Sources */,
 				459188AF2A76480600EFA2B6 /* LoginButton.swift in Sources */,
+				45D0366B2A8B654700FE5042 /* PermissionView.swift in Sources */,
 				45D0365E2A8B45F900FE5042 /* UIImage+Extension.swift in Sources */,
 				45D160872A2F1C3500D633E1 /* AppDelegate.swift in Sources */,
+				45D036662A8B611400FE5042 /* PermissionType.swift in Sources */,
 				45D036602A8B4B1800FE5042 /* LoginButtonCell.swift in Sources */,
 				459188A82A763D6200EFA2B6 /* LoginImageCell.swift in Sources */,
+				45D036692A8B628800FE5042 /* PermissionTypeView.swift in Sources */,
 				45B9E5D82A76346B00915DD9 /* Dimension.swift in Sources */,
 				45983F032A385A9200203EBB /* Color.swift in Sources */,
 			);
