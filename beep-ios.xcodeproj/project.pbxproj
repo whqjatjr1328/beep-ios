@@ -26,6 +26,8 @@
 		45D036662A8B611400FE5042 /* PermissionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D036652A8B611400FE5042 /* PermissionType.swift */; };
 		45D036692A8B628800FE5042 /* PermissionTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D036682A8B628800FE5042 /* PermissionTypeView.swift */; };
 		45D0366B2A8B654700FE5042 /* PermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0366A2A8B654700FE5042 /* PermissionView.swift */; };
+		45D0366E2A8B6FC800FE5042 /* Gifticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0366D2A8B6FC800FE5042 /* Gifticon.swift */; };
+		45D036702AADBB8300FE5042 /* LoginViewModel+Naver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0366F2AADBB8300FE5042 /* LoginViewModel+Naver.swift */; };
 		45D160872A2F1C3500D633E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D160862A2F1C3500D633E1 /* AppDelegate.swift */; };
 		45D1608B2A2F1C3500D633E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1608A2A2F1C3500D633E1 /* ViewController.swift */; };
 		45D160902A2F1C3800D633E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D1608F2A2F1C3800D633E1 /* Assets.xcassets */; };
@@ -54,6 +56,8 @@
 		45D036652A8B611400FE5042 /* PermissionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionType.swift; sourceTree = "<group>"; };
 		45D036682A8B628800FE5042 /* PermissionTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionTypeView.swift; sourceTree = "<group>"; };
 		45D0366A2A8B654700FE5042 /* PermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionView.swift; sourceTree = "<group>"; };
+		45D0366D2A8B6FC800FE5042 /* Gifticon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gifticon.swift; sourceTree = "<group>"; };
+		45D0366F2AADBB8300FE5042 /* LoginViewModel+Naver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewModel+Naver.swift"; sourceTree = "<group>"; };
 		45D160832A2F1C3500D633E1 /* beep-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "beep-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D160862A2F1C3500D633E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45D1608A2A2F1C3500D633E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				459188B12A764DF200EFA2B6 /* LoginViewModel.swift */,
+				45D0366F2AADBB8300FE5042 /* LoginViewModel+Naver.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -177,6 +182,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		45D0366C2A8B6FB400FE5042 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				45D0366D2A8B6FC800FE5042 /* Gifticon.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		45D1607A2A2F1C3500D633E1 = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +213,7 @@
 			children = (
 				45B9E5E72A76385300915DD9 /* Resources */,
 				45983F062A385B6F00203EBB /* Base */,
+				45D0366C2A8B6FB400FE5042 /* Models */,
 				45983EE22A38587A00203EBB /* StaticConfig */,
 				45E884642A6D2ACD0094A155 /* Login */,
 				45D036612A8B601000FE5042 /* Permission */,
@@ -352,6 +366,7 @@
 				45D036632A8B602200FE5042 /* PermissionViewController.swift in Sources */,
 				45983EDF2A3857CE00203EBB /* RootViewController.swift in Sources */,
 				45983F052A385A9900203EBB /* Font.swift in Sources */,
+				45D036702AADBB8300FE5042 /* LoginViewModel+Naver.swift in Sources */,
 				459188AD2A76438200EFA2B6 /* LoginType.swift in Sources */,
 				45983F082A385B7C00203EBB /* UIColor+Extension.swift in Sources */,
 				45983F0A2A38609B00203EBB /* String+Extension.swift in Sources */,
@@ -368,6 +383,7 @@
 				459188A82A763D6200EFA2B6 /* LoginImageCell.swift in Sources */,
 				45D036692A8B628800FE5042 /* PermissionTypeView.swift in Sources */,
 				45B9E5D82A76346B00915DD9 /* Dimension.swift in Sources */,
+				45D0366E2A8B6FC800FE5042 /* Gifticon.swift in Sources */,
 				45983F032A385A9200203EBB /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

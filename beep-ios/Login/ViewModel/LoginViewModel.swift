@@ -9,22 +9,40 @@ import Foundation
 import RxSwift
 import RxCocoa
 import RxDataSources
+import NaverThirdPartyLogin
 
-class LoginViewModel {
+class LoginViewModel: NSObject {
     
     let animationCount = LoginAnimationType.allCases.count
     let loginAnimations = BehaviorRelay<[LoginAnimationType]>(value: [.third, .first, .second, .third, .first])
     let loginButtonTypes = BehaviorRelay<[LoginType]>(value: [.naver, .kakao, .google, .apple])
-    
+     
     let selectedLoginButton = PublishSubject<LoginType>()
     
-    let disposeBag = DisposeBag()
+    let naverLoginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
     
+    var disposeBag = DisposeBag()
     
-    init() {
-        
+    override init() {
+        super.init()
+        setupLoginSettings()
     }
     
+    private func setupLoginSettings() {
+        setupNaverLoginSettings()
+    }
+    
+    func isLogined() -> Bool {
+        return naverLoginInstance?.isValidAccessTokenExpireTimeNow() ?? false
+    }
+    
+    func resetViewModel() {
+        disposeBag = DisposeBag()
+    }
+    
+}
+
+extension LoginViewModel {
     func configureLoginAnimatinoList(listView: UICollectionView) {
         let datasource = RxCollectionViewSectionedReloadDataSource<SectionModel<Int, LoginAnimationType>> { [weak self] datasource, collectionView, indexPath, item in
             guard let self = self else { return LoginImageCell() }
@@ -50,9 +68,7 @@ class LoginViewModel {
         let idx = index % animationCount
         return idx > 0 ? idx : idx + animationCount
     }
-}
-
-extension LoginViewModel {
+    
     func configureLoginButtonList(listView: UICollectionView) {
         let datasource = RxCollectionViewSectionedReloadDataSource<SectionModel<Int, LoginType>> { [weak self] datasource, collectionView, indexPath, item in
             guard let self = self else { return LoginButtonCell() }

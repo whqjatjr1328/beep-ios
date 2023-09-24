@@ -19,10 +19,19 @@ class RootViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        let loginViewModel = LoginViewModel()
         
-        let loginVC = LoginViewController()
-        loginVC.modalPresentationStyle = .fullScreen
-        self.present(loginVC, animated: true)
+        if loginViewModel.isLogined() == false {
+            let loginVC = LoginViewController(loginViewModel: loginViewModel)
+            loginVC.modalPresentationStyle = .fullScreen
+            self.present(loginVC, animated: true)
+            return
+        }
+        
+        let permissionVC = PermissionViewController()
+        permissionVC.modalPresentationStyle = .fullScreen
+        self.present(permissionVC, animated: true)
+        
     }
     
     

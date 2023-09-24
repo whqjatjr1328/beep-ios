@@ -86,6 +86,7 @@ class PermissionViewController: UIViewController {
         button.backgroundColor = Static.color.pink
         button.layer.cornerRadius = 16
         self.agreeButton = button
+        view.addSubview(button)
         button.snp.makeConstraints { make in
             make.top.equalTo(descriptionLabel.snp.bottom).offset(20)
             make.centerX.equalToSuperview()
