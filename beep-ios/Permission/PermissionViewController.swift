@@ -13,18 +13,18 @@ class PermissionViewController: UIViewController {
     
     let titleLable: UILabel = {
         let label = UILabel()
-        label.text = "접근 권한 안내"
-        label.font = UIFont.systemFont(ofSize: 22, weight: .bold)
-        label.textAlignment = .center
+        label.text = "Beep"
+        label.font = Static.font.title2
+        label.textAlignment = .left
         label.textColor = Static.color.black
         return label
     }()
     
     let subTitleLabel: UILabel = {
         let label = UILabel()
-        label.text = "이용을 위해 접근 권한을 허용해 주세요"
-        label.font = Static.font.titleSmall
-        label.textAlignment = .center
+        label.text = "접근 권한 안내"
+        label.font = Static.font.highlight2
+        label.textAlignment = .left
         label.textColor = Static.color.grey30
         return label
     }()
@@ -41,19 +41,20 @@ class PermissionViewController: UIViewController {
     }
     
     func setupUI() {
+        view.backgroundColor = Static.color.bg
+        
         view.addSubview(titleLable)
         titleLable.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(100)
-            make.centerX.equalToSuperview()
-            make.width.equalTo(125)
-            make.height.equalTo(28)
+            make.top.equalToSuperview().offset(Static.dimension.safeArae.top + 6)
+            make.left.equalToSuperview().offset(24)
+            make.height.equalTo(38)
         }
         
         view.addSubview(subTitleLabel)
         subTitleLabel.snp.makeConstraints { make in
-            make.top.equalTo(titleLable.snp.bottom)
-            make.left.right.equalToSuperview()
-            make.height.equalTo(20)
+            make.top.equalTo(titleLable.snp.bottom).offset(16)
+            make.left.equalTo(titleLable.snp.left)
+            make.height.equalTo(30)
         }
         
         let permissionView = PermissionView()
@@ -66,20 +67,6 @@ class PermissionViewController: UIViewController {
         }
         self.permissionView = permissionView
         
-        let descriptionLabel = UILabel()
-        descriptionLabel.text = "허용하지 않아도 서비스를 이용할 수 있으나\n일부 서비스의 이용이 제한 될 수 있습니다."
-        descriptionLabel.textAlignment = .center
-        descriptionLabel.font = Static.font.bodySmall
-        descriptionLabel.textColor = Static.color.grey70
-        self.descriptionLabel = descriptionLabel
-        view.addSubview(descriptionLabel)
-        descriptionLabel.snp.makeConstraints { make in
-            make.top.equalTo(permissionView.snp.bottom).offset(156)
-            make.centerX.equalToSuperview()
-            make.width.equalTo(211)
-            make.height.equalTo(32)
-        }
-        
         let button = UIButton()
         button.setTitle("동의하고 시작", for: .normal)
         button.setTitleColor(Static.color.whilte, for: .normal)
@@ -88,10 +75,10 @@ class PermissionViewController: UIViewController {
         self.agreeButton = button
         view.addSubview(button)
         button.snp.makeConstraints { make in
-            make.top.equalTo(descriptionLabel.snp.bottom).offset(20)
+            make.bottom.equalToSuperview().offset(0 - Static.dimension.safeArae.bottom - 12)
             make.centerX.equalToSuperview()
-            make.width.equalTo(312)
-            make.height.equalTo(54)
+            make.width.equalTo(327)
+            make.height.equalTo(16 + 22 + 16)
         }
         
         button.rx.tapGesture()
@@ -100,6 +87,20 @@ class PermissionViewController: UIViewController {
                 guard let self = self else { return }
             })
             .disposed(by: disposeBag)
+        
+        let descriptionLabel = UILabel()
+        descriptionLabel.text = "허용하지 않아도 서비스를 이용할 수 있으나\n일부 서비스의 이용이 제한 될 수 있습니다."
+        descriptionLabel.textAlignment = .center
+        descriptionLabel.numberOfLines = 2
+        descriptionLabel.font = Static.font.subText
+        descriptionLabel.textColor = Static.color.grey70
+        self.descriptionLabel = descriptionLabel
+        view.addSubview(descriptionLabel)
+        descriptionLabel.snp.makeConstraints { make in
+            make.bottom.equalTo(button.snp.top).offset(-20)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(36)
+        }
     }
     
     

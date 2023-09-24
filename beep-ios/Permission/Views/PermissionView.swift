@@ -10,15 +10,15 @@ import SnapKit
 
 class PermissionView: UIView {
     enum Dimension {
-        static let titleHeight: CGFloat = 24
-        static let titleBottomMargin: CGFloat = 20
-        static let spacing: CGFloat = 16
+        static let titleHeight: CGFloat = 22
+        static let titleBottomMargin: CGFloat = 16
+        static let spacing: CGFloat = 15
     }
     
     let titleLable: UILabel = {
         let label = UILabel()
         label.text = "선택 권한 목록"
-        label.font = Static.font.titleMedium
+        label.font = Static.font.title5
         label.textAlignment = .left
         label.textColor = Static.color.grey30
         return label
@@ -34,22 +34,22 @@ class PermissionView: UIView {
     }
     
     func setupUI() {
-        backgroundColor = Static.color.grey95
+        backgroundColor = .clear
         
         addSubview(titleLable)
         titleLable.snp.makeConstraints { make in
-            make.top.left.equalToSuperview().offset(Dimension.titleHeight)
-            make.width.equalTo(92)
+            make.top.left.right.equalToSuperview()
             make.height.equalTo(Dimension.titleHeight)
         }
         
-        var offset: CGFloat = Dimension.titleHeight + Dimension.titleHeight + Dimension.titleBottomMargin
+        var offset: CGFloat = Dimension.titleHeight + Dimension.titleBottomMargin
         for permissionType in PermissionType.allCases {
             let permissionTypeView = PermissionTypeView(permissionType: permissionType)
             addSubview(permissionTypeView)
             permissionTypeView.snp.makeConstraints { make in
                 make.top.equalToSuperview().offset(offset)
                 make.left.right.equalToSuperview()
+                make.height.equalTo(PermissionTypeView.Dimension.size.height)
             }
             
             offset += PermissionTypeView.Dimension.size.height

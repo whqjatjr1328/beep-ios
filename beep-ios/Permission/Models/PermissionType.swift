@@ -33,4 +33,12 @@ enum PermissionType: CaseIterable {
         case .location: return UIImage(beepNamed: "Pin_fill")
         }
     }
+    
+    var iconBGColor: UIColor {
+        switch self {
+        case .alarm:    return UIColor(hexString: "#D5A1E9")
+        case .gallery:  return UIColor(hexString: "619CE4")
+        case .location: return UIColor(hexString: "#F48E4A")
+        }
+    }
 }
