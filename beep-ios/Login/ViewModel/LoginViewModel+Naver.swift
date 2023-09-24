@@ -82,6 +82,7 @@ extension LoginViewModel: NaverThirdPartyLoginConnectionDelegate {
                     print("네이버 로그인 프로필사진 ",profile)
                     print("네이버 로그인 이메일 ",email)
                     print("네이버 로그인 닉네임 ",nickName)
+                    self.didLogin.onNext(Void())
                 }
                 else{
                     //실패

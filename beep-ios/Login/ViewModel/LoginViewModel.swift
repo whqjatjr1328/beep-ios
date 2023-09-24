@@ -17,10 +17,10 @@ class LoginViewModel: NSObject {
     let loginAnimations = BehaviorRelay<[LoginAnimationType]>(value: [.third, .first, .second, .third, .first])
     let loginButtonTypes = BehaviorRelay<[LoginType]>(value: [.naver, .kakao, .google, .apple])
      
-    let selectedLoginButton = PublishSubject<LoginType>()
-    
     let naverLoginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
     
+    let selectedLoginButton = PublishSubject<LoginType>()
+    let didLogin = PublishSubject<Void>()
     var disposeBag = DisposeBag()
     
     override init() {
@@ -32,8 +32,8 @@ class LoginViewModel: NSObject {
         setupNaverLoginSettings()
     }
     
-    func isLogined() -> Bool {
-        return naverLoginInstance?.isValidAccessTokenExpireTimeNow() ?? false
+    static func isLogined() -> Bool {
+        return NaverThirdPartyLoginConnection.getSharedInstance()?.isValidAccessTokenExpireTimeNow() ?? false
     }
     
     func resetViewModel() {
