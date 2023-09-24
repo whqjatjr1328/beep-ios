@@ -23,6 +23,9 @@ pod 'KakaoSDKUser', '2.15.0'  # 카카오 로그인, 사용자 관리
 
 pod 'GoogleSignIn'
 
+pod 'RealmSwift', '~>10'
+
+
   # Pods for beep-ios
 
 end
