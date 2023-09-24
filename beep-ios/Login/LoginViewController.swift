@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
     let titleLable: UILabel = {
         let label = UILabel()
         label.text = "Beep"
-        label.font = UIFont.systemFont(ofSize: 24, weight: .regular)
+        label.font = Static.font.large
         label.textAlignment = .center
         label.textColor = Static.color.black
         return label
@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
     let subTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "기프티콘을 한번에 관리해요"
-        label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        label.font = Static.font.title5
         label.textAlignment = .center
         label.textColor = Static.color.grey30
         return label
@@ -59,7 +59,7 @@ class LoginViewController: UIViewController {
     let loginButtonTitle: UILabel = {
         let label = UILabel()
         label.text = "로그인 방법 선택"
-        label.font = Static.font.bodyMedium
+        label.font = Static.font.body5
         label.textAlignment = .center
         label.textColor = Static.color.grey50
         return label
@@ -86,7 +86,7 @@ class LoginViewController: UIViewController {
     
     init(loginViewModel: LoginViewModel) {
         self.loginViewModel = loginViewModel
-        super.init()
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {

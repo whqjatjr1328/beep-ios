@@ -45,7 +45,7 @@ class LoginButton: UIView {
         titleLabel.text = loginType.title
         titleLabel.textColor = loginType.textColor
         titleLabel.textAlignment = .center
-        titleLabel.font = Static.font.titleSmall
+        titleLabel.font = Static.font.title5
         addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
             make.edges.equalToSuperview()
@@ -59,7 +59,7 @@ class LoginButton: UIView {
             }
             
             titleLabel.textAlignment = .left
-            titleLabel.font = Static.font.bodySmall
+            titleLabel.font = Static.font.body3
             titleLabel.snp.remakeConstraints { make in
                 make.top.bottom.equalToSuperview()
                 make.left.right.equalToSuperview().inset(34)
@@ -69,7 +69,7 @@ class LoginButton: UIView {
             subTitleLabel.text = "비회원 로그인"
             subTitleLabel.textColor = Static.color.grey30
             subTitleLabel.textAlignment = .left
-            subTitleLabel.font = Static.font.bodySmall
+            subTitleLabel.font = Static.font.body3
             addSubview(subTitleLabel)
             subTitleLabel.snp.makeConstraints { make in
                 make.top.bottom.equalToSuperview()

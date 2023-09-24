@@ -67,4 +67,8 @@ class Color {
     var pink: UIColor {
         return UIColor(hexString: "#FF2869")
     }
+    
+    var bg: UIColor {
+        return UIColor(hexString: "#F8F8F8")
+    }
 }

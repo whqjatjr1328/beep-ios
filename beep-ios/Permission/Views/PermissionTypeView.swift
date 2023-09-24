@@ -9,12 +9,12 @@ import UIKit
 
 class PermissionTypeView: UIView {
     enum Dimension {
-        static let size: CGSize = CGSize(width: 246, height: 40)
+        static let size: CGSize = CGSize(width: 263, height: 76)
     }
     
     let titleLable: UILabel = {
         let label = UILabel()
-        label.font = Static.font.titleSmall
+        label.font = Static.font.subTitle
         label.textAlignment = .left
         label.textColor = Static.color.grey30
         return label
@@ -22,7 +22,7 @@ class PermissionTypeView: UIView {
     
     let descriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = Static.font.bodySmall
+        label.font = Static.font.body4
         label.textAlignment = .left
         label.textColor = Static.color.grey30
         return label
