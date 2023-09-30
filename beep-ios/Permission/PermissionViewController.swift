@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Photos
 import RxSwift
 import RxGesture
 
@@ -33,6 +34,9 @@ class PermissionViewController: UIViewController {
     var descriptionLabel: UILabel?
     var agreeButton: UIButton?
     
+    var locationManager: CLLocationManager? = nil
+    
+    let didRequestPersmission = PublishSubject<Void>()
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -85,6 +89,7 @@ class PermissionViewController: UIViewController {
             .when(.recognized)
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else { return }
+                self.requestPermissions()
             })
             .disposed(by: disposeBag)
         
@@ -102,7 +107,82 @@ class PermissionViewController: UIViewController {
             make.height.equalTo(36)
         }
     }
+}
+
+extension PermissionViewController {
+    func requestPermissions() {
+        requestNotificationAuthorization()
+            .flatMap({ _ in self.requestPHPhotoLibraryAuthorization() })
+            .subscribe(onSuccess: { [weak self] _ in
+                guard let self = self else { return }
+                self.requestLocationUsage()
+            })
+            .disposed(by: disposeBag)
+    }
     
+    func requestNotificationAuthorization() -> Single<Bool> {
+        return Single<Bool>.create { single in
+            let authOptions: UNAuthorizationOptions = [.alert, .sound, .badge]
+            let notificationCenter = UNUserNotificationCenter.current()
+            notificationCenter.requestAuthorization(options: authOptions) { success, error in
+                if let error = error {
+                    print(error)
+                }
+                
+                single(.success(success))
+            }
+            
+            return Disposables.create()
+        }
+    }
     
+    func requestPHPhotoLibraryAuthorization() -> Single<Bool> {
+        return Single<Bool>.create { single in
+            guard PHPhotoLibrary.authorizationStatus(for: .readWrite) != .authorized else {
+                single(.success(true))
+                return Disposables.create()
+            }
+            
+            PHPhotoLibrary.requestAuthorization(for: .readWrite) { authorizationStatus in
+                switch authorizationStatus {
+                case .limited:
+                    print("limited authorization granted")
+                case .authorized:
+                    print("authorization granted")
+                default:
+                    print("Unimplemented")
+                }
+                single(.success(true))
+            }
+            
+            return Disposables.create()
+        }
+    }
     
+    func requestLocationUsage() {
+        let locationManager = CLLocationManager()
+        locationManager.delegate = self
+        
+        guard locationManager.authorizationStatus
+        
+        locationManager.requestWhenInUseAuthorization()
+        self.locationManager = locationManager
+    }
+}
+
+extension PermissionViewController: CLLocationManagerDelegate {
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        switch manager.authorizationStatus {
+        case .authorizedAlways, .authorizedWhenInUse:
+            print("location auth success")
+        case .restricted, .notDetermined:
+            print("location auth not set")
+        case .denied:
+            print("location auth denied")
+        default:
+            break
+        }
+        
+        self.didRequestPersmission.onNext(())
+    }
 }

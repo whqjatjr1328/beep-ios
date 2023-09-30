@@ -36,24 +36,41 @@ class RootViewController: UIViewController {
 extension RootViewController {
     private func openLoginViewControlelr() {
         let loginViewModel = LoginViewModel()
+        let loginVC = LoginViewController(loginViewModel: loginViewModel)
+        loginVC.modalPresentationStyle = .fullScreen
         
         loginViewModel.didLogin
             .take(1)
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else { return }
-                self.presentingViewController?.dismiss(animated: false)
-                self.openPermissionController()
+                loginVC.dismiss(animated: true) { [weak self] in
+                    self?.openPermissionController()
+                }
             })
             .disposed(by: disposeBag)
         
-        let loginVC = LoginViewController(loginViewModel: loginViewModel)
-        loginVC.modalPresentationStyle = .fullScreen
         self.present(loginVC, animated: true)
     }
     
     private func openPermissionController() {
         let permissionVC = PermissionViewController()
         permissionVC.modalPresentationStyle = .fullScreen
+        
+        permissionVC.didRequestPersmission
+            .take(1)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                permissionVC.dismiss(animated: true) { [weak self] in
+                    self?.openHomeViewController()
+                }
+                
+            })
+            .disposed(by: disposeBag)
+        
         self.present(permissionVC, animated: true)
+    }
+    
+    private func openHomeViewController() {
+        
     }
 }
