@@ -15,7 +15,7 @@ class RootViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Static.color.main
+        view.backgroundColor = Static.color.beepPink
     }
     
     

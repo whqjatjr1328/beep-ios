@@ -22,10 +22,10 @@ enum LoginType: CaseIterable {
     
     var textColor: UIColor {
         switch self {
-        case .naver:    return Static.color.whilte
+        case .naver:    return Static.color.white
         case .kakao:    return Static.color.black
         case .google:   return Static.color.black
-        case .apple:    return Static.color.whilte
+        case .apple:    return Static.color.white
         case .custom:   return UIColor(hexString: "#AEAAAE")
         }
     }

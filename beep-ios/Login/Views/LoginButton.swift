@@ -67,7 +67,7 @@ class LoginButton: UIView {
             
             let subTitleLabel = UILabel()
             subTitleLabel.text = "비회원 로그인"
-            subTitleLabel.textColor = Static.color.grey30
+            subTitleLabel.textColor = Static.color.fontGray
             subTitleLabel.textAlignment = .left
             subTitleLabel.font = Static.font.body3
             addSubview(subTitleLabel)

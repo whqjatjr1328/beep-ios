@@ -20,7 +20,7 @@ class PermissionView: UIView {
         label.text = "선택 권한 목록"
         label.font = Static.font.title5
         label.textAlignment = .left
-        label.textColor = Static.color.grey30
+        label.textColor = Static.color.fontDarkGray
         return label
     }()
     

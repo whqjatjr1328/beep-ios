@@ -16,7 +16,7 @@ class PermissionTypeView: UIView {
         let label = UILabel()
         label.font = Static.font.subTitle
         label.textAlignment = .left
-        label.textColor = Static.color.grey30
+        label.textColor = UIColor(hexString: "#4A4A4A")
         return label
     }()
     
@@ -24,7 +24,7 @@ class PermissionTypeView: UIView {
         let label = UILabel()
         label.font = Static.font.body4
         label.textAlignment = .left
-        label.textColor = Static.color.grey30
+        label.textColor = UIColor(hexString: "#AAAAAA")
         return label
     }()
     
@@ -43,7 +43,7 @@ class PermissionTypeView: UIView {
     }
     
     func setupUI() {
-        backgroundColor = Static.color.whilte
+        backgroundColor = Static.color.white
         layer.cornerRadius = 12
         
         let iconBgView = UIView()

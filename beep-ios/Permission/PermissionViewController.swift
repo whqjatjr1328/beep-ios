@@ -26,7 +26,7 @@ class PermissionViewController: UIViewController {
         label.text = "접근 권한 안내"
         label.font = Static.font.highlight2
         label.textAlignment = .left
-        label.textColor = Static.color.grey30
+        label.textColor = Static.color.fontDarkGray
         return label
     }()
     
@@ -73,8 +73,8 @@ class PermissionViewController: UIViewController {
         
         let button = UIButton()
         button.setTitle("동의하고 시작", for: .normal)
-        button.setTitleColor(Static.color.whilte, for: .normal)
-        button.backgroundColor = Static.color.pink
+        button.setTitleColor(Static.color.white, for: .normal)
+        button.backgroundColor = Static.color.beepPink
         button.layer.cornerRadius = 16
         self.agreeButton = button
         view.addSubview(button)
@@ -98,7 +98,7 @@ class PermissionViewController: UIViewController {
         descriptionLabel.textAlignment = .center
         descriptionLabel.numberOfLines = 2
         descriptionLabel.font = Static.font.subText
-        descriptionLabel.textColor = Static.color.grey70
+        descriptionLabel.textColor = Static.color.fontGray
         self.descriptionLabel = descriptionLabel
         view.addSubview(descriptionLabel)
         descriptionLabel.snp.makeConstraints { make in
@@ -163,7 +163,7 @@ extension PermissionViewController {
         let locationManager = CLLocationManager()
         locationManager.delegate = self
         
-        guard locationManager.authorizationStatus
+//        guard locationManager.authorizationStatus ==  else { return }
         
         locationManager.requestWhenInUseAuthorization()
         self.locationManager = locationManager

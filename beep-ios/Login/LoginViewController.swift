@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
         label.text = "Beep"
         label.font = Static.font.large
         label.textAlignment = .center
-        label.textColor = Static.color.black
+        label.textColor = Static.color.fontDarkGray
         return label
     }()
     
@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
         label.text = "기프티콘을 한번에 관리해요"
         label.font = Static.font.title5
         label.textAlignment = .center
-        label.textColor = Static.color.grey30
+        label.textColor = Static.color.fontDarkGray
         return label
     }()
     
@@ -52,7 +52,7 @@ class LoginViewController: UIViewController {
     
     let pageControl: AdvancedPageControlView = {
         let pageControl = AdvancedPageControlView()
-        pageControl.drawer = WormDrawer(numberOfPages: 3, indicatorColor: Static.color.main)
+        pageControl.drawer = WormDrawer(numberOfPages: 3, indicatorColor: Static.color.beepPink)
         return pageControl
     }()
     
@@ -61,7 +61,7 @@ class LoginViewController: UIViewController {
         label.text = "로그인 방법 선택"
         label.font = Static.font.body5
         label.textAlignment = .center
-        label.textColor = Static.color.grey50
+        label.textColor = Static.color.fontGray
         return label
     }()
     
@@ -99,7 +99,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Static.color.whilte
+        view.backgroundColor = Static.color.white
         
         view.addSubview(titleLable)
         titleLable.snp.makeConstraints { make in
