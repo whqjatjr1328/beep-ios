@@ -11,4 +11,12 @@ class Dimension {
     var safeArae: UIEdgeInsets {
         return UIApplication.shared.delegate?.window??.safeAreaInsets ?? .zero
     }
+    
+    var screenWidth: CGFloat {
+        return UIScreen.main.bounds.width
+    }
+    
+    var screenHeight: CGFloat {
+        return UIScreen.main.bounds.height
+    }
 }

@@ -5,7 +5,7 @@
 //  Created by BeomSeok on 2023/06/13.
 //
 
-import Foundation
+import UIKit
 
 extension String {
     var hex: Int? {
@@ -14,5 +14,10 @@ extension String {
     
     func appendingPathComponent(_ string: String) -> String {
         return (self as NSString).appendingPathComponent(string)
+    }
+    
+    func size(boundingSize: CGSize, font: UIFont) -> CGSize {
+        let boundingBox = self.boundingRect(with: boundingSize, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
+        return CGSize(width: boundingBox.width, height: boundingBox.height)
     }
 }

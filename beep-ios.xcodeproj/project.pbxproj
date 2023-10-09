@@ -18,8 +18,22 @@
 		45983F052A385A9900203EBB /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F042A385A9900203EBB /* Font.swift */; };
 		45983F082A385B7C00203EBB /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F072A385B7C00203EBB /* UIColor+Extension.swift */; };
 		45983F0A2A38609B00203EBB /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F092A38609B00203EBB /* String+Extension.swift */; };
+		45B4AC002AD3DE9800F59397 /* Dms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4ABFF2AD3DE9800F59397 /* Dms.swift */; };
+		45B4AC022AD3E33400F59397 /* UsageHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC012AD3E33400F59397 /* UsageHistory.swift */; };
+		45B4AC042AD3E83300F59397 /* BrandSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC032AD3E83300F59397 /* BrandSection.swift */; };
+		45B4AC062AD3E94100F59397 /* BrandLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC052AD3E94100F59397 /* BrandLocation.swift */; };
+		45B4AC082AD4185100F59397 /* MainGifticonByLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC072AD4185100F59397 /* MainGifticonByLocationCell.swift */; };
+		45B4AC0A2AD420BA00F59397 /* MainGifticonListByLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC092AD420BA00F59397 /* MainGifticonListByLocation.swift */; };
+		45B4AC0C2AD426BA00F59397 /* MainGifticonListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC0B2AD426BA00F59397 /* MainGifticonListHeader.swift */; };
+		45B4AC0E2AD43B1200F59397 /* MainGifticonOrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC0D2AD43B1200F59397 /* MainGifticonOrderButton.swift */; };
+		45B4AC102AD43E6F00F59397 /* GifticonBrandListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC0F2AD43E6F00F59397 /* GifticonBrandListCell.swift */; };
+		45B4AC122AD447D400F59397 /* MainGifticonEditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC112AD447D400F59397 /* MainGifticonEditButton.swift */; };
+		45B4AC232AD44F6C00F59397 /* MainGifticonListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC222AD44F6C00F59397 /* MainGifticonListCell.swift */; };
 		45B9E5D82A76346B00915DD9 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B9E5D72A76346B00915DD9 /* Dimension.swift */; };
 		45B9E5E92A76386D00915DD9 /* Beep.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 45B9E5E82A76386D00915DD9 /* Beep.bundle */; };
+		45C27DB22AC7E5C9000FA158 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C27DB12AC7E5C9000FA158 /* MainViewController.swift */; };
+		45C27DB52AC7E767000FA158 /* MainTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C27DB42AC7E767000FA158 /* MainTopView.swift */; };
+		45C27DB72AC7E864000FA158 /* LoginInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C27DB62AC7E864000FA158 /* LoginInfo.swift */; };
 		45D0365E2A8B45F900FE5042 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0365D2A8B45F900FE5042 /* UIImage+Extension.swift */; };
 		45D036602A8B4B1800FE5042 /* LoginButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0365F2A8B4B1800FE5042 /* LoginButtonCell.swift */; };
 		45D036632A8B602200FE5042 /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D036622A8B602200FE5042 /* PermissionViewController.swift */; };
@@ -48,8 +62,22 @@
 		45983F042A385A9900203EBB /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		45983F072A385B7C00203EBB /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		45983F092A38609B00203EBB /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		45B4ABFF2AD3DE9800F59397 /* Dms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dms.swift; sourceTree = "<group>"; };
+		45B4AC012AD3E33400F59397 /* UsageHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageHistory.swift; sourceTree = "<group>"; };
+		45B4AC032AD3E83300F59397 /* BrandSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandSection.swift; sourceTree = "<group>"; };
+		45B4AC052AD3E94100F59397 /* BrandLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandLocation.swift; sourceTree = "<group>"; };
+		45B4AC072AD4185100F59397 /* MainGifticonByLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGifticonByLocationCell.swift; sourceTree = "<group>"; };
+		45B4AC092AD420BA00F59397 /* MainGifticonListByLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGifticonListByLocation.swift; sourceTree = "<group>"; };
+		45B4AC0B2AD426BA00F59397 /* MainGifticonListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGifticonListHeader.swift; sourceTree = "<group>"; };
+		45B4AC0D2AD43B1200F59397 /* MainGifticonOrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGifticonOrderButton.swift; sourceTree = "<group>"; };
+		45B4AC0F2AD43E6F00F59397 /* GifticonBrandListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonBrandListCell.swift; sourceTree = "<group>"; };
+		45B4AC112AD447D400F59397 /* MainGifticonEditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGifticonEditButton.swift; sourceTree = "<group>"; };
+		45B4AC222AD44F6C00F59397 /* MainGifticonListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGifticonListCell.swift; sourceTree = "<group>"; };
 		45B9E5D72A76346B00915DD9 /* Dimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
 		45B9E5E82A76386D00915DD9 /* Beep.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Beep.bundle; sourceTree = "<group>"; };
+		45C27DB12AC7E5C9000FA158 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		45C27DB42AC7E767000FA158 /* MainTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTopView.swift; sourceTree = "<group>"; };
+		45C27DB62AC7E864000FA158 /* LoginInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInfo.swift; sourceTree = "<group>"; };
 		45D0365D2A8B45F900FE5042 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		45D0365F2A8B4B1800FE5042 /* LoginButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonCell.swift; sourceTree = "<group>"; };
 		45D036622A8B602200FE5042 /* PermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +133,7 @@
 			children = (
 				459188AA2A763F6800EFA2B6 /* LoginAnimationType.swift */,
 				459188AC2A76438200EFA2B6 /* LoginType.swift */,
+				45C27DB62AC7E864000FA158 /* LoginInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -155,6 +184,30 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		45C27DB02AC7E5BC000FA158 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				45C27DB32AC7E70A000FA158 /* Views */,
+				45C27DB12AC7E5C9000FA158 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		45C27DB32AC7E70A000FA158 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				45B4AC0F2AD43E6F00F59397 /* GifticonBrandListCell.swift */,
+				45B4AC072AD4185100F59397 /* MainGifticonByLocationCell.swift */,
+				45B4AC112AD447D400F59397 /* MainGifticonEditButton.swift */,
+				45B4AC092AD420BA00F59397 /* MainGifticonListByLocation.swift */,
+				45B4AC0B2AD426BA00F59397 /* MainGifticonListHeader.swift */,
+				45B4AC0D2AD43B1200F59397 /* MainGifticonOrderButton.swift */,
+				45C27DB42AC7E767000FA158 /* MainTopView.swift */,
+				45B4AC222AD44F6C00F59397 /* MainGifticonListCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		45D036612A8B601000FE5042 /* Permission */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +239,10 @@
 			isa = PBXGroup;
 			children = (
 				45D0366D2A8B6FC800FE5042 /* Gifticon.swift */,
+				45B4ABFF2AD3DE9800F59397 /* Dms.swift */,
+				45B4AC012AD3E33400F59397 /* UsageHistory.swift */,
+				45B4AC032AD3E83300F59397 /* BrandSection.swift */,
+				45B4AC052AD3E94100F59397 /* BrandLocation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -214,6 +271,7 @@
 				45B9E5E72A76385300915DD9 /* Resources */,
 				45983EE22A38587A00203EBB /* StaticConfig */,
 				45983F062A385B6F00203EBB /* Base */,
+				45C27DB02AC7E5BC000FA158 /* Main */,
 				45D0366C2A8B6FB400FE5042 /* Models */,
 				45E884642A6D2ACD0094A155 /* Login */,
 				45D036612A8B601000FE5042 /* Permission */,
@@ -363,9 +421,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				45E884662A6D2AE00094A155 /* LoginViewController.swift in Sources */,
+				45B4AC122AD447D400F59397 /* MainGifticonEditButton.swift in Sources */,
 				45D036632A8B602200FE5042 /* PermissionViewController.swift in Sources */,
+				45B4AC042AD3E83300F59397 /* BrandSection.swift in Sources */,
+				45B4AC232AD44F6C00F59397 /* MainGifticonListCell.swift in Sources */,
+				45B4AC102AD43E6F00F59397 /* GifticonBrandListCell.swift in Sources */,
 				45983EDF2A3857CE00203EBB /* RootViewController.swift in Sources */,
+				45B4AC002AD3DE9800F59397 /* Dms.swift in Sources */,
+				45B4AC022AD3E33400F59397 /* UsageHistory.swift in Sources */,
+				45B4AC0A2AD420BA00F59397 /* MainGifticonListByLocation.swift in Sources */,
 				45983F052A385A9900203EBB /* Font.swift in Sources */,
+				45C27DB52AC7E767000FA158 /* MainTopView.swift in Sources */,
 				45D036702AADBB8300FE5042 /* LoginViewModel+Naver.swift in Sources */,
 				459188AD2A76438200EFA2B6 /* LoginType.swift in Sources */,
 				45983F082A385B7C00203EBB /* UIColor+Extension.swift in Sources */,
@@ -374,17 +440,23 @@
 				459188AB2A763F6800EFA2B6 /* LoginAnimationType.swift in Sources */,
 				459188B22A764DF200EFA2B6 /* LoginViewModel.swift in Sources */,
 				45D1608B2A2F1C3500D633E1 /* ViewController.swift in Sources */,
+				45B4AC062AD3E94100F59397 /* BrandLocation.swift in Sources */,
+				45C27DB72AC7E864000FA158 /* LoginInfo.swift in Sources */,
 				459188AF2A76480600EFA2B6 /* LoginButton.swift in Sources */,
 				45D0366B2A8B654700FE5042 /* PermissionView.swift in Sources */,
 				45D0365E2A8B45F900FE5042 /* UIImage+Extension.swift in Sources */,
+				45C27DB22AC7E5C9000FA158 /* MainViewController.swift in Sources */,
 				45D160872A2F1C3500D633E1 /* AppDelegate.swift in Sources */,
+				45B4AC0E2AD43B1200F59397 /* MainGifticonOrderButton.swift in Sources */,
 				45D036662A8B611400FE5042 /* PermissionType.swift in Sources */,
 				45D036602A8B4B1800FE5042 /* LoginButtonCell.swift in Sources */,
 				459188A82A763D6200EFA2B6 /* LoginImageCell.swift in Sources */,
 				45D036692A8B628800FE5042 /* PermissionTypeView.swift in Sources */,
 				45B9E5D82A76346B00915DD9 /* Dimension.swift in Sources */,
 				45D0366E2A8B6FC800FE5042 /* Gifticon.swift in Sources */,
+				45B4AC082AD4185100F59397 /* MainGifticonByLocationCell.swift in Sources */,
 				45983F032A385A9200203EBB /* Color.swift in Sources */,
+				45B4AC0C2AD426BA00F59397 /* MainGifticonListHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

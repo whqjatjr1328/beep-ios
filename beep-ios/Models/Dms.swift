@@ -23,7 +23,6 @@ class Dms: EmbeddedObject {
     init(dd: Double) {
         self.dd = dd
         
-        var ddValue = dd
         let degreeDouble = floor(dd)
         let minuteDouble = floor((dd - degreeDouble) * 60)
         let secondDouble = floor(((dd - degreeDouble) * 60 - minuteDouble) * 60)
@@ -34,9 +33,9 @@ class Dms: EmbeddedObject {
     }
     
     func sample(dGap: Int, mGap: Int, sGap: Int) -> Dms {
-        var dOffset = dGap != 0 ? degree % dGap : 0
-        var mOffset = mGap != 0 ? minute % mGap : 0
-        var sOffset = sGap != 0 ? second % sGap : 0
+        let dOffset = dGap != 0 ? degree % dGap : 0
+        let mOffset = mGap != 0 ? minute % mGap : 0
+        let sOffset = sGap != 0 ? second % sGap : 0
         return self + Dms(degree: -dOffset, minute: -mOffset, second: -sOffset)
     }
     
