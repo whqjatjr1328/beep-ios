@@ -12,4 +12,5 @@ class StaticConfig {
     static let color = Color()
     static let font = Font()
     static let dimension = Dimension()
+    static let constant = Constant()
 }

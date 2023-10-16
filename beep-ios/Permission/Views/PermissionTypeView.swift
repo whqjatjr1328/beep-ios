@@ -14,7 +14,7 @@ class PermissionTypeView: UIView {
     
     let titleLable: UILabel = {
         let label = UILabel()
-        label.font = Static.font.subTitle
+        label.font = Static.font.subTitle2
         label.textAlignment = .left
         label.textColor = UIColor(hexString: "#4A4A4A")
         return label

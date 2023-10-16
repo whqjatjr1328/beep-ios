@@ -60,7 +60,11 @@ class Font {
         return UIFont.systemFont(ofSize: 12, weight: .medium)
     }
     
-    var subTitle: UIFont {
+    var subTitle1: UIFont {
+        return UIFont.systemFont(ofSize: 20, weight: .regular)
+    }
+    
+    var subTitle2: UIFont {
         return UIFont.systemFont(ofSize: 14, weight: .bold)
     }
     

@@ -19,52 +19,16 @@ enum MainGifticonListOrder: CaseIterable {
     }
 }
 
-class MainGifticonOrderButton: UIView {
-    var isSelected: Bool = false {
-        didSet {
-            updateView()
-        }
-    }
-    
-    let titleLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        label.font = Static.font.body3
-        return label
-    }()
-    
-    let seperator = UIView()
+class MainGifticonOrderButton: BaseSelectButton {
     
     let order: MainGifticonListOrder
     
     init(order: MainGifticonListOrder) {
         self.order = order
-        super.init(frame: .zero)
-        setupView()
+        super.init(title: order.title)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    func setupView() {
-        titleLabel.text = order.title
-        addSubview(titleLabel)
-        titleLabel.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-        
-        addSubview(seperator)
-        seperator.snp.makeConstraints { make in
-            make.left.bottom.right.equalToSuperview()
-            make.height.equalTo(1)
-        }
-        
-        updateView()
-    }
-    
-    func updateView() {
-        titleLabel.textColor = isSelected ? Static.color.black : Static.color.fontMediumGray
-        seperator.backgroundColor = isSelected ? Static.color.black : Static.color.lightGray
     }
 }
