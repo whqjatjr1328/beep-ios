@@ -29,6 +29,7 @@
 		45B4AC102AD43E6F00F59397 /* GifticonBrandListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC0F2AD43E6F00F59397 /* GifticonBrandListCell.swift */; };
 		45B4AC122AD447D400F59397 /* MainGifticonEditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC112AD447D400F59397 /* MainGifticonEditButton.swift */; };
 		45B4AC232AD44F6C00F59397 /* MainGifticonListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC222AD44F6C00F59397 /* MainGifticonListCell.swift */; };
+		45B4AC6E2ADD910900F59397 /* MainGifticonListFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC6D2ADD910900F59397 /* MainGifticonListFooter.swift */; };
 		45B9E5D82A76346B00915DD9 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B9E5D72A76346B00915DD9 /* Dimension.swift */; };
 		45B9E5E92A76386D00915DD9 /* Beep.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 45B9E5E82A76386D00915DD9 /* Beep.bundle */; };
 		45C27DB22AC7E5C9000FA158 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C27DB12AC7E5C9000FA158 /* MainViewController.swift */; };
@@ -73,6 +74,7 @@
 		45B4AC0F2AD43E6F00F59397 /* GifticonBrandListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonBrandListCell.swift; sourceTree = "<group>"; };
 		45B4AC112AD447D400F59397 /* MainGifticonEditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGifticonEditButton.swift; sourceTree = "<group>"; };
 		45B4AC222AD44F6C00F59397 /* MainGifticonListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGifticonListCell.swift; sourceTree = "<group>"; };
+		45B4AC6D2ADD910900F59397 /* MainGifticonListFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGifticonListFooter.swift; sourceTree = "<group>"; };
 		45B9E5D72A76346B00915DD9 /* Dimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
 		45B9E5E82A76386D00915DD9 /* Beep.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Beep.bundle; sourceTree = "<group>"; };
 		45C27DB12AC7E5C9000FA158 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				45B4AC112AD447D400F59397 /* MainGifticonEditButton.swift */,
 				45B4AC092AD420BA00F59397 /* MainGifticonListByLocation.swift */,
 				45B4AC0B2AD426BA00F59397 /* MainGifticonListHeader.swift */,
+				45B4AC6D2ADD910900F59397 /* MainGifticonListFooter.swift */,
 				45B4AC0D2AD43B1200F59397 /* MainGifticonOrderButton.swift */,
 				45C27DB42AC7E767000FA158 /* MainTopView.swift */,
 				45B4AC222AD44F6C00F59397 /* MainGifticonListCell.swift */,
@@ -442,6 +445,7 @@
 				45D1608B2A2F1C3500D633E1 /* ViewController.swift in Sources */,
 				45B4AC062AD3E94100F59397 /* BrandLocation.swift in Sources */,
 				45C27DB72AC7E864000FA158 /* LoginInfo.swift in Sources */,
+				45B4AC6E2ADD910900F59397 /* MainGifticonListFooter.swift in Sources */,
 				459188AF2A76480600EFA2B6 /* LoginButton.swift in Sources */,
 				45D0366B2A8B654700FE5042 /* PermissionView.swift in Sources */,
 				45D0365E2A8B45F900FE5042 /* UIImage+Extension.swift in Sources */,

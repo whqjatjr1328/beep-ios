@@ -160,13 +160,16 @@ extension PermissionViewController {
     }
     
     func requestLocationUsage() {
-        let locationManager = CLLocationManager()
-        locationManager.delegate = self
+        self.didRequestPersmission.onNext(())
         
-//        guard locationManager.authorizationStatus ==  else { return }
-        
-        locationManager.requestWhenInUseAuthorization()
-        self.locationManager = locationManager
+//        
+//        let locationManager = CLLocationManager()
+//        locationManager.delegate = self
+//        
+////        guard locationManager.authorizationStatus ==  else { return }
+//        
+//        locationManager.requestWhenInUseAuthorization()
+//        self.locationManager = locationManager
     }
 }
 

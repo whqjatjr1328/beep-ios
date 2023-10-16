@@ -40,6 +40,7 @@ class MainGifticonOrderButton: UIView {
     init(order: MainGifticonListOrder) {
         self.order = order
         super.init(frame: .zero)
+        setupView()
     }
     
     required init?(coder: NSCoder) {

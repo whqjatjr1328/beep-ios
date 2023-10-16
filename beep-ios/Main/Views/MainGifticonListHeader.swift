@@ -51,6 +51,7 @@ class MainGifticonListHeader: UICollectionReusableView {
     }
     
     func setupViews() {
+        
         let dDayButton = MainGifticonOrderButton(order: .dDay)
         addSubview(dDayButton)
         dDayButton.snp.makeConstraints { make in

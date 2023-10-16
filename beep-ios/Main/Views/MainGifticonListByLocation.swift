@@ -12,9 +12,11 @@ class MainGifticonListByLocation: UICollectionViewCell {
         static let size = CGSize(width: Static.dimension.screenWidth, height: 324)
     }
     
+    var locationTitleText: String {
+        return "근처에서 사용할 수 있어요"
+    }
     let locationTitle: UILabel = {
         let label = UILabel()
-        label.text = "근처에서 사용할 수 있어요"
         label.textColor = Static.color.fontDarkGray
         label.font = Static.font.title5
         return label
@@ -22,6 +24,7 @@ class MainGifticonListByLocation: UICollectionViewCell {
     
     let locationIcon: UIImageView = {
         let imageView = UIImageView()
+        imageView.image = UIImage(beepNamed: "Pin_fill")
         return imageView
     }()
     
@@ -49,6 +52,8 @@ class MainGifticonListByLocation: UICollectionViewCell {
         return button
     }()
     
+    var gifticons: [Gifticon] = []
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -61,11 +66,14 @@ class MainGifticonListByLocation: UICollectionViewCell {
     func setupViews() {
         contentView.backgroundColor = Static.color.bg
         
+        let text = locationTitleText
+        let textWidth = text.size(boundingSize: CGSize(width: Static.dimension.screenWidth, height: 22), font: Static.font.title5).width
+        locationTitle.text = text
         contentView.addSubview(locationTitle)
         locationTitle.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(16)
             make.left.equalToSuperview().offset(24)
-            make.width.equalTo(160)
+            make.width.equalTo(ceil(textWidth))
             make.height.equalTo(22)
         }
         
@@ -76,6 +84,9 @@ class MainGifticonListByLocation: UICollectionViewCell {
             make.width.height.equalTo(16)
         }
         
+        gifticonList.backgroundColor = .clear
+        gifticonList.dataSource = self
+        gifticonList.delegate = self
         contentView.addSubview(gifticonList)
         gifticonList.snp.makeConstraints { make in
             make.top.equalTo(locationTitle.snp.bottom).offset(16)
@@ -91,4 +102,26 @@ class MainGifticonListByLocation: UICollectionViewCell {
             make.height.equalTo(54)
         }
     }
+}
+
+extension MainGifticonListByLocation: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return gifticons.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: MainGifticonByLocationCell.self), for: indexPath)
+        
+        if let locationCell = cell as? MainGifticonByLocationCell {
+            
+        }
+        
+        return cell
+    }
+    
+    
+}
+
+extension MainGifticonListByLocation: UICollectionViewDelegate {
+    
 }

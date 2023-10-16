@@ -11,6 +11,7 @@ import UIKit
 
 class RootViewController: UIViewController {
     
+    var didPermission: Bool = false
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -27,7 +28,9 @@ class RootViewController: UIViewController {
             return
         }
          
-        openPermissionController()
+        if didPermission == false {
+            openPermissionController()
+        }
     }
     
 }
@@ -41,6 +44,7 @@ extension RootViewController {
         
         loginViewModel.didLogin
             .take(1)
+            .observe(on: MainScheduler.asyncInstance)
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else { return }
                 loginVC.dismiss(animated: true) { [weak self] in
@@ -58,8 +62,10 @@ extension RootViewController {
         
         permissionVC.didRequestPersmission
             .take(1)
+            .observe(on: MainScheduler.asyncInstance)
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else { return }
+                self.didPermission = true
                 permissionVC.dismiss(animated: true) { [weak self] in
                     self?.openHomeViewController()
                 }
@@ -71,6 +77,9 @@ extension RootViewController {
     }
     
     private func openHomeViewController() {
+        let homeVC = MainViewController()
+        homeVC.modalPresentationStyle = .fullScreen
         
+        self.present(homeVC, animated: true)
     }
 }
