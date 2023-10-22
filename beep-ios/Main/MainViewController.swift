@@ -72,16 +72,13 @@ class MainViewController: UIViewController {
     }
     
     func setupObservers() {
-        
-        
         addButton.rx.tap
             .bind(onNext: { [weak self] _ in
                 guard let self = self else { return }
-                
+                self.didTapAddButton()
             })
             .disposed(by: disposeBag)
     }
-    
 }
 
 extension MainViewController: UICollectionViewDataSource {
@@ -160,5 +157,13 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 16
     }
-    
+}
+
+extension MainViewController {
+    func didTapAddButton() {
+        let selectedImageViewModel = SelectedImageViewModel()
+        let galleryVC = GalleryViewController(selectedImageViewModel: selectedImageViewModel)
+        galleryVC.modalPresentationStyle = .fullScreen
+        self.present(galleryVC, animated: true)
+    }
 }

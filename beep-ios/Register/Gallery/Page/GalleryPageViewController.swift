@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import Photos
+import SnapKit
 
-class GalleryPageViewController: UIViewController {
+class GalleryPageViewController: UIViewController, PHPhotoLibraryChangeObserver {
     
     let collectionView: UICollectionView = {
         let collectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -21,18 +23,67 @@ class GalleryPageViewController: UIViewController {
         return collectionView
     }()
     
+    var fetchResult: PHFetchResult<PHAsset>
+    let fetchOption: PHFetchOptions = {
+        let fetchOption = PHFetchOptions()
+        fetchOption.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
+        return fetchOption
+    }()
     
+    var imageManager: PHCachingImageManager?
+    
+    init(imageManager: PHCachingImageManager) {
+        self.imageManager = imageManager
+        fetchResult = PHAsset.fetchAssets(with: .image, options: fetchOption)
+        super.init(nibName: nil, bundle: nil)
+        PHPhotoLibrary.shared().register(self)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    deinit {
+        PHPhotoLibrary.shared().unregisterChangeObserver(self)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupViews()
+    }
+    
+    func photoLibraryDidChange(_ changeInstance: PHChange) {
+        
+    }
+    
+    func setupViews() {
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+    }
 }
 
 extension GalleryPageViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return fetchResult.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: GalleryPagePhotoCell.self), for: indexPath)
         
         if let photoCell = cell as? GalleryPagePhotoCell {
+            let asset = fetchResult.object(at: indexPath.item)
+            photoCell.updateCell(assetId: asset.localIdentifier)
+            
+            let targetSize = CGSize(width: 200, height: 200)
+            imageManager?.requestImage(for: asset, targetSize: targetSize, contentMode: .aspectFill, options: .none, resultHandler: { resultImage, _ in
+                if let resultImage = resultImage {
+                    photoCell.updateCellImage(assetId: asset.localIdentifier, image: resultImage)
+                }
+            })
             
         }
         

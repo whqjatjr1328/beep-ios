@@ -26,6 +26,7 @@ class GalleryPagePhotoCell: UICollectionViewCell {
     var selectedColor: UIColor { return Static.color.beepPink }
     var unSeletedColor: UIColor { return Static.color.gray }
     
+    var assetId: String = ""
     var currentImage: UIImage? = nil
     
     override init(frame: CGRect) {
@@ -39,12 +40,13 @@ class GalleryPagePhotoCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        updateCell(image: nil)
+        updateCell(assetId: "")
         updateSelectedState(selectedIndex: nil)
     }
     
     func setupViews() {
         contentView.backgroundColor = Static.color.lightGray
+        contentView.layer.masksToBounds = true
         
         imageView.backgroundColor = Static.color.gray
         imageView.contentMode = .scaleAspectFill
@@ -87,9 +89,18 @@ class GalleryPagePhotoCell: UICollectionViewCell {
         }
     }
     
-    func updateCell(image: UIImage?) {
-        currentImage = image
-        imageView.image = image
+    func updateCell(assetId: String) {
+        self.assetId = assetId
+    }
+    
+    func updateCellImage(assetId: String, image: UIImage?) {
+        if assetId == self.assetId {
+            currentImage = image
+            imageView.image = image
+        } else {
+            currentImage = nil
+            imageView.image = nil
+        }
     }
     
     

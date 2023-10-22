@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Photos
 import SnapKit
 import RxSwift
 import RxCocoa
@@ -15,6 +16,9 @@ class GalleryViewController: UIViewController {
     let bottomView = GalleryBottoView()
     let selectedImageView = GallerySelectedImageListView()
     let pageTabView = GalleryPageTabView()
+    
+    var galleryPageVC: GalleryPageViewController?
+    var recommendPageVC: GalleryPageViewController?
     var pageViewController: UIPageViewController?
     
     weak var selectedImageViewModel: SelectedImageViewModel?
@@ -77,11 +81,26 @@ class GalleryViewController: UIViewController {
         pageViewController.dataSource = self
         pageViewController.delegate = self
         self.pageViewController = pageViewController
+        
+        let imageManager = PHCachingImageManager()
+        let galleryPageVC = GalleryPageViewController(imageManager: imageManager)
+        self.galleryPageVC = galleryPageVC
+        let recommendPageVC = GalleryPageViewController(imageManager: imageManager)
+        self.recommendPageVC = recommendPageVC
+        
+        pageViewController.setViewControllers([galleryPageVC], direction: .forward, animated: false)
     }
     
     func setupObservers() {
         pageTabView.selectedPage
-            .subscribe()
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] pageType in
+                guard let self else { return }
+                let nextVC = pageType == .all ? self.galleryPageVC : self.recommendPageVC
+                let navigationDirection: UIPageViewController.NavigationDirection = pageType == .all ? .forward : .reverse
+                guard let vc = nextVC else { return }
+                pageViewController?.setViewControllers([vc], direction: navigationDirection, animated: true)
+            })
             .disposed(by: disposeBag)
     }
 }
