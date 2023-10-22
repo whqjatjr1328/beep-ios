@@ -39,6 +39,10 @@
 		45B4AC802ADDA67A00F59397 /* GalleryPageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC7F2ADDA67A00F59397 /* GalleryPageButton.swift */; };
 		45B4AC832ADDA71400F59397 /* BaseSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC822ADDA71400F59397 /* BaseSelectButton.swift */; };
 		45B4AC852ADDA8B300F59397 /* GalleryPageTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC842ADDA8B300F59397 /* GalleryPageTabView.swift */; };
+		45B4AC882AE18A4400F59397 /* GalleryPagePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC872AE18A4400F59397 /* GalleryPagePhotoCell.swift */; };
+		45B4AC8A2AE18E7D00F59397 /* GalleryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC892AE18E7D00F59397 /* GalleryPageViewController.swift */; };
+		45B4AC8D2AE1932300F59397 /* SelectedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC8C2AE1932300F59397 /* SelectedImage.swift */; };
+		45B4AC8F2AE196CB00F59397 /* GallerySelectedImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC8E2AE196CB00F59397 /* GallerySelectedImageListCell.swift */; };
 		45B9E5D82A76346B00915DD9 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B9E5D72A76346B00915DD9 /* Dimension.swift */; };
 		45B9E5E92A76386D00915DD9 /* Beep.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 45B9E5E82A76386D00915DD9 /* Beep.bundle */; };
 		45C27DB22AC7E5C9000FA158 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C27DB12AC7E5C9000FA158 /* MainViewController.swift */; };
@@ -93,6 +97,10 @@
 		45B4AC7F2ADDA67A00F59397 /* GalleryPageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPageButton.swift; sourceTree = "<group>"; };
 		45B4AC822ADDA71400F59397 /* BaseSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSelectButton.swift; sourceTree = "<group>"; };
 		45B4AC842ADDA8B300F59397 /* GalleryPageTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPageTabView.swift; sourceTree = "<group>"; };
+		45B4AC872AE18A4400F59397 /* GalleryPagePhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPagePhotoCell.swift; sourceTree = "<group>"; };
+		45B4AC892AE18E7D00F59397 /* GalleryPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPageViewController.swift; sourceTree = "<group>"; };
+		45B4AC8C2AE1932300F59397 /* SelectedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedImage.swift; sourceTree = "<group>"; };
+		45B4AC8E2AE196CB00F59397 /* GallerySelectedImageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallerySelectedImageListCell.swift; sourceTree = "<group>"; };
 		45B9E5D72A76346B00915DD9 /* Dimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimension.swift; sourceTree = "<group>"; };
 		45B9E5E82A76386D00915DD9 /* Beep.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Beep.bundle; sourceTree = "<group>"; };
 		45C27DB12AC7E5C9000FA158 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +219,8 @@
 		45B4AC702ADD992000F59397 /* Page */ = {
 			isa = PBXGroup;
 			children = (
+				45B4AC862AE18A2F00F59397 /* Views */,
+				45B4AC892AE18E7D00F59397 /* GalleryPageViewController.swift */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -218,6 +228,7 @@
 		45B4AC712ADD9A1E00F59397 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				45B4AC8B2AE1931500F59397 /* Model */,
 				45B4AC6F2ADD98FC00F59397 /* Gallery */,
 				45B4AC7B2ADDA16200F59397 /* SelectedImageViewModel.swift */,
 			);
@@ -232,6 +243,7 @@
 				45B4AC772ADDA0D000F59397 /* GallerySelectedImageListView.swift */,
 				45B4AC7F2ADDA67A00F59397 /* GalleryPageButton.swift */,
 				45B4AC842ADDA8B300F59397 /* GalleryPageTabView.swift */,
+				45B4AC8E2AE196CB00F59397 /* GallerySelectedImageListCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -242,6 +254,22 @@
 				45B4AC822ADDA71400F59397 /* BaseSelectButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		45B4AC862AE18A2F00F59397 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				45B4AC872AE18A4400F59397 /* GalleryPagePhotoCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		45B4AC8B2AE1931500F59397 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				45B4AC8C2AE1932300F59397 /* SelectedImage.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		45B9E5E72A76385300915DD9 /* Resources */ = {
@@ -502,6 +530,7 @@
 				45B4AC7A2ADDA0FD00F59397 /* GalleryBottomView.swift in Sources */,
 				45B4AC022AD3E33400F59397 /* UsageHistory.swift in Sources */,
 				45B4AC0A2AD420BA00F59397 /* MainGifticonListByLocation.swift in Sources */,
+				45B4AC8D2AE1932300F59397 /* SelectedImage.swift in Sources */,
 				45983F052A385A9900203EBB /* Font.swift in Sources */,
 				45B4AC802ADDA67A00F59397 /* GalleryPageButton.swift in Sources */,
 				45C27DB52AC7E767000FA158 /* MainTopView.swift in Sources */,
@@ -518,6 +547,8 @@
 				459188B22A764DF200EFA2B6 /* LoginViewModel.swift in Sources */,
 				45D1608B2A2F1C3500D633E1 /* ViewController.swift in Sources */,
 				45B4AC062AD3E94100F59397 /* BrandLocation.swift in Sources */,
+				45B4AC8A2AE18E7D00F59397 /* GalleryPageViewController.swift in Sources */,
+				45B4AC882AE18A4400F59397 /* GalleryPagePhotoCell.swift in Sources */,
 				45C27DB72AC7E864000FA158 /* LoginInfo.swift in Sources */,
 				45B4AC6E2ADD910900F59397 /* MainGifticonListFooter.swift in Sources */,
 				459188AF2A76480600EFA2B6 /* LoginButton.swift in Sources */,
@@ -532,6 +563,7 @@
 				459188A82A763D6200EFA2B6 /* LoginImageCell.swift in Sources */,
 				45D036692A8B628800FE5042 /* PermissionTypeView.swift in Sources */,
 				45B9E5D82A76346B00915DD9 /* Dimension.swift in Sources */,
+				45B4AC8F2AE196CB00F59397 /* GallerySelectedImageListCell.swift in Sources */,
 				45D0366E2A8B6FC800FE5042 /* Gifticon.swift in Sources */,
 				45B4AC082AD4185100F59397 /* MainGifticonByLocationCell.swift in Sources */,
 				45B4AC762ADD9BB500F59397 /* GalleryTopView.swift in Sources */,
