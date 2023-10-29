@@ -12,6 +12,9 @@ import RxCocoa
 class SelectedImageViewModel {
     let selectedImages = BehaviorRelay<[SelectedImage]>(value: [])
     
+    let galleryEvent = PublishSubject<GalleryEvent>()
+    let gifticonMakerEvent = PublishSubject<GifticonMakerEvent>()
+    
     func selectedImageIndex(assetId: String) -> Int? {
         let selectedImages = self.selectedImages.value
         return selectedImages.firstIndex(where: { $0.assetId == assetId })
