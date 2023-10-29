@@ -23,6 +23,7 @@
 		45AC42CD2AEE3D9E00733052 /* GifticonMakerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AC42CC2AEE3D9E00733052 /* GifticonMakerEvent.swift */; };
 		45AC42CF2AEE3E9C00733052 /* GifticonMakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AC42CE2AEE3E9C00733052 /* GifticonMakerViewController.swift */; };
 		45AC42D22AEE3FB800733052 /* GifticonMakerTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AC42D12AEE3FB800733052 /* GifticonMakerTopView.swift */; };
+		45AC42D42AEE419D00733052 /* CommonAlerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AC42D32AEE419D00733052 /* CommonAlerView.swift */; };
 		45B4AC002AD3DE9800F59397 /* Dms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4ABFF2AD3DE9800F59397 /* Dms.swift */; };
 		45B4AC022AD3E33400F59397 /* UsageHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC012AD3E33400F59397 /* UsageHistory.swift */; };
 		45B4AC042AD3E83300F59397 /* BrandSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC032AD3E83300F59397 /* BrandSection.swift */; };
@@ -87,6 +88,7 @@
 		45AC42CC2AEE3D9E00733052 /* GifticonMakerEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerEvent.swift; sourceTree = "<group>"; };
 		45AC42CE2AEE3E9C00733052 /* GifticonMakerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerViewController.swift; sourceTree = "<group>"; };
 		45AC42D12AEE3FB800733052 /* GifticonMakerTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerTopView.swift; sourceTree = "<group>"; };
+		45AC42D32AEE419D00733052 /* CommonAlerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAlerView.swift; sourceTree = "<group>"; };
 		45B4ABFF2AD3DE9800F59397 /* Dms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dms.swift; sourceTree = "<group>"; };
 		45B4AC012AD3E33400F59397 /* UsageHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageHistory.swift; sourceTree = "<group>"; };
 		45B4AC032AD3E83300F59397 /* BrandSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandSection.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				45B4AC822ADDA71400F59397 /* BaseSelectButton.swift */,
+				45AC42D32AEE419D00733052 /* CommonAlerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				45B4AC042AD3E83300F59397 /* BrandSection.swift in Sources */,
 				45AC42CD2AEE3D9E00733052 /* GifticonMakerEvent.swift in Sources */,
 				45B4AC232AD44F6C00F59397 /* MainGifticonListCell.swift in Sources */,
+				45AC42D42AEE419D00733052 /* CommonAlerView.swift in Sources */,
 				45B4AC102AD43E6F00F59397 /* GifticonBrandListCell.swift in Sources */,
 				45983EDF2A3857CE00203EBB /* RootViewController.swift in Sources */,
 				45B4AC002AD3DE9800F59397 /* Dms.swift in Sources */,
