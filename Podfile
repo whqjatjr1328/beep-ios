@@ -22,6 +22,11 @@ pod 'KakaoSDKAuth', '2.15.0'  # 사용자 인증
 pod 'KakaoSDKUser', '2.15.0'  # 카카오 로그인, 사용자 관리
 
 pod 'GoogleSignIn'
+pod 'GoogleMLKit/BarcodeScanning', '3.2.0'
+pod 'GoogleMLKit/TextRecognition', '3.2.0'
+pod 'GoogleMLKit/TextRecognitionKorean', '3.2.0'
+
+
 
 pod 'RealmSwift', '~>10.40.2'
 
