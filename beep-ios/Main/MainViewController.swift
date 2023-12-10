@@ -161,9 +161,8 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
 
 extension MainViewController {
     func didTapAddButton() {
-        let selectedImageViewModel = SelectedImageViewModel()
-        let galleryVC = GalleryViewController(selectedImageViewModel: selectedImageViewModel)
-        galleryVC.modalPresentationStyle = .fullScreen
-        self.present(galleryVC, animated: true)
+        let registerVC = RegisterNavigationController()
+        registerVC.modalPresentationStyle = .fullScreen
+        self.present(registerVC, animated: true)
     }
 }

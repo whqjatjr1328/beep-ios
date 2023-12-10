@@ -121,6 +121,7 @@ class GalleryViewController: UIViewController {
             .subscribe(onNext: { [weak self] shouldShowSelectedPhotosView in
                 guard let self else { return }
                 self.showSelectedPhotosView(isShow: shouldShowSelectedPhotosView)
+                self.topView.selectButtonEnabled.accept(shouldShowSelectedPhotosView)
             })
             .disposed(by: disposeBag)
         
@@ -129,6 +130,18 @@ class GalleryViewController: UIViewController {
                 guard let self else { return }
                 self.selectedImageViewModel?.removeSelectedImage(index: removeIndex)
             })
+            .disposed(by: disposeBag)
+        
+        topView.didSelectTopButton
+            .subscribe { [weak self] topAction in
+                guard let self else { return }
+                switch topAction {
+                case .cancel:
+                    self.selectedImageViewModel?.galleryEvent.onNext(.cancelGallery)
+                case .select:
+                    self.selectedImageViewModel?.galleryEvent.onNext(.didFinishSelectImages)
+                }
+            }
             .disposed(by: disposeBag)
         
     }

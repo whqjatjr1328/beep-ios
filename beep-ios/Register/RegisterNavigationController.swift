@@ -17,16 +17,12 @@ class RegisterNavigationController: UINavigationController {
     init() {
         let galleryViewController = GalleryViewController(selectedImageViewModel: viewModel)
         super.init(rootViewController: galleryViewController)
+        self.isNavigationBarHidden = true
+        setupObservers()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.isNavigationBarHidden = true
-        setupObservers()
     }
     
     func setupObservers() {
@@ -54,6 +50,11 @@ class RegisterNavigationController: UINavigationController {
     }
     
     func openGifticonMaker() {
-        
+        let gifticonMakerVC = GifticonMakerViewController(selectedImageViewModel: viewModel)
+        self.pushViewController(gifticonMakerVC, animated: true)
+    }
+    
+    func closeGifiticonMaker() {
+        self.popViewController(animated: true)
     }
 }
