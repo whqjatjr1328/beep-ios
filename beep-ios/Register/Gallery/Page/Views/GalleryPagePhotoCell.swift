@@ -78,7 +78,7 @@ class GalleryPagePhotoCell: UICollectionViewCell {
             coverView.isHidden = false
             selectedView.backgroundColor = selectedColor
             selectedView.layer.borderColor = selectedColor.cgColor
-            selectedView.text = "\(selectedIndex)"
+            selectedView.text = "\(selectedIndex + 1)"
         } else {
             contentView.layer.borderColor = nil
             contentView.layer.borderWidth = 0

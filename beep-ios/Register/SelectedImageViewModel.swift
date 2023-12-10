@@ -15,6 +15,11 @@ class SelectedImageViewModel {
     let galleryEvent = PublishSubject<GalleryEvent>()
     let gifticonMakerEvent = PublishSubject<GifticonMakerEvent>()
     
+    func isSelected(assetId: String) -> Bool {
+        let selectedImages = self.selectedImages.value
+        return selectedImages.contains(where: { $0.assetId == assetId })
+    }
+    
     func selectedImageIndex(assetId: String) -> Int? {
         let selectedImages = self.selectedImages.value
         return selectedImages.firstIndex(where: { $0.assetId == assetId })
@@ -28,8 +33,15 @@ class SelectedImageViewModel {
     }
     
     func removeSelectedImage(assetId: String) {
+        let currentSelectedImages = selectedImages.value
+        guard let idx = currentSelectedImages.firstIndex(where: { $0.assetId == assetId }) else { return }
+        removeSelectedImage(index: idx)
+    }
+    
+    func removeSelectedImage(index: Int) {
         var currentSelectedImages = selectedImages.value
-        currentSelectedImages.removeAll(where: { $0.assetId == assetId })
+        guard index < currentSelectedImages.count else { return }
+        currentSelectedImages.remove(at: index)
         self.selectedImages.accept(currentSelectedImages)
     }
     

@@ -8,6 +8,7 @@
 import UIKit
 import Photos
 import SnapKit
+import RxSwift
 
 class GalleryPageViewController: UIViewController, PHPhotoLibraryChangeObserver {
     
@@ -26,14 +27,18 @@ class GalleryPageViewController: UIViewController, PHPhotoLibraryChangeObserver 
     var fetchResult: PHFetchResult<PHAsset>
     let fetchOption: PHFetchOptions = {
         let fetchOption = PHFetchOptions()
-        fetchOption.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
+        fetchOption.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         return fetchOption
     }()
     
     var imageManager: PHCachingImageManager?
+    var selectedImageViewModel: SelectedImageViewModel?
     
-    init(imageManager: PHCachingImageManager) {
+    let disposeBag = DisposeBag()
+    
+    init(imageManager: PHCachingImageManager, selectedImageViewModel: SelectedImageViewModel) {
         self.imageManager = imageManager
+        self.selectedImageViewModel = selectedImageViewModel
         fetchResult = PHAsset.fetchAssets(with: .image, options: fetchOption)
         super.init(nibName: nil, bundle: nil)
         PHPhotoLibrary.shared().register(self)
@@ -50,6 +55,7 @@ class GalleryPageViewController: UIViewController, PHPhotoLibraryChangeObserver 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        setupObservers()
     }
     
     func photoLibraryDidChange(_ changeInstance: PHChange) {
@@ -64,6 +70,30 @@ class GalleryPageViewController: UIViewController, PHPhotoLibraryChangeObserver 
             make.edges.equalToSuperview()
         }
     }
+    
+    func setupObservers() {
+        selectedImageViewModel?.selectedImages
+            .subscribe(onNext: { [weak self] _ in
+                guard let self else { return }
+                self.collectionView.reloadData()
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func requestImage(asset: PHAsset) -> Single<UIImage?> {
+        return Single.create { [weak self] single in
+            guard let self else { return Disposables.create() }
+            
+            let targetSize = CGSize(width: 200, height: 200)
+            let option = PHImageRequestOptions()
+            option.isSynchronous = true
+            self.imageManager?.requestImage(for: asset, targetSize: targetSize, contentMode: .aspectFill, options: option, resultHandler: { image, _ in
+                single(.success(image))
+            })
+            
+            return Disposables.create()
+        }
+    }
 }
 
 extension GalleryPageViewController: UICollectionViewDataSource {
@@ -76,15 +106,17 @@ extension GalleryPageViewController: UICollectionViewDataSource {
         
         if let photoCell = cell as? GalleryPagePhotoCell {
             let asset = fetchResult.object(at: indexPath.item)
+            let selectedIndex = selectedImageViewModel?.selectedImageIndex(assetId: asset.localIdentifier)
             photoCell.updateCell(assetId: asset.localIdentifier)
+            photoCell.updateSelectedState(selectedIndex: selectedIndex)
             
-            let targetSize = CGSize(width: 200, height: 200)
-            imageManager?.requestImage(for: asset, targetSize: targetSize, contentMode: .aspectFill, options: .none, resultHandler: { resultImage, _ in
-                if let resultImage = resultImage {
-                    photoCell.updateCellImage(assetId: asset.localIdentifier, image: resultImage)
+            self.requestImage(asset: asset)
+                .subscribe { resultImage in
+                    if let resultImage {
+                        photoCell.updateCellImage(assetId: asset.localIdentifier, image: resultImage)
+                    }
                 }
-            })
-            
+                .disposed(by: disposeBag)
         }
         
         return cell
@@ -95,9 +127,22 @@ extension GalleryPageViewController: UICollectionViewDataSource {
 
 extension GalleryPageViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? GalleryPagePhotoCell else { return }
+        let asset = fetchResult.object(at: indexPath.item)
         
-        if let cell = collectionView.cellForItem(at: indexPath) as? GalleryPagePhotoCell {
-            cell.updateSelectedState(selectedIndex: nil)
+        if selectedImageViewModel?.isSelected(assetId: asset.localIdentifier) == true {
+            self.selectedImageViewModel?.removeSelectedImage(assetId: asset.localIdentifier)
+        } else {
+            self.requestImage(asset: asset)
+                .observe(on: MainScheduler.asyncInstance)
+                .subscribe { [weak self] resultImage in
+                    guard let self = self,
+                          let selectedImageViewModel = self.selectedImageViewModel,
+                          let resultImage else { return }
+                    
+                    selectedImageViewModel.addSelectedImage(image: resultImage, assetId: asset.localIdentifier)
+                }
+                .disposed(by: disposeBag)
         }
     }
 }

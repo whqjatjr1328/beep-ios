@@ -41,6 +41,7 @@ class GalleryViewController: UIViewController {
     }
     
     func setupViews() {
+        guard let selectedImageViewModel else { return }
         view.backgroundColor = .white
         
         view.addSubview(topView)
@@ -52,6 +53,7 @@ class GalleryViewController: UIViewController {
         
         view.addSubview(selectedImageView)
         selectedImageView.frame.origin = CGPoint(x: 0, y: Static.dimension.safeArae.top + GalleryTopView.Dimension.height)
+        selectedImageView.frame.size.width = Static.dimension.screenWidth
         
         view.addSubview(pageTabView)
         pageTabView.snp.makeConstraints { make in
@@ -64,7 +66,7 @@ class GalleryViewController: UIViewController {
         view.addSubview(bottomView)
         bottomView.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
-            make.bottom.equalToSuperview().offset(Static.dimension.safeArae.bottom)
+            make.bottom.equalToSuperview().offset(-Static.dimension.safeArae.bottom)
             make.height.equalTo(GalleryBottoView.Dimension.height)
         }
         
@@ -83,9 +85,9 @@ class GalleryViewController: UIViewController {
         self.pageViewController = pageViewController
         
         let imageManager = PHCachingImageManager()
-        let galleryPageVC = GalleryPageViewController(imageManager: imageManager)
+        let galleryPageVC = GalleryPageViewController(imageManager: imageManager, selectedImageViewModel: selectedImageViewModel)
         self.galleryPageVC = galleryPageVC
-        let recommendPageVC = GalleryPageViewController(imageManager: imageManager)
+        let recommendPageVC = GalleryPageViewController(imageManager: imageManager, selectedImageViewModel: selectedImageViewModel)
         self.recommendPageVC = recommendPageVC
         
         pageViewController.setViewControllers([galleryPageVC], direction: .forward, animated: false)
@@ -102,6 +104,42 @@ class GalleryViewController: UIViewController {
                 pageViewController?.setViewControllers([vc], direction: navigationDirection, animated: true)
             })
             .disposed(by: disposeBag)
+        
+        selectedImageViewModel?.selectedImages
+            .observe(on: MainScheduler.asyncInstance)
+            .subscribe(onNext: { [weak self] selectedImages in
+                guard let self else { return }
+                self.selectedImageView.reloadSelectedImages(selectedImages: selectedImages)
+                self.bottomView.selectedImageCount.accept(selectedImages.count)
+            })
+            .disposed(by: disposeBag)
+        
+        selectedImageViewModel?.selectedImages
+            .map({ $0.isEmpty == false })
+            .distinctUntilChanged()
+            .observe(on: MainScheduler.asyncInstance)
+            .subscribe(onNext: { [weak self] shouldShowSelectedPhotosView in
+                guard let self else { return }
+                self.showSelectedPhotosView(isShow: shouldShowSelectedPhotosView)
+            })
+            .disposed(by: disposeBag)
+        
+        selectedImageView.removeSelectedImage
+            .subscribe(onNext: { [weak self] removeIndex in
+                guard let self else { return }
+                self.selectedImageViewModel?.removeSelectedImage(index: removeIndex)
+            })
+            .disposed(by: disposeBag)
+        
+    }
+    
+    func showSelectedPhotosView(isShow: Bool) {
+        let height: CGFloat = isShow ? GallerySelectedImageListView.Dimension.height : 0
+        UIView.animate(withDuration: 0.25) {
+            self.selectedImageView.frame.size.height = height
+        } completion: { _ in
+            self.selectedImageView.isHidden = isShow == false
+        }
     }
 }
 

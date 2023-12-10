@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class GallerySelectedImageListView: UIView {
     enum Dimension {
@@ -25,7 +26,8 @@ class GallerySelectedImageListView: UIView {
         return collectionView
     }()
     
-    var selectedImages: [SelectedImage] = []
+    private var selectedImages: [SelectedImage] = []
+    let removeSelectedImage = PublishSubject<Int>()
     
     init() {
         super.init(frame: .zero)
@@ -49,10 +51,8 @@ class GallerySelectedImageListView: UIView {
     }
     
     func reloadSelectedImages(selectedImages: [SelectedImage]) {
-        collectionView.performBatchUpdates {
-            self.selectedImages = selectedImages
-            self.collectionView.reloadData()
-        }
+        self.selectedImages = selectedImages
+        self.collectionView.reloadData()
     }
 }
 
@@ -76,7 +76,7 @@ extension GallerySelectedImageListView: UICollectionViewDataSource {
 extension GallerySelectedImageListView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard indexPath.item < selectedImages.count else { return }
-        let selectedImage = selectedImages[indexPath.item]
+        self.removeSelectedImage.onNext(indexPath.item)
         
     }
 }
