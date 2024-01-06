@@ -12,6 +12,18 @@
 		459188AD2A76438200EFA2B6 /* LoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459188AC2A76438200EFA2B6 /* LoginType.swift */; };
 		459188AF2A76480600EFA2B6 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459188AE2A76480600EFA2B6 /* LoginButton.swift */; };
 		459188B22A764DF200EFA2B6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459188B12A764DF200EFA2B6 /* LoginViewModel.swift */; };
+		45924D322B25BC1E00218AE6 /* GifticonField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45924D312B25BC1E00218AE6 /* GifticonField.swift */; };
+		45924D342B25BCB700218AE6 /* GifticonMakerFiledListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45924D332B25BCB700218AE6 /* GifticonMakerFiledListCell.swift */; };
+		45924D362B25DD0100218AE6 /* GifticonMakerPreviewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45924D352B25DD0100218AE6 /* GifticonMakerPreviewButton.swift */; };
+		45924D382B3D41FA00218AE6 /* GifticonMakeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45924D372B3D41FA00218AE6 /* GifticonMakeButton.swift */; };
+		45924D3A2B3D534C00218AE6 /* GifticonMakerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45924D392B3D534C00218AE6 /* GifticonMakerPreview.swift */; };
+		45924D3C2B3D536B00218AE6 /* GifticonMakerPreviewSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45924D3B2B3D536B00218AE6 /* GifticonMakerPreviewSubView.swift */; };
+		45924D3E2B4942B800218AE6 /* GifticonMakerPreviewSubviewTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45924D3D2B4942B800218AE6 /* GifticonMakerPreviewSubviewTitle.swift */; };
+		45924D402B49445400218AE6 /* GifticonMakerPreviewSubviewLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45924D3F2B49445400218AE6 /* GifticonMakerPreviewSubviewLabel.swift */; };
+		45924D422B49474500218AE6 /* GifticonMakerPreviewSubviewImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45924D412B49474500218AE6 /* GifticonMakerPreviewSubviewImageView.swift */; };
+		45924D442B494F7F00218AE6 /* GifticonMakerPreviewSubViewDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45924D432B494F7F00218AE6 /* GifticonMakerPreviewSubViewDate.swift */; };
+		45924D462B49534C00218AE6 /* GifticonMakerPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45924D452B49534C00218AE6 /* GifticonMakerPreviewCell.swift */; };
+		45924D482B49568F00218AE6 /* GifticonMakerPreviewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45924D472B49568F00218AE6 /* GifticonMakerPreviewList.swift */; };
 		45983EDF2A3857CE00203EBB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983EDB2A3857CE00203EBB /* RootViewController.swift */; };
 		45983EE42A38588E00203EBB /* StaticConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983EE32A38588E00203EBB /* StaticConfig.swift */; };
 		45983F032A385A9200203EBB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45983F022A385A9200203EBB /* Color.swift */; };
@@ -77,6 +89,18 @@
 		459188AC2A76438200EFA2B6 /* LoginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginType.swift; sourceTree = "<group>"; };
 		459188AE2A76480600EFA2B6 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		459188B12A764DF200EFA2B6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		45924D312B25BC1E00218AE6 /* GifticonField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonField.swift; sourceTree = "<group>"; };
+		45924D332B25BCB700218AE6 /* GifticonMakerFiledListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerFiledListCell.swift; sourceTree = "<group>"; };
+		45924D352B25DD0100218AE6 /* GifticonMakerPreviewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerPreviewButton.swift; sourceTree = "<group>"; };
+		45924D372B3D41FA00218AE6 /* GifticonMakeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakeButton.swift; sourceTree = "<group>"; };
+		45924D392B3D534C00218AE6 /* GifticonMakerPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerPreview.swift; sourceTree = "<group>"; };
+		45924D3B2B3D536B00218AE6 /* GifticonMakerPreviewSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerPreviewSubView.swift; sourceTree = "<group>"; };
+		45924D3D2B4942B800218AE6 /* GifticonMakerPreviewSubviewTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerPreviewSubviewTitle.swift; sourceTree = "<group>"; };
+		45924D3F2B49445400218AE6 /* GifticonMakerPreviewSubviewLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerPreviewSubviewLabel.swift; sourceTree = "<group>"; };
+		45924D412B49474500218AE6 /* GifticonMakerPreviewSubviewImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerPreviewSubviewImageView.swift; sourceTree = "<group>"; };
+		45924D432B494F7F00218AE6 /* GifticonMakerPreviewSubViewDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerPreviewSubViewDate.swift; sourceTree = "<group>"; };
+		45924D452B49534C00218AE6 /* GifticonMakerPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerPreviewCell.swift; sourceTree = "<group>"; };
+		45924D472B49568F00218AE6 /* GifticonMakerPreviewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerPreviewList.swift; sourceTree = "<group>"; };
 		45983EDB2A3857CE00203EBB /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		45983EE32A38588E00203EBB /* StaticConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticConfig.swift; sourceTree = "<group>"; };
 		45983F022A385A9200203EBB /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -234,6 +258,7 @@
 				45AC42D02AEE3F8F00733052 /* Views */,
 				45AC42CB2AEE3D8A00733052 /* Events */,
 				45AC42CE2AEE3E9C00733052 /* GifticonMakerViewController.swift */,
+				45924D312B25BC1E00218AE6 /* GifticonField.swift */,
 			);
 			path = GifticonMaker;
 			sourceTree = "<group>";
@@ -250,6 +275,17 @@
 			isa = PBXGroup;
 			children = (
 				45AC42D12AEE3FB800733052 /* GifticonMakerTopView.swift */,
+				45924D332B25BCB700218AE6 /* GifticonMakerFiledListCell.swift */,
+				45924D352B25DD0100218AE6 /* GifticonMakerPreviewButton.swift */,
+				45924D372B3D41FA00218AE6 /* GifticonMakeButton.swift */,
+				45924D472B49568F00218AE6 /* GifticonMakerPreviewList.swift */,
+				45924D452B49534C00218AE6 /* GifticonMakerPreviewCell.swift */,
+				45924D392B3D534C00218AE6 /* GifticonMakerPreview.swift */,
+				45924D3B2B3D536B00218AE6 /* GifticonMakerPreviewSubView.swift */,
+				45924D3D2B4942B800218AE6 /* GifticonMakerPreviewSubviewTitle.swift */,
+				45924D3F2B49445400218AE6 /* GifticonMakerPreviewSubviewLabel.swift */,
+				45924D412B49474500218AE6 /* GifticonMakerPreviewSubviewImageView.swift */,
+				45924D432B494F7F00218AE6 /* GifticonMakerPreviewSubViewDate.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -593,18 +629,27 @@
 				45B4AC122AD447D400F59397 /* MainGifticonEditButton.swift in Sources */,
 				45AC42CF2AEE3E9C00733052 /* GifticonMakerViewController.swift in Sources */,
 				45D036632A8B602200FE5042 /* PermissionViewController.swift in Sources */,
+				45924D442B494F7F00218AE6 /* GifticonMakerPreviewSubViewDate.swift in Sources */,
 				45B4AC042AD3E83300F59397 /* BrandSection.swift in Sources */,
+				45924D482B49568F00218AE6 /* GifticonMakerPreviewList.swift in Sources */,
 				45AC42CD2AEE3D9E00733052 /* GifticonMakerEvent.swift in Sources */,
+				45924D362B25DD0100218AE6 /* GifticonMakerPreviewButton.swift in Sources */,
 				45B4AC232AD44F6C00F59397 /* MainGifticonListCell.swift in Sources */,
 				45AC42D42AEE419D00733052 /* CommonAlerView.swift in Sources */,
+				45924D402B49445400218AE6 /* GifticonMakerPreviewSubviewLabel.swift in Sources */,
 				45B4AC102AD43E6F00F59397 /* GifticonBrandListCell.swift in Sources */,
 				45983EDF2A3857CE00203EBB /* RootViewController.swift in Sources */,
 				45B4AC002AD3DE9800F59397 /* Dms.swift in Sources */,
+				45924D322B25BC1E00218AE6 /* GifticonField.swift in Sources */,
+				45924D342B25BCB700218AE6 /* GifticonMakerFiledListCell.swift in Sources */,
+				45924D382B3D41FA00218AE6 /* GifticonMakeButton.swift in Sources */,
 				45B4AC832ADDA71400F59397 /* BaseSelectButton.swift in Sources */,
 				45B4AC7A2ADDA0FD00F59397 /* GalleryBottomView.swift in Sources */,
 				45B4AC022AD3E33400F59397 /* UsageHistory.swift in Sources */,
+				45924D3C2B3D536B00218AE6 /* GifticonMakerPreviewSubView.swift in Sources */,
 				45B4AC0A2AD420BA00F59397 /* MainGifticonListByLocation.swift in Sources */,
 				45B4AC8D2AE1932300F59397 /* SelectedImage.swift in Sources */,
+				45924D3E2B4942B800218AE6 /* GifticonMakerPreviewSubviewTitle.swift in Sources */,
 				45983F052A385A9900203EBB /* Font.swift in Sources */,
 				45B4AC802ADDA67A00F59397 /* GalleryPageButton.swift in Sources */,
 				45C27DB52AC7E767000FA158 /* MainTopView.swift in Sources */,
@@ -620,11 +665,13 @@
 				45B4AC732ADD9B6500F59397 /* GalleryViewController.swift in Sources */,
 				459188B22A764DF200EFA2B6 /* LoginViewModel.swift in Sources */,
 				45D1608B2A2F1C3500D633E1 /* ViewController.swift in Sources */,
+				45924D422B49474500218AE6 /* GifticonMakerPreviewSubviewImageView.swift in Sources */,
 				45B4AC062AD3E94100F59397 /* BrandLocation.swift in Sources */,
 				45B4AC8A2AE18E7D00F59397 /* GalleryPageViewController.swift in Sources */,
 				45B4AC882AE18A4400F59397 /* GalleryPagePhotoCell.swift in Sources */,
 				45C27DB72AC7E864000FA158 /* LoginInfo.swift in Sources */,
 				45B4AC6E2ADD910900F59397 /* MainGifticonListFooter.swift in Sources */,
+				45924D462B49534C00218AE6 /* GifticonMakerPreviewCell.swift in Sources */,
 				459188AF2A76480600EFA2B6 /* LoginButton.swift in Sources */,
 				45D0366B2A8B654700FE5042 /* PermissionView.swift in Sources */,
 				45AC42C62AEE37C100733052 /* RegisterNavigationController.swift in Sources */,
@@ -646,6 +693,7 @@
 				45B4AC082AD4185100F59397 /* MainGifticonByLocationCell.swift in Sources */,
 				45B4AC762ADD9BB500F59397 /* GalleryTopView.swift in Sources */,
 				45983F032A385A9200203EBB /* Color.swift in Sources */,
+				45924D3A2B3D534C00218AE6 /* GifticonMakerPreview.swift in Sources */,
 				45B4AC0C2AD426BA00F59397 /* MainGifticonListHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
