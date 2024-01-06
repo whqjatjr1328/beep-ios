@@ -30,8 +30,8 @@ class GIfticonMakerPreview: UIView {
     }()
     
     private let imageView = GifticonMakerPreviewSubviewImageView()
-    private let titleView = GifticonMakerPreviewSubView(title: GifticonField.name.title)
-    private let brandView = GifticonMakerPreviewSubView(title: GifticonField.brand.title)
+    private let titleView = GifticonMakerPreviewSubView(title: GifticonFieldType.name.title)
+    private let brandView = GifticonMakerPreviewSubView(title: GifticonFieldType.brand.title)
     private let dateView = GifticonMakerPreviewSubViewDate()
     
     init() {

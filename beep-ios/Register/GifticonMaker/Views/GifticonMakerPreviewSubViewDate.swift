@@ -14,8 +14,8 @@ class GifticonMakerPreviewSubViewDate: GifticonMakerPreviewSubView {
     let cashAmountLabel = GifticonMakerPreviewSubviewLabel()
     
     init() {
-        let title = GifticonField.expireDate.title
-        cashLabel = GifticonMakerPreviewSubviewTitle(title: GifticonField.totalCash.title)
+        let title = GifticonFieldType.expireDate.title
+        cashLabel = GifticonMakerPreviewSubviewTitle(title: GifticonFieldType.totalCash.title)
         super.init(title: title)
     }
     

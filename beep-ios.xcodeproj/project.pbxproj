@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		458E04B72B49BD5600F10908 /* GifticonMakerLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458E04B62B49BD5600F10908 /* GifticonMakerLabelView.swift */; };
+		458E04B92B49C7D400F10908 /* GifticonMakerTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458E04B82B49C7D400F10908 /* GifticonMakerTextInputView.swift */; };
 		459188A82A763D6200EFA2B6 /* LoginImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459188A72A763D6200EFA2B6 /* LoginImageCell.swift */; };
 		459188AB2A763F6800EFA2B6 /* LoginAnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459188AA2A763F6800EFA2B6 /* LoginAnimationType.swift */; };
 		459188AD2A76438200EFA2B6 /* LoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459188AC2A76438200EFA2B6 /* LoginType.swift */; };
@@ -84,6 +86,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		458E04B62B49BD5600F10908 /* GifticonMakerLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerLabelView.swift; sourceTree = "<group>"; };
+		458E04B82B49C7D400F10908 /* GifticonMakerTextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerTextInputView.swift; sourceTree = "<group>"; };
 		459188A72A763D6200EFA2B6 /* LoginImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginImageCell.swift; sourceTree = "<group>"; };
 		459188AA2A763F6800EFA2B6 /* LoginAnimationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAnimationType.swift; sourceTree = "<group>"; };
 		459188AC2A76438200EFA2B6 /* LoginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginType.swift; sourceTree = "<group>"; };
@@ -286,6 +290,8 @@
 				45924D3F2B49445400218AE6 /* GifticonMakerPreviewSubviewLabel.swift */,
 				45924D412B49474500218AE6 /* GifticonMakerPreviewSubviewImageView.swift */,
 				45924D432B494F7F00218AE6 /* GifticonMakerPreviewSubViewDate.swift */,
+				458E04B62B49BD5600F10908 /* GifticonMakerLabelView.swift */,
+				458E04B82B49C7D400F10908 /* GifticonMakerTextInputView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -660,6 +666,8 @@
 				45983F0A2A38609B00203EBB /* String+Extension.swift in Sources */,
 				45B4AC852ADDA8B300F59397 /* GalleryPageTabView.swift in Sources */,
 				45983EE42A38588E00203EBB /* StaticConfig.swift in Sources */,
+				458E04B72B49BD5600F10908 /* GifticonMakerLabelView.swift in Sources */,
+				458E04B92B49C7D400F10908 /* GifticonMakerTextInputView.swift in Sources */,
 				45B4AC7E2ADDA18B00F59397 /* Constant.swift in Sources */,
 				459188AB2A763F6800EFA2B6 /* LoginAnimationType.swift in Sources */,
 				45B4AC732ADD9B6500F59397 /* GalleryViewController.swift in Sources */,

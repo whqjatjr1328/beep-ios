@@ -15,24 +15,29 @@ class GifticonMakerViewController: UIViewController {
     let selectedImageView = GallerySelectedImageListView()
     let previewListView = GifticonMakerPreviewList()
     let previewButton = GifticonMakerPreviewButton()
+    let gradientView = UIView()
     let gifticonMakerFieldList: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
-        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: GifticonMakerPreviewButton.Dimension.maxWidth + 12, bottom: 0, right: 0)
+        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: GifticonMakerPreviewButton.Dimension.maxWidth + 12, bottom: 0, right: 12)
         flowLayout.minimumInteritemSpacing = 12
         flowLayout.minimumInteritemSpacing = 12
         
         let listView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        listView.bounces = false
         listView.register(GifticonMakerFiledListCell.self, forCellWithReuseIdentifier: String(describing: GifticonMakerFiledListCell.self))
         listView.showsHorizontalScrollIndicator = false
         return listView
     }()
-    
+    let gifticonMakerLabel = GifticonMakerLabelView()
     let gifticonMakeButton = GifticonMakeButton()
+    
+    var textInputView: GifticonMakerTextInputView?
     
     var previewButtonWidthConstraint: Constraint? = nil
     
     var selectedImageViewModel: SelectedImageViewModel?
+    var disposeBag = DisposeBag()
     
     init(selectedImageViewModel: SelectedImageViewModel) {
         self.selectedImageViewModel = selectedImageViewModel
@@ -90,6 +95,28 @@ class GifticonMakerViewController: UIViewController {
             make.right.equalToSuperview()
         }
         
+        let gradientSize = CGSize(width: GifticonMakerPreviewButton.Dimension.minWidth + 13, height: GifticonMakerPreviewButton.Dimension.height)
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = CGRect(origin: .zero, size: gradientSize)
+        gradientLayer.colors = [UIColor.white.cgColor, UIColor.white.withAlphaComponent(0.0).cgColor]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        gradientLayer.locations = [(GifticonMakerPreviewButton.Dimension.minWidth / gradientSize.width) as NSNumber]
+        gradientView.layer.addSublayer(gradientLayer)
+        view.addSubview(gradientView)
+        gradientView.snp.makeConstraints { make in
+            make.top.bottom.left.equalTo(gifticonMakerFieldList)
+            make.width.equalTo(gradientSize.width)
+        }
+        
+        gifticonMakerLabel.updateLabel(currentField: .preview)
+        view.addSubview(gifticonMakerLabel)
+        gifticonMakerLabel.snp.makeConstraints { make in
+            make.top.equalTo(previewButton.snp.bottom).offset(16)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(GifticonMakerLabelView.Dimension.height)
+        }
+        
         view.addSubview(gifticonMakeButton)
         gifticonMakeButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -102,20 +129,59 @@ class GifticonMakerViewController: UIViewController {
     }
     
     func setupObservers() {
+        gifticonMakerLabel.rx.tapGesture()
+            .when(.recognized)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self else { return }
+                self.showTextInputView(isShow: true)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func showTextInputView(isShow: Bool) {
+        setupTextInputViewIfNeeded()
+        guard let textInputView = self.textInputView else { return }
+        UIView.animate(withDuration: 0.25) {
+            textInputView.alpha = isShow ? 1.0 : 0.0
+        } completion: { _ in
+            if isShow {
+                
+            } else {
+                textInputView.removeFromSuperview()
+                self.textInputView = nil
+            }
+        }
+    }
+    
+    func setupTextInputViewIfNeeded() {
+        guard self.textInputView == nil else { return }
+        let textInputView = GifticonMakerTextInputView(initailText: "", hasMaxinumLength: false)
+        textInputView.alpha = 0.0
+        textInputView.didEndTextEdit
+            .take(1)
+            .subscribe(onNext: { [weak self] inputText in
+                guard let self else { return }
+                self.gifticonMakerLabel.updateLabelText(text: inputText)
+                self.showTextInputView(isShow: false)
+            })
+            .disposed(by: disposeBag)
         
+        view.addSubview(textInputView)
+        self.textInputView = textInputView
+        textInputView.beginEdit()
     }
 }
 
 extension GifticonMakerViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return GifticonField.allCases.count
+        return GifticonFieldType.allCases.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: GifticonMakerFiledListCell.self), for: indexPath)
         
         if let gifticonFieldCell = cell as? GifticonMakerFiledListCell {
-            let gifticonField = GifticonField.allCases[indexPath.item]
+            let gifticonField = GifticonFieldType.allCases[indexPath.item]
             gifticonFieldCell.updateCell(title: gifticonField.title, isSelected: false)
         }
         
@@ -123,7 +189,7 @@ extension GifticonMakerViewController: UICollectionViewDataSource, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let gifticonFieldTitle = GifticonField.allCases[indexPath.item].title
+        let gifticonFieldTitle = GifticonFieldType.allCases[indexPath.item].title
         let size = gifticonFieldTitle.size(boundingSize: CGSize(width: Static.dimension.screenWidth, height: GifticonMakerPreviewButton.Dimension.height), font: Static.font.body1)
         return CGSize(width: 14 + ceil(size.width) + 14, height: GifticonMakerPreviewButton.Dimension.height)
     }

@@ -13,7 +13,7 @@ import RxCocoa
 class GifticonMakerPreviewButton: UIView {
     enum Dimension {
         static let maxWidth: CGFloat = 98
-        static let minWidth: CGFloat = 34
+        static let minWidth: CGFloat = 38
         static let height: CGFloat = 34
     }
     
@@ -89,14 +89,6 @@ class GifticonMakerPreviewButton: UIView {
         self.backgroundColor = isSelected.value ? Static.color.beepPink.withAlphaComponent(0.1) : Static.color.beepPink
         iconView.tintColor = isSelected.value ? Static.color.beepPink : Static.color.white
         titleLabel.textColor = isSelected.value ? Static.color.beepPink : Static.color.white
-    }
-    
-    func updateSize(width: CGFloat) {
-        let validWidth = max(Dimension.minWidth, min(width, Dimension.maxWidth))
-        self.frame.size.width = width
-        let alpha = 1 - (Dimension.maxWidth - validWidth) / (Dimension.maxWidth - Dimension.minWidth)
-        print("### alpha = \(alpha)")
-        titleLabel.alpha = alpha
     }
     
     func validWidth(width: CGFloat) -> CGFloat {
