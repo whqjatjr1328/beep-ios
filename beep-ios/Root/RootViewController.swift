@@ -8,6 +8,9 @@
 import RxSwift
 import UIKit
 
+#if DEBUG
+import FLEX
+#endif
 
 class RootViewController: UIViewController {
     
@@ -22,6 +25,11 @@ class RootViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+#if DEBUG
+        FLEXManager.shared.showExplorer()
+#endif
+
         
         if LoginViewModel.isLogined() == false {
             openLoginViewControlelr()

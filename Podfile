@@ -26,6 +26,9 @@ pod 'GoogleMLKit/BarcodeScanning', '3.2.0'
 pod 'GoogleMLKit/TextRecognition', '3.2.0'
 pod 'GoogleMLKit/TextRecognitionKorean', '3.2.0'
 
+pod 'FLEX', :configurations => ['Debug']
+
+
 
 
 pod 'RealmSwift', '~>10.40.2'
