@@ -31,8 +31,7 @@ class GifticonMakerPreviewButton: UIView {
         return label
     }()
     
-    let isSelected = BehaviorRelay<Bool>(value: false)
-    let disposeBag = DisposeBag()
+    var isSelected: Bool = false
     
     init() {
         let frame = CGRect(origin: .zero, size: CGSize(width: Dimension.maxWidth, height: Dimension.height))
@@ -67,28 +66,16 @@ class GifticonMakerPreviewButton: UIView {
         updateUI()
     }
     
-    func setupObserver() {
-        isSelected
-            .distinctUntilChanged()
-            .subscribe(onNext: { [weak self] _ in
-                guard let self else { return }
-                self.updateUI()
-            })
-            .disposed(by: disposeBag)
-        
-        self.rx.tapGesture()
-            .when(.recognized)
-            .subscribe(onNext: { [weak self] _ in
-                guard let self else { return }
-                self.isSelected.accept(true)
-            })
-            .disposed(by: disposeBag)
+    func updateSelected(isSelected: Bool) {
+        guard self.isSelected != isSelected else { return }
+        self.isSelected = isSelected
+        updateUI()
     }
     
     func updateUI() {
-        self.backgroundColor = isSelected.value ? Static.color.beepPink.withAlphaComponent(0.1) : Static.color.beepPink
-        iconView.tintColor = isSelected.value ? Static.color.beepPink : Static.color.white
-        titleLabel.textColor = isSelected.value ? Static.color.beepPink : Static.color.white
+        self.backgroundColor = isSelected ? Static.color.beepPink.withAlphaComponent(0.1) : Static.color.beepPink
+        iconView.tintColor = isSelected ? Static.color.beepPink : Static.color.white
+        titleLabel.textColor = isSelected ? Static.color.beepPink : Static.color.white
     }
     
     func validWidth(width: CGFloat) -> CGFloat {

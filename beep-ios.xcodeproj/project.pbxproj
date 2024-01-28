@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		458E04B72B49BD5600F10908 /* GifticonMakerLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458E04B62B49BD5600F10908 /* GifticonMakerLabelView.swift */; };
 		458E04B92B49C7D400F10908 /* GifticonMakerTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458E04B82B49C7D400F10908 /* GifticonMakerTextInputView.swift */; };
+		458E04BC2B4DAABC00F10908 /* GifticonCandidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458E04BB2B4DAABC00F10908 /* GifticonCandidate.swift */; };
+		458E04BE2B4DAADE00F10908 /* GifticonMakerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458E04BD2B4DAADE00F10908 /* GifticonMakerViewModel.swift */; };
 		459188A82A763D6200EFA2B6 /* LoginImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459188A72A763D6200EFA2B6 /* LoginImageCell.swift */; };
 		459188AB2A763F6800EFA2B6 /* LoginAnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459188AA2A763F6800EFA2B6 /* LoginAnimationType.swift */; };
 		459188AD2A76438200EFA2B6 /* LoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459188AC2A76438200EFA2B6 /* LoginType.swift */; };
@@ -38,6 +40,8 @@
 		45AC42CF2AEE3E9C00733052 /* GifticonMakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AC42CE2AEE3E9C00733052 /* GifticonMakerViewController.swift */; };
 		45AC42D22AEE3FB800733052 /* GifticonMakerTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AC42D12AEE3FB800733052 /* GifticonMakerTopView.swift */; };
 		45AC42D42AEE419D00733052 /* CommonAlerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AC42D32AEE419D00733052 /* CommonAlerView.swift */; };
+		45AE7D012B53C85A0079E3F6 /* GifticonCandidateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AE7D002B53C85A0079E3F6 /* GifticonCandidateListView.swift */; };
+		45AE7D032B53D3D90079E3F6 /* GifticonCandidateListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AE7D022B53D3D90079E3F6 /* GifticonCandidateListCell.swift */; };
 		45B4AC002AD3DE9800F59397 /* Dms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4ABFF2AD3DE9800F59397 /* Dms.swift */; };
 		45B4AC022AD3E33400F59397 /* UsageHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC012AD3E33400F59397 /* UsageHistory.swift */; };
 		45B4AC042AD3E83300F59397 /* BrandSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B4AC032AD3E83300F59397 /* BrandSection.swift */; };
@@ -88,6 +92,8 @@
 /* Begin PBXFileReference section */
 		458E04B62B49BD5600F10908 /* GifticonMakerLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerLabelView.swift; sourceTree = "<group>"; };
 		458E04B82B49C7D400F10908 /* GifticonMakerTextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerTextInputView.swift; sourceTree = "<group>"; };
+		458E04BB2B4DAABC00F10908 /* GifticonCandidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonCandidate.swift; sourceTree = "<group>"; };
+		458E04BD2B4DAADE00F10908 /* GifticonMakerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerViewModel.swift; sourceTree = "<group>"; };
 		459188A72A763D6200EFA2B6 /* LoginImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginImageCell.swift; sourceTree = "<group>"; };
 		459188AA2A763F6800EFA2B6 /* LoginAnimationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAnimationType.swift; sourceTree = "<group>"; };
 		459188AC2A76438200EFA2B6 /* LoginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginType.swift; sourceTree = "<group>"; };
@@ -117,6 +123,8 @@
 		45AC42CE2AEE3E9C00733052 /* GifticonMakerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerViewController.swift; sourceTree = "<group>"; };
 		45AC42D12AEE3FB800733052 /* GifticonMakerTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerTopView.swift; sourceTree = "<group>"; };
 		45AC42D32AEE419D00733052 /* CommonAlerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAlerView.swift; sourceTree = "<group>"; };
+		45AE7D002B53C85A0079E3F6 /* GifticonCandidateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonCandidateListView.swift; sourceTree = "<group>"; };
+		45AE7D022B53D3D90079E3F6 /* GifticonCandidateListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonCandidateListCell.swift; sourceTree = "<group>"; };
 		45B4ABFF2AD3DE9800F59397 /* Dms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dms.swift; sourceTree = "<group>"; };
 		45B4AC012AD3E33400F59397 /* UsageHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageHistory.swift; sourceTree = "<group>"; };
 		45B4AC032AD3E83300F59397 /* BrandSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandSection.swift; sourceTree = "<group>"; };
@@ -186,6 +194,15 @@
 				E1D659B1DF638A0581A94BBC /* Pods_beep_ios.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		458E04BA2B4DAAAB00F10908 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				45924D312B25BC1E00218AE6 /* GifticonField.swift */,
+				458E04BB2B4DAABC00F10908 /* GifticonCandidate.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		459188A62A763D4100EFA2B6 /* Views */ = {
@@ -259,10 +276,11 @@
 		45AC42CA2AEE3D1100733052 /* GifticonMaker */ = {
 			isa = PBXGroup;
 			children = (
+				458E04BA2B4DAAAB00F10908 /* Model */,
 				45AC42D02AEE3F8F00733052 /* Views */,
 				45AC42CB2AEE3D8A00733052 /* Events */,
 				45AC42CE2AEE3E9C00733052 /* GifticonMakerViewController.swift */,
-				45924D312B25BC1E00218AE6 /* GifticonField.swift */,
+				458E04BD2B4DAADE00F10908 /* GifticonMakerViewModel.swift */,
 			);
 			path = GifticonMaker;
 			sourceTree = "<group>";
@@ -292,6 +310,8 @@
 				45924D432B494F7F00218AE6 /* GifticonMakerPreviewSubViewDate.swift */,
 				458E04B62B49BD5600F10908 /* GifticonMakerLabelView.swift */,
 				458E04B82B49C7D400F10908 /* GifticonMakerTextInputView.swift */,
+				45AE7D002B53C85A0079E3F6 /* GifticonCandidateListView.swift */,
+				45AE7D022B53D3D90079E3F6 /* GifticonCandidateListCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -633,6 +653,7 @@
 			files = (
 				45E884662A6D2AE00094A155 /* LoginViewController.swift in Sources */,
 				45B4AC122AD447D400F59397 /* MainGifticonEditButton.swift in Sources */,
+				458E04BC2B4DAABC00F10908 /* GifticonCandidate.swift in Sources */,
 				45AC42CF2AEE3E9C00733052 /* GifticonMakerViewController.swift in Sources */,
 				45D036632A8B602200FE5042 /* PermissionViewController.swift in Sources */,
 				45924D442B494F7F00218AE6 /* GifticonMakerPreviewSubViewDate.swift in Sources */,
@@ -676,12 +697,15 @@
 				45924D422B49474500218AE6 /* GifticonMakerPreviewSubviewImageView.swift in Sources */,
 				45B4AC062AD3E94100F59397 /* BrandLocation.swift in Sources */,
 				45B4AC8A2AE18E7D00F59397 /* GalleryPageViewController.swift in Sources */,
+				458E04BE2B4DAADE00F10908 /* GifticonMakerViewModel.swift in Sources */,
 				45B4AC882AE18A4400F59397 /* GalleryPagePhotoCell.swift in Sources */,
 				45C27DB72AC7E864000FA158 /* LoginInfo.swift in Sources */,
 				45B4AC6E2ADD910900F59397 /* MainGifticonListFooter.swift in Sources */,
 				45924D462B49534C00218AE6 /* GifticonMakerPreviewCell.swift in Sources */,
+				45AE7D012B53C85A0079E3F6 /* GifticonCandidateListView.swift in Sources */,
 				459188AF2A76480600EFA2B6 /* LoginButton.swift in Sources */,
 				45D0366B2A8B654700FE5042 /* PermissionView.swift in Sources */,
+				45AE7D032B53D3D90079E3F6 /* GifticonCandidateListCell.swift in Sources */,
 				45AC42C62AEE37C100733052 /* RegisterNavigationController.swift in Sources */,
 				45D0365E2A8B45F900FE5042 /* UIImage+Extension.swift in Sources */,
 				45AC42D22AEE3FB800733052 /* GifticonMakerTopView.swift in Sources */,

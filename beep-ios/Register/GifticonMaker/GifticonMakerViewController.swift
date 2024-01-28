@@ -12,7 +12,7 @@ import RxSwift
 class GifticonMakerViewController: UIViewController {
     
     let topView = GifticonMakerTopView()
-    let selectedImageView = GallerySelectedImageListView()
+    let gifticonCandidateListView: GifticonCandidateListView
     let previewListView = GifticonMakerPreviewList()
     let previewButton = GifticonMakerPreviewButton()
     let gradientView = UIView()
@@ -37,10 +37,13 @@ class GifticonMakerViewController: UIViewController {
     var previewButtonWidthConstraint: Constraint? = nil
     
     var selectedImageViewModel: SelectedImageViewModel?
+    let viewModel: GifticonMakerViewModel
     var disposeBag = DisposeBag()
     
     init(selectedImageViewModel: SelectedImageViewModel) {
         self.selectedImageViewModel = selectedImageViewModel
+        self.viewModel = GifticonMakerViewModel()
+        self.gifticonCandidateListView = GifticonCandidateListView(viewModel: self.viewModel)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -64,8 +67,8 @@ class GifticonMakerViewController: UIViewController {
             make.height.equalTo(GifticonMakerTopView.Dimension.height)
         }
         
-        view.addSubview(selectedImageView)
-        selectedImageView.snp.makeConstraints { make in
+        view.addSubview(gifticonCandidateListView)
+        gifticonCandidateListView.snp.makeConstraints { make in
             make.top.equalTo(topView.snp.bottom)
             make.left.right.equalToSuperview()
             make.height.equalTo(GallerySelectedImageListView.Dimension.height)
@@ -73,7 +76,7 @@ class GifticonMakerViewController: UIViewController {
         
         view.addSubview(previewListView)
         previewListView.snp.makeConstraints { make in
-            make.top.equalTo(selectedImageView.snp.bottom)
+            make.top.equalTo(gifticonCandidateListView.snp.bottom)
             make.left.right.equalToSuperview()
             make.height.equalTo(GIfticonMakerPreview.Dimension.size.height)
         }
@@ -129,6 +132,33 @@ class GifticonMakerViewController: UIViewController {
     }
     
     func setupObservers() {
+        viewModel.gifticonFields
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] _ in
+                guard let self else { return }
+                self.gifticonMakerFieldList.reloadData()
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.selectedGifticonFieldType
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] selectedGifticonFieldType in
+                guard let self else { return }
+                let isPreviewSelected = selectedGifticonFieldType == .preview
+                self.previewButton.updateSelected(isSelected: isPreviewSelected)
+                self.gifticonMakerFieldList.reloadData()
+                self.scrollTo(gifticonFieldType: selectedGifticonFieldType)
+            })
+            .disposed(by: disposeBag)
+        
+        previewButton.rx.tapGesture()
+            .when(.recognized)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self else { return }
+                self.viewModel.selectedGifticonFieldType.accept(.preview)
+            })
+            .disposed(by: disposeBag)
+        
         gifticonMakerLabel.rx.tapGesture()
             .when(.recognized)
             .subscribe(onNext: { [weak self] _ in
@@ -170,28 +200,42 @@ class GifticonMakerViewController: UIViewController {
         self.textInputView = textInputView
         textInputView.beginEdit()
     }
+    
+    func scrollTo(gifticonFieldType: GifticonFieldType) {
+        if gifticonFieldType == .preview {
+            gifticonMakerFieldList.setContentOffset(.zero, animated: true)
+        } else if let index = self.viewModel.gifticonFields.value.firstIndex(where: { $0.type == gifticonFieldType }) {
+            gifticonMakerFieldList.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: true)
+        }
+    }
 }
 
 extension GifticonMakerViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return GifticonFieldType.allCases.count
+        return viewModel.gifticonFields.value.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: GifticonMakerFiledListCell.self), for: indexPath)
         
         if let gifticonFieldCell = cell as? GifticonMakerFiledListCell {
-            let gifticonField = GifticonFieldType.allCases[indexPath.item]
-            gifticonFieldCell.updateCell(title: gifticonField.title, isSelected: false)
+            let gifticonField = viewModel.gifticonFields.value[indexPath.item]
+            let isSelected = viewModel.selectedGifticonFieldType.value == gifticonField.type
+            gifticonFieldCell.updateCell(title: gifticonField.type.title, isSelected: isSelected)
         }
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let gifticonFieldTitle = GifticonFieldType.allCases[indexPath.item].title
+        let gifticonFieldTitle = viewModel.gifticonFields.value[indexPath.item].type.title
         let size = gifticonFieldTitle.size(boundingSize: CGSize(width: Static.dimension.screenWidth, height: GifticonMakerPreviewButton.Dimension.height), font: Static.font.body1)
         return CGSize(width: 14 + ceil(size.width) + 14, height: GifticonMakerPreviewButton.Dimension.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let gifticonField = viewModel.gifticonFields.value[indexPath.item]
+        viewModel.selectedGifticonFieldType.accept(gifticonField.type)
     }
 }
 

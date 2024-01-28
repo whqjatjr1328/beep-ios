@@ -22,6 +22,7 @@ class GifticonMakerPreviewList: UIView {
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionviewFlowLayout)
         collectionView.isPagingEnabled = true
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.register(GifticonMakerPreviewCell.self, forCellWithReuseIdentifier: String(describing: GifticonMakerPreviewCell.self))
         return collectionView
     }()
