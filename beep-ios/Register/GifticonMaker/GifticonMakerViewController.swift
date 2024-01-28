@@ -132,6 +132,15 @@ class GifticonMakerViewController: UIViewController {
     }
     
     func setupObservers() {
+        selectedImageViewModel?.selectedImages
+            .distinctUntilChanged()
+            .map({ selectedImages in
+                return selectedImages.compactMap({ GifticonCandidate(originalImage: $0.image) })
+            })
+            .bind(to: viewModel.gifticonCandidates)
+            .disposed(by: disposeBag)
+        
+        
         viewModel.gifticonFields
             .distinctUntilChanged()
             .subscribe(onNext: { [weak self] _ in

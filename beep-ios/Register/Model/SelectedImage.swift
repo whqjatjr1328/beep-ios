@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct SelectedImage {
+struct SelectedImage: Equatable {
     let image: UIImage
     let assetId: String
 }
