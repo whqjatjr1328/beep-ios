@@ -35,6 +35,16 @@ enum GifticonFieldType: CaseIterable {
         case .totalCash: "남은 금액을 등록해 주세요."
         }
     }
+    
+    var isLabelType: Bool {
+        switch self {
+        case .preview, .name, .brand, .barcode, .expireDate, .totalCash:
+            return true
+            
+        case .thumbnail:
+            return false
+        }
+    }
 }
 
 struct GifticonFieldStatus: Equatable {

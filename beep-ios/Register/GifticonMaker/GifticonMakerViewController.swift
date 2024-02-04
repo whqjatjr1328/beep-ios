@@ -30,9 +30,11 @@ class GifticonMakerViewController: UIViewController {
         return listView
     }()
     let gifticonMakerLabel = GifticonMakerLabelView()
+    let gifticonMakerThumbnailView = GIfticonMakerThumbnailInputView()
     let gifticonMakeButton = GifticonMakeButton()
     
     var textInputView: GifticonMakerTextInputView?
+    var sheetView: BottomSheetView?
     
     var previewButtonWidthConstraint: Constraint? = nil
     
@@ -120,6 +122,14 @@ class GifticonMakerViewController: UIViewController {
             make.height.equalTo(GifticonMakerLabelView.Dimension.height)
         }
         
+        gifticonMakerThumbnailView.isHidden = true
+        view.addSubview(gifticonMakerThumbnailView)
+        gifticonMakerThumbnailView.snp.makeConstraints { make in
+            make.top.equalTo(gifticonMakerLabel)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(GIfticonMakerThumbnailInputView.Dimension.height)
+        }
+        
         view.addSubview(gifticonMakeButton)
         gifticonMakeButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -156,6 +166,7 @@ class GifticonMakerViewController: UIViewController {
                 let isPreviewSelected = selectedGifticonFieldType == .preview
                 self.previewButton.updateSelected(isSelected: isPreviewSelected)
                 self.gifticonMakerFieldList.reloadData()
+                self.updateBottomView()
                 self.scrollTo(gifticonFieldType: selectedGifticonFieldType)
             })
             .disposed(by: disposeBag)
@@ -172,7 +183,19 @@ class GifticonMakerViewController: UIViewController {
             .when(.recognized)
             .subscribe(onNext: { [weak self] _ in
                 guard let self else { return }
-                self.showTextInputView(isShow: true)
+                if self.viewModel.selectedGifticonFieldType.value == .expireDate {
+                    self.showDatePickerView()
+                } else {
+                    self.showTextInputView(isShow: true)
+                }
+                
+            })
+            .disposed(by: disposeBag)
+        
+        gifticonMakerThumbnailView.oepnThumbnailPicker
+            .subscribe(onNext: {[weak self] _ in
+                guard let self else { return }
+                self.showThumbnailPickerView()
             })
             .disposed(by: disposeBag)
     }
@@ -208,6 +231,64 @@ class GifticonMakerViewController: UIViewController {
         view.addSubview(textInputView)
         self.textInputView = textInputView
         textInputView.beginEdit()
+    }
+    
+    func setupSheetViewIfNeeded(sheetHeight: CGFloat) {
+        guard self.sheetView == nil else { return }
+        let sheetView = BottomSheetView(sheetHeight: sheetHeight)
+        sheetView.isHidden = true
+        view.addSubview(sheetView)
+        self.sheetView = sheetView
+        
+        sheetView.closeSheetView
+            .take(1)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self else { return }
+                self.sheetView?.removeFromSuperview()
+                self.sheetView = nil
+            })
+            .disposed(by: disposeBag)
+        
+        sheetView.showSheetView()
+    }
+    
+    func updateBottomView() {
+        guard let currentCandidate = viewModel.selectedGifticonCandidate.value else { return }
+        
+        let currentSelectedFieldType = viewModel.selectedGifticonFieldType.value
+        gifticonMakerLabel.isHidden = currentSelectedFieldType.isLabelType == false
+        gifticonMakerThumbnailView.isHidden = currentSelectedFieldType.isLabelType
+    }
+    
+    func showThumbnailPickerView() {
+        setupSheetViewIfNeeded(sheetHeight: 286)
+        guard let sheetView = self.sheetView else { return }
+        
+        let picker = GifticonMakerThumbnailPicker()
+        sheetView.sheetView.addSubview(picker)
+        picker.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(31)
+            make.centerX.equalToSuperview()
+            make.size.equalTo(GifticonMakerThumbnailPicker.Dimension.size)
+        }
+        
+        sheetView.showSheetView()
+    }
+    
+    func showDatePickerView() {
+        setupSheetViewIfNeeded(sheetHeight: 263)
+        guard let sheetView = self.sheetView else { return }
+        
+        let datePicker = GifticonMakerDatePicker()
+        sheetView.sheetView.addSubview(datePicker)
+        datePicker.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(30)
+            make.left.equalToSuperview().offset(28)
+            make.right.equalToSuperview().offset(-28)
+            make.bottom.equalToSuperview().offset(-51)
+        }
+        
+        sheetView.showSheetView()
     }
     
     func scrollTo(gifticonFieldType: GifticonFieldType) {
