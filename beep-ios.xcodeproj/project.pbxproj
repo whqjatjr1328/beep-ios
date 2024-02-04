@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4566838B2B662196002921BE /* GifticonTextRecogizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4566838A2B662196002921BE /* GifticonTextRecogizer.swift */; };
+		4566838D2B6623FF002921BE /* GifticonRecognizerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4566838C2B6623FF002921BE /* GifticonRecognizerError.swift */; };
+		456683902B662A85002921BE /* ExpiredParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4566838F2B662A85002921BE /* ExpiredParser.swift */; };
+		456683922B6648E9002921BE /* BalanceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456683912B6648E9002921BE /* BalanceParser.swift */; };
 		458E04B72B49BD5600F10908 /* GifticonMakerLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458E04B62B49BD5600F10908 /* GifticonMakerLabelView.swift */; };
 		458E04B92B49C7D400F10908 /* GifticonMakerTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458E04B82B49C7D400F10908 /* GifticonMakerTextInputView.swift */; };
 		458E04BC2B4DAABC00F10908 /* GifticonCandidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458E04BB2B4DAABC00F10908 /* GifticonCandidate.swift */; };
@@ -90,6 +94,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4566838A2B662196002921BE /* GifticonTextRecogizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonTextRecogizer.swift; sourceTree = "<group>"; };
+		4566838C2B6623FF002921BE /* GifticonRecognizerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonRecognizerError.swift; sourceTree = "<group>"; };
+		4566838F2B662A85002921BE /* ExpiredParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpiredParser.swift; sourceTree = "<group>"; };
+		456683912B6648E9002921BE /* BalanceParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceParser.swift; sourceTree = "<group>"; };
 		458E04B62B49BD5600F10908 /* GifticonMakerLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerLabelView.swift; sourceTree = "<group>"; };
 		458E04B82B49C7D400F10908 /* GifticonMakerTextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerTextInputView.swift; sourceTree = "<group>"; };
 		458E04BB2B4DAABC00F10908 /* GifticonCandidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonCandidate.swift; sourceTree = "<group>"; };
@@ -194,6 +202,25 @@
 				E1D659B1DF638A0581A94BBC /* Pods_beep_ios.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		456683892B66216A002921BE /* Recognizer */ = {
+			isa = PBXGroup;
+			children = (
+				4566838E2B662830002921BE /* Parser */,
+				4566838C2B6623FF002921BE /* GifticonRecognizerError.swift */,
+				4566838A2B662196002921BE /* GifticonTextRecogizer.swift */,
+			);
+			path = Recognizer;
+			sourceTree = "<group>";
+		};
+		4566838E2B662830002921BE /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				4566838F2B662A85002921BE /* ExpiredParser.swift */,
+				456683912B6648E9002921BE /* BalanceParser.swift */,
+			);
+			path = Parser;
 			sourceTree = "<group>";
 		};
 		458E04BA2B4DAAAB00F10908 /* Model */ = {
@@ -480,6 +507,7 @@
 		45D160852A2F1C3500D633E1 /* beep-ios */ = {
 			isa = PBXGroup;
 			children = (
+				456683892B66216A002921BE /* Recognizer */,
 				45B9E5E72A76385300915DD9 /* Resources */,
 				45983EE22A38587A00203EBB /* StaticConfig */,
 				45983F062A385B6F00203EBB /* Base */,
@@ -677,6 +705,7 @@
 				45B4AC0A2AD420BA00F59397 /* MainGifticonListByLocation.swift in Sources */,
 				45B4AC8D2AE1932300F59397 /* SelectedImage.swift in Sources */,
 				45924D3E2B4942B800218AE6 /* GifticonMakerPreviewSubviewTitle.swift in Sources */,
+				4566838B2B662196002921BE /* GifticonTextRecogizer.swift in Sources */,
 				45983F052A385A9900203EBB /* Font.swift in Sources */,
 				45B4AC802ADDA67A00F59397 /* GalleryPageButton.swift in Sources */,
 				45C27DB52AC7E767000FA158 /* MainTopView.swift in Sources */,
@@ -699,6 +728,7 @@
 				45B4AC8A2AE18E7D00F59397 /* GalleryPageViewController.swift in Sources */,
 				458E04BE2B4DAADE00F10908 /* GifticonMakerViewModel.swift in Sources */,
 				45B4AC882AE18A4400F59397 /* GalleryPagePhotoCell.swift in Sources */,
+				456683922B6648E9002921BE /* BalanceParser.swift in Sources */,
 				45C27DB72AC7E864000FA158 /* LoginInfo.swift in Sources */,
 				45B4AC6E2ADD910900F59397 /* MainGifticonListFooter.swift in Sources */,
 				45924D462B49534C00218AE6 /* GifticonMakerPreviewCell.swift in Sources */,
@@ -709,6 +739,7 @@
 				45AC42C62AEE37C100733052 /* RegisterNavigationController.swift in Sources */,
 				45D0365E2A8B45F900FE5042 /* UIImage+Extension.swift in Sources */,
 				45AC42D22AEE3FB800733052 /* GifticonMakerTopView.swift in Sources */,
+				4566838D2B6623FF002921BE /* GifticonRecognizerError.swift in Sources */,
 				45C27DB22AC7E5C9000FA158 /* MainViewController.swift in Sources */,
 				45D160872A2F1C3500D633E1 /* AppDelegate.swift in Sources */,
 				45AC42C92AEE392C00733052 /* GalleryEvent.swift in Sources */,
@@ -720,6 +751,7 @@
 				459188A82A763D6200EFA2B6 /* LoginImageCell.swift in Sources */,
 				45D036692A8B628800FE5042 /* PermissionTypeView.swift in Sources */,
 				45B9E5D82A76346B00915DD9 /* Dimension.swift in Sources */,
+				456683902B662A85002921BE /* ExpiredParser.swift in Sources */,
 				45B4AC8F2AE196CB00F59397 /* GallerySelectedImageListCell.swift in Sources */,
 				45D0366E2A8B6FC800FE5042 /* Gifticon.swift in Sources */,
 				45B4AC082AD4185100F59397 /* MainGifticonByLocationCell.swift in Sources */,
@@ -873,7 +905,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -902,7 +934,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

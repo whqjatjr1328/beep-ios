@@ -34,6 +34,15 @@ class GifticonCandidate: NSObject {
         barcode = GifticonFieldString(fieldType: .barcode)
         expireDate = GifticonFieldDate(fieldType: .expireDate)
         totalCash = GifticonFieldString(fieldType: .totalCash)
+        
+        let recognizer = GifticonTextRecogizer()
+        recognizer.parse(image: originalImage)
+            .subscribe(onSuccess: { text in
+                print("### text \(text)")
+            }, onFailure: { error in
+                print("### error \(error)")
+            })
+            .disposed(by: disposeBag)
     }
     
     func setupObservers() {
