@@ -95,6 +95,12 @@
 		45D160902A2F1C3800D633E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D1608F2A2F1C3800D633E1 /* Assets.xcassets */; };
 		45D160932A2F1C3800D633E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D160912A2F1C3800D633E1 /* LaunchScreen.storyboard */; };
 		45E884662A6D2AE00094A155 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E884652A6D2AE00094A155 /* LoginViewController.swift */; };
+		45FC3D102B77BAA90032F305 /* GifticonMakerScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC3D0F2B77BAA90032F305 /* GifticonMakerScrollView.swift */; };
+		45FC3D122B77C4940032F305 /* GifticonMakerCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC3D112B77C4940032F305 /* GifticonMakerCropView.swift */; };
+		45FC3D232B77C6B40032F305 /* GifticonMakerCropHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC3D222B77C6B40032F305 /* GifticonMakerCropHandler.swift */; };
+		45FC3D342B7930E80032F305 /* GifticonMakerDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC3D332B7930E80032F305 /* GifticonMakerDrawView.swift */; };
+		45FC3D362B7933150032F305 /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC3D352B7933150032F305 /* CGRect+Extension.swift */; };
+		45FC3D382B7A27320032F305 /* GifticonMakerScrollViewModeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FC3D372B7A27320032F305 /* GifticonMakerScrollViewModeButton.swift */; };
 		4C9B012C178C45DEF1859192 /* Pods_beep_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D659B1DF638A0581A94BBC /* Pods_beep_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -189,6 +195,12 @@
 		45D160922A2F1C3800D633E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45D160942A2F1C3800D633E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45E884652A6D2AE00094A155 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		45FC3D0F2B77BAA90032F305 /* GifticonMakerScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerScrollView.swift; sourceTree = "<group>"; };
+		45FC3D112B77C4940032F305 /* GifticonMakerCropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerCropView.swift; sourceTree = "<group>"; };
+		45FC3D222B77C6B40032F305 /* GifticonMakerCropHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerCropHandler.swift; sourceTree = "<group>"; };
+		45FC3D332B7930E80032F305 /* GifticonMakerDrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerDrawView.swift; sourceTree = "<group>"; };
+		45FC3D352B7933150032F305 /* CGRect+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extension.swift"; sourceTree = "<group>"; };
+		45FC3D372B7A27320032F305 /* GifticonMakerScrollViewModeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifticonMakerScrollViewModeButton.swift; sourceTree = "<group>"; };
 		860DB2D2AF67BA5A9C1930B9 /* Pods-beep-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beep-ios.release.xcconfig"; path = "Target Support Files/Pods-beep-ios/Pods-beep-ios.release.xcconfig"; sourceTree = "<group>"; };
 		98C591E3B0958C203A441A56 /* Pods-beep-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beep-ios.debug.xcconfig"; path = "Target Support Files/Pods-beep-ios/Pods-beep-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		E1D659B1DF638A0581A94BBC /* Pods_beep_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beep_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -298,6 +310,7 @@
 				45983F072A385B7C00203EBB /* UIColor+Extension.swift */,
 				45983F092A38609B00203EBB /* String+Extension.swift */,
 				45D0365D2A8B45F900FE5042 /* UIImage+Extension.swift */,
+				45FC3D352B7933150032F305 /* CGRect+Extension.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -353,6 +366,11 @@
 				456683972B6FC22B002921BE /* GifticonMakerThumbnailPicker.swift */,
 				456683992B6FC421002921BE /* GifticonMakerThumbnailPickerCell.swift */,
 				4566839B2B6FCAEA002921BE /* GIfticonMakerThumbnailInputView.swift */,
+				45FC3D0F2B77BAA90032F305 /* GifticonMakerScrollView.swift */,
+				45FC3D112B77C4940032F305 /* GifticonMakerCropView.swift */,
+				45FC3D222B77C6B40032F305 /* GifticonMakerCropHandler.swift */,
+				45FC3D332B7930E80032F305 /* GifticonMakerDrawView.swift */,
+				45FC3D372B7A27320032F305 /* GifticonMakerScrollViewModeButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -703,6 +721,7 @@
 				45B4AC042AD3E83300F59397 /* BrandSection.swift in Sources */,
 				45924D482B49568F00218AE6 /* GifticonMakerPreviewList.swift in Sources */,
 				45AC42CD2AEE3D9E00733052 /* GifticonMakerEvent.swift in Sources */,
+				45FC3D362B7933150032F305 /* CGRect+Extension.swift in Sources */,
 				45924D362B25DD0100218AE6 /* GifticonMakerPreviewButton.swift in Sources */,
 				45B4AC232AD44F6C00F59397 /* MainGifticonListCell.swift in Sources */,
 				456683962B6FBC9A002921BE /* GifticonMakerDatePicker.swift in Sources */,
@@ -716,6 +735,7 @@
 				45924D382B3D41FA00218AE6 /* GifticonMakeButton.swift in Sources */,
 				45B4AC832ADDA71400F59397 /* BaseSelectButton.swift in Sources */,
 				456683942B6F7037002921BE /* BottomSheetView.swift in Sources */,
+				45FC3D232B77C6B40032F305 /* GifticonMakerCropHandler.swift in Sources */,
 				45B4AC7A2ADDA0FD00F59397 /* GalleryBottomView.swift in Sources */,
 				45B4AC022AD3E33400F59397 /* UsageHistory.swift in Sources */,
 				45924D3C2B3D536B00218AE6 /* GifticonMakerPreviewSubView.swift in Sources */,
@@ -730,6 +750,7 @@
 				45D036702AADBB8300FE5042 /* LoginViewModel+Naver.swift in Sources */,
 				459188AD2A76438200EFA2B6 /* LoginType.swift in Sources */,
 				45983F082A385B7C00203EBB /* UIColor+Extension.swift in Sources */,
+				45FC3D382B7A27320032F305 /* GifticonMakerScrollViewModeButton.swift in Sources */,
 				45983F0A2A38609B00203EBB /* String+Extension.swift in Sources */,
 				45B4AC852ADDA8B300F59397 /* GalleryPageTabView.swift in Sources */,
 				45983EE42A38588E00203EBB /* StaticConfig.swift in Sources */,
@@ -738,7 +759,9 @@
 				45B4AC7E2ADDA18B00F59397 /* Constant.swift in Sources */,
 				459188AB2A763F6800EFA2B6 /* LoginAnimationType.swift in Sources */,
 				45B4AC732ADD9B6500F59397 /* GalleryViewController.swift in Sources */,
+				45FC3D122B77C4940032F305 /* GifticonMakerCropView.swift in Sources */,
 				459188B22A764DF200EFA2B6 /* LoginViewModel.swift in Sources */,
+				45FC3D102B77BAA90032F305 /* GifticonMakerScrollView.swift in Sources */,
 				45D1608B2A2F1C3500D633E1 /* ViewController.swift in Sources */,
 				45924D422B49474500218AE6 /* GifticonMakerPreviewSubviewImageView.swift in Sources */,
 				45B4AC062AD3E94100F59397 /* BrandLocation.swift in Sources */,
@@ -754,6 +777,7 @@
 				459188AF2A76480600EFA2B6 /* LoginButton.swift in Sources */,
 				45D0366B2A8B654700FE5042 /* PermissionView.swift in Sources */,
 				45AE7D032B53D3D90079E3F6 /* GifticonCandidateListCell.swift in Sources */,
+				45FC3D342B7930E80032F305 /* GifticonMakerDrawView.swift in Sources */,
 				45AC42C62AEE37C100733052 /* RegisterNavigationController.swift in Sources */,
 				45D0365E2A8B45F900FE5042 /* UIImage+Extension.swift in Sources */,
 				45AC42D22AEE3FB800733052 /* GifticonMakerTopView.swift in Sources */,

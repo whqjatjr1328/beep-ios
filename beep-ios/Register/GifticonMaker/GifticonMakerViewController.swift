@@ -14,6 +14,7 @@ class GifticonMakerViewController: UIViewController {
     let topView = GifticonMakerTopView()
     let gifticonCandidateListView: GifticonCandidateListView
     let previewListView = GifticonMakerPreviewList()
+    let gifticonScrollView = GifticonMakerScrollView()
     let previewButton = GifticonMakerPreviewButton()
     let gradientView = UIView()
     let gifticonMakerFieldList: UICollectionView = {
@@ -83,6 +84,12 @@ class GifticonMakerViewController: UIViewController {
             make.height.equalTo(GIfticonMakerPreview.Dimension.size.height)
         }
         
+        gifticonScrollView.isHidden = true
+        view.insertSubview(gifticonScrollView, belowSubview: previewListView)
+        gifticonScrollView.snp.makeConstraints { make in
+            make.edges.equalTo(self.previewListView)
+        }
+        
         view.addSubview(previewButton)
         previewButton.snp.makeConstraints { make in
             make.top.equalTo(previewListView.snp.bottom).offset(16)
@@ -150,6 +157,14 @@ class GifticonMakerViewController: UIViewController {
             .bind(to: viewModel.gifticonCandidates)
             .disposed(by: disposeBag)
         
+        viewModel.selectedGifticonCandidate
+            .distinctUntilChanged()
+            .subscribe(onNext: {[weak self] selectedGifticonCandidate in
+                guard let self, let originalImage = selectedGifticonCandidate?.originalImage else { return }
+                self.gifticonScrollView.updateImage(image: originalImage)
+            })
+            .disposed(by: disposeBag)
+        
         
         viewModel.gifticonFields
             .distinctUntilChanged()
@@ -165,6 +180,8 @@ class GifticonMakerViewController: UIViewController {
                 guard let self else { return }
                 let isPreviewSelected = selectedGifticonFieldType == .preview
                 self.previewButton.updateSelected(isSelected: isPreviewSelected)
+                self.previewListView.isHidden = isPreviewSelected == false
+                self.gifticonScrollView.isHidden = isPreviewSelected
                 self.gifticonMakerFieldList.reloadData()
                 self.updateBottomView()
                 self.scrollTo(gifticonFieldType: selectedGifticonFieldType)

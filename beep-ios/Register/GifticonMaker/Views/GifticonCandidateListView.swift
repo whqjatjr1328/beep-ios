@@ -72,6 +72,7 @@ extension GifticonCandidateListView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let candidate = viewModel?.gifticonCandidates.value[indexPath.item] else { return }
         self.viewModel?.selectedGifticonCandidate.accept(candidate)
+        collectionView.reloadData()
     }
 }
 

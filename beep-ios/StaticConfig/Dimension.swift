@@ -19,4 +19,8 @@ class Dimension {
     var screenHeight: CGFloat {
         return UIScreen.main.bounds.height
     }
+    
+    var cropHanderWidth: CGFloat {
+        return 20
+    }
 }
